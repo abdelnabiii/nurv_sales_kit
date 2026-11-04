@@ -127,6 +127,14 @@ img.ph{display:block;object-fit:cover}
 .bullets li{font-size:20pt;line-height:1.35;padding:11pt 0 11pt 26pt;border-bottom:1px solid var(--rule);color:var(--body);position:relative;font-weight:300}
 .bullets li::before{content:"";position:absolute;left:0;top:22pt;width:10pt;height:1px;background:var(--blue)}
 
+/* render gallery */
+.gal{position:absolute;margin:0}
+.gal img{display:block;width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:0;bottom:-24pt;font-size:12.5pt;letter-spacing:.06em;color:var(--mute)}
+.gal-a{left:50pt;top:96pt;width:1240pt;height:698pt}
+.gal-b{left:1320pt;top:96pt;width:610pt;height:331pt}
+.gal-c{left:1320pt;top:463pt;width:610pt;height:331pt}
+.gal-note{position:absolute;right:50pt;bottom:62pt;font-size:12.5pt;color:var(--faint)}
 /* cover */
 .cover-mark{position:absolute;left:50pt;top:330pt;width:600pt;color:var(--fg)}
 .cover-mark svg{width:100%;height:auto;display:block}
@@ -178,15 +186,16 @@ img.ph{display:block;object-fit:cover}
     <ul class="toc">
       <li><b>01</b>About Jalour<i>03</i></li>
       <li><b>02</b>Vision and Positioning<i>04</i></li>
-      <li><b>03</b>Location<i>05</i></li>
-      <li><b>04</b>nurv at a Glance<i>06</i></li>
-      <li><b>05</b>Level by Level<i>07</i></li>
-      <li><b>06</b>Design and Specification<i>13</i></li>
-      <li><b>07</b>Why nurv<i>14</i></li>
-      <li><b>08</b>Management and Operations<i>15</i></li>
-      <li><b>09</b>Developer Credentials<i>16</i></li>
-      <li><b>&nbsp;</b>Legal Notice<i>17</i></li>
-      <li><b>&nbsp;</b>Contact<i>18</i></li>
+      <li><b>&nbsp;</b>The Building<i>05</i></li>
+      <li><b>03</b>Location<i>06</i></li>
+      <li><b>04</b>nurv at a Glance<i>07</i></li>
+      <li><b>05</b>Level by Level<i>08</i></li>
+      <li><b>06</b>Design and Specification<i>14</i></li>
+      <li><b>07</b>Why nurv<i>15</i></li>
+      <li><b>08</b>Management and Operations<i>16</i></li>
+      <li><b>09</b>Developer Credentials<i>17</i></li>
+      <li><b>&nbsp;</b>Legal Notice<i>18</i></li>
+      <li><b>&nbsp;</b>Contact<i>19</i></li>
     </ul>
   </div>
   <div class="title">Contents</div>
@@ -217,6 +226,17 @@ img.ph{display:block;object-fit:cover}
   </div>
   <img class="ph" src="../assets/img/vision.jpg" alt="nurv, daytime view of the glazed façade and plaza" style="position:absolute;left:860pt;top:590pt;width:1011pt;height:390pt;object-position:50% 40%">
   <div class="title">Vision and<br>Positioning</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ THE BUILDING (render gallery) ============ -->
+<section class="page" id="p-gallery">
+  {{HEADER}}
+  <figure class="gal gal-a"><img class="ph" src="../assets/img/gallery-exterior.jpg" alt="nurv, completed building at dusk"><figcaption>The completed building at dusk</figcaption></figure>
+  <figure class="gal gal-b"><img class="ph" src="../assets/img/second.jpg" alt="The Wellness Arena, second floor"><figcaption>The Wellness Arena, second floor</figcaption></figure>
+  <figure class="gal gal-c"><img class="ph" src="../assets/img/roof.jpg" alt="On-Air Track, rooftop"><figcaption>On-Air Track, rooftop</figcaption></figure>
+  <div class="title sm" style="bottom:56pt">The Building</div>
+  <div class="gal-note">Artist's impressions. Final design may vary.</div>
   {{FOOTER}}
 </section>
 
@@ -466,7 +486,7 @@ img.ph{display:block;object-fit:cover}
 <section class="page" id="p-mgmt">
   {{HEADER}}
   <div class="num">08</div>
-  <img class="ph" src="../assets/img/management.jpg" alt="nurv, completed building at dusk (still from the construction visualisation)" style="position:absolute;left:50pt;top:230pt;width:710pt;height:400pt">
+  <img class="ph" src="../assets/img/management.jpg" alt="nurv. reception and lounge interior" style="position:absolute;left:50pt;top:230pt;width:710pt;height:400pt">
   <div class="col">
     <div class="mlogo">{{MEADIS_LOGO}}</div>
     <p class="lead">nurv is managed by Meadis Group, Jalour's retail and commercial expertise partner.</p>
