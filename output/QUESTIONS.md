@@ -19,8 +19,8 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
 |---|---|---|
 | B1 | **Aeonik font files (licensed).** The template embeds only a subset of Aeonik, which cannot be reused. Per your approval, the brochure uses **Inter Tight** (SIL Open Font License). | If you supply licensed Aeonik files, switching is a one-line change to the `@font-face` rules in `src/brochure.html`. |
 | B2 | **Original vector logos.** All three logos were traced to vector from raster sources. | Jalour: from the "JALOUR®" alpha mask in Nurv._compressed.pdf (510x154 px; the same wordmark as on the Company Profile cover, where the logo sits over a photo and could not be isolated cleanly). nurv.: from DMK-Nurv-Presentation p.4 (raster only). Meadis Group: from the 570x320 px mask in Nurv._compressed.pdf. Original vector files would give exact geometry. |
-| B3 | **Higher-resolution Design A renders.** Each image is placed at or below its native size (no upscaling). Higher-resolution originals would allow full-bleed layouts. | Lower-resolution images in use: cover (828x1084 px, the night half of Company Profile p.23), p.4 (1011x811), p.9 (1011x430), p.13 (1000x666). |
-| B4 | **Home comfort imagery for the 1st floor.** The only home comfort visual (deck p.32) is a collage, so it was not used. | p.9 uses a crop of the upper-floor glazing instead. |
+| B3 | **Higher-resolution Design A renders.** Each image is placed at or below its native size (no upscaling). Higher-resolution originals would allow full-bleed layouts. | Lower-resolution images in use: cover (828x1084 px, the night half of Company Profile p.23), p.4 (1011x811), p.8 (1000x470), p.9 (360x290), p.18 (653x482). |
+| B4 | **Home comfort imagery for the 1st floor.** The only home comfort visual (deck p.32) is a collage. | p.9 uses the armchair cropped clean from that collage (360x290 px, low resolution, shown at native size). A proper home comfort render would be better. |
 
 ## C. Decisions applied (from your answers), for the record
 
@@ -36,10 +36,11 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
 
 - **Excluded (show "REGALIA"):** `WhatsApp Image 2026-09-13 at 15.26.42.webp`, `3.webp`, `4.webp`.
 - **Not used:** `2.webp`. It shows no project name but is a low-resolution duplicate of a Design B render.
-- **Third-party brand cropped out:** every Design A hero render shows an **Audi** badge on the car at left. The cover and the p.4 and p.13 images are cropped to exclude it. The SUV at right shows no badge.
+- **Third-party brand cropped out:** every Design A hero render shows an **Audi** badge on the car at left. The cover and the p.4 and p.8 images are cropped to exclude it. The SUV at right shows no badge.
 - **Please confirm:** on the cover image, a window behind the nurv. sign holds a small, illegible sign-like text block (not a recognisable name). It was judged acceptable. Say if you want a tighter crop.
 - **Excluded deck pages/imagery:** p.7 (target group), p.12 (moodboard), pp.38–39 (sponsorships), p.16 (bank/telecom branding), pp.29/31 ("Luster & Luxe"), all hexagon cut-outs and collages (pp.25, 35), p.18 cut-out (Design B), p.10 imagery (low resolution; artworks shown), and the DMK gradient imagery and mock-ups.
-- **Construction video:** the first frame (shows dimension figures) is excluded. The stills used are the structural frame (p.16) and the completed building (p.15).
+- **Construction video:** the first frame (shows dimension figures) is excluded. Stills used: columns rising (p.7, Basement; no basement render exists), finished curtain-wall façade (p.13), completed building (p.15) and structural frame (p.16).
+- **Image revision (your request):** p.8 now shows the evening restaurant frontage and terraces; p.9 the home comfort armchair; p.7 (Basement) and p.18 (Contact, rooftop track render) gained images.
 
 ## E. Plans and map: method and limitations
 
