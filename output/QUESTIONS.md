@@ -9,9 +9,9 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
 |---|---|---|---|
 | A1 | **Approved legal disclaimer text.** None was found in the Drive folder. | p.17 (placeholder box, interim working text) | Please supply |
 | A2 | **Basement gross area (BUA).** No figure supplied. | p.6 table, p.7 | Placeholder "to be confirmed" |
-| A3 | **Rooftop / track area (BUA).** No figure supplied. | p.6 table, p.12 | Placeholder "to be confirmed" |
-| A4 | **Third floor plan.** None exists. Subject to final approvals. | p.11 | Labelled placeholder |
-| A5 | **Roof plan.** None exists. | p.12 | Labelled placeholder |
+| A3 | **Rooftop / track area (BUA).** No figure supplied. The roof sheet's title block has an area table (e.g. "44.60%", "106.36"), but it is not labelled as a gross area, so it is not used. | p.6 table, p.12 | Placeholder "to be confirmed"; please confirm the figure |
+| A4 | **Third floor plan.** Resolved: per your instruction, p.11 shows the second-floor layout as the typical plan. Subject to final approvals. | p.11 | Done |
+| A5 | **Roof plan.** Resolved: redrawn from `Roof - Updated.pdf` (supplied in chat) using the same CAD-layer method. Cars, parking arrows, title block, area table and text removed. The triangular site feature is shown unlabelled. | p.12 | Done |
 
 ## B. Brand and asset requests
 

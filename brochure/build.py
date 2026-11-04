@@ -61,7 +61,7 @@ def footer(_):
 html = re.sub(r"\{\{FOOTER\}\}", footer, html)
 html = html.replace("{{NURV_LOGO}}", NURV).replace("{{JALOUR_LOGO}}", JALOUR).replace("{{MEADIS_LOGO}}", MEADIS)
 html = html.replace("{{MAP}}", strip(rd("src/map.svg")))
-for i in range(1, 5):
+for i in range(1, 6):
     html = html.replace("{{PLAN%d}}" % i, strip(rd(f"assets/plans/plan{i}.svg")))
 
 assert "{{" not in html, "unreplaced token"

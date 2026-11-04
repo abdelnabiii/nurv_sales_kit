@@ -13,7 +13,7 @@ for p in PG['paths']:
             a,b=tp(v[i],v[i+1]); nv+= [a,b]; xs.append(a); ys.append(b)
         d.append([seg[0]]+nv)
     q=dict(p); q['d']=d; q['bbox']=[min(xs),min(ys),max(xs),max(ys)]; P.append(q)
-KEEP={'I-SECT-DIMS','NEW WALLS','CLOM','Stairs','I-STRS-HRAL','walls','A-DOR','A-Door','A-Flor-Pfix','THIET-BI','A-FURN-FIXD','A-ELEV-BACK','I-COLS-CONC','0'}
+KEEP={'I-SECT-HTCH','WAL-1','I-SECT-DIMS','NEW WALLS','CLOM','Stairs','I-STRS-HRAL','walls','A-DOR','A-Door','A-Flor-Pfix','THIET-BI','A-FURN-FIXD','A-ELEV-BACK','I-COLS-CONC','0'}
 nw=[p for p in P if p['layer']=='NEW WALLS']
 bx=[min(p['bbox'][0] for p in nw),min(p['bbox'][1] for p in nw),max(p['bbox'][2] for p in nw),max(p['bbox'][3] for p in nw)]
 X0,Y0,X1,Y1=bx; W=X1-X0; Hh=Y1-Y0; small=max(W,Hh)*0.012
@@ -51,7 +51,7 @@ for g in clusters(cand, small*0.35):
     ys0=min(cand[i]['bbox'][1] for i in g); ys1=max(cand[i]['bbox'][3] for i in g)
     if max(xs1-xs0,ys1-ys0)<small*2.2: drop.update(id(cand[i]) for i in g)
 ps=[p for p in ps if id(p) not in drop]
-COL={'I-SECT-DIMS':'#fa0','NEW WALLS':'#fff','CLOM':'#f00','Stairs':'#0f0','I-STRS-HRAL':'#0ff','walls':'#ff0','A-DOR':'#f0f','A-Door':'#f80','A-Flor-Pfix':'#8f8','THIET-BI':'#f88','A-FURN-FIXD':'#88f','0':'#c66','I-COLS-CONC':'#faa','A-ELEV-BACK':'#afa'}
+COL={'WAL-1':'#0cf','I-SECT-DIMS':'#fa0','NEW WALLS':'#fff','CLOM':'#f00','Stairs':'#0f0','I-STRS-HRAL':'#0ff','walls':'#ff0','A-DOR':'#f0f','A-Door':'#f80','A-Flor-Pfix':'#8f8','THIET-BI':'#f88','A-FURN-FIXD':'#88f','0':'#c66','I-COLS-CONC':'#faa','A-ELEV-BACK':'#afa'}
 def D(p): return ' '.join('Z' if s[0]=='Z' else s[0]+' '.join('%.2f'%x for x in s[1:]) for s in p['d'])
 pad=W*0.02
 svg=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{X0-pad:.1f} {Y0-pad:.1f} {W+2*pad:.1f} {Hh+2*pad:.1f}" width="1400" height="{1400*(Hh+2*pad)/(W+2*pad):.0f}" style="--plan-wall:#E8E8E8;--plan-thin:#7C828C;--plan-hatch:#3A3F47;--plan-plot:#5A6070;background:#000" fill-rule="evenodd" stroke-linejoin="round" stroke-linecap="round">']
@@ -61,8 +61,8 @@ def style(p):
     L=p['layer']; filled=p['op'] in ('f','F','f*','b','B','b*','B*')
     if full: return 'plot', 'none', 'var(--plan-plot)', 0.9*u, f' stroke-dasharray="{6*u:.2f} {4*u:.2f}"'
     if L=='CLOM': return 'col', 'none','var(--plan-wall)',1.1*u,''
-    if L in ('NEW WALLS','walls','Stairs'): return 'wall', 'none','var(--plan-wall)',1.1*u,''
-    if L=='I-STRS-HRAL': return 'hatch','none','var(--plan-hatch)',0.5*u,''
+    if L in ('NEW WALLS','walls','Stairs','WAL-1'): return 'wall', 'none','var(--plan-wall)',1.1*u,''
+    if L in ('I-STRS-HRAL','I-SECT-HTCH'): return 'hatch','none','var(--plan-hatch)',0.5*u,''
     return 'thin','none','var(--plan-thin)',0.6*u,''
 for p in ps:
     if debug:
