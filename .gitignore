@@ -1,3 +1,5 @@
 
 # Local copies of Drive source files (not for version control)
 inputs/
+brochure/build/
+__pycache__/

@@ -1,0 +1,641 @@
+<svg class="plan" xmlns="http://www.w3.org/2000/svg" viewBox="318.0 -615.6 456.1 439.2" style="--plan-wall:#E8E8E8;--plan-thin:#7C828C;--plan-hatch:#3A3F47;--plan-plot:#5A6070;" fill-rule="evenodd" stroke-linejoin="round" stroke-linecap="round">
+<path class="thin" d="M689.82 -503.16 L689.58 -504.78 L689.16 -506.28 L688.56 -507.78 L687.78 -509.16 L686.76 -510.42 L685.62 -511.56 L684.36 -512.52 L682.98 -513.30 L681.48 -513.90 L679.92 -514.26 L678.30 -514.44 L676.68 -514.44" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M577.08 -554.82 L639.48 -554.82" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M639.48 -554.82 L639.48 -502.20" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M639.48 -502.20 L590.04 -502.20" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M577.08 -502.20 L577.08 -554.82" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M669.78 -376.44 L666.72 -376.44" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -316.14 L676.68 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -316.14 L676.68 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -301.50 L679.74 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -301.50 L679.74 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -370.98 L574.02 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -367.92 L588.72 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -367.92 L588.72 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -370.98 L574.02 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -370.98 L627.84 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -367.92 L642.54 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -367.92 L642.54 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -370.98 L627.84 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -249.48 L676.68 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -249.48 L676.68 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -234.84 L679.74 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -234.84 L679.74 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -237.90 L574.02 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -234.84 L588.72 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -234.84 L588.72 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -237.90 L574.02 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -377.10 L712.80 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -377.10 L712.80 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -362.40 L715.86 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -362.40 L715.86 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -316.14 L676.68 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -316.14 L676.68 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -301.50 L679.74 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -301.50 L679.74 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -370.98 L574.02 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -367.92 L588.72 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -367.92 L588.72 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -370.98 L574.02 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -370.98 L627.84 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -367.92 L642.54 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -367.92 L642.54 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -370.98 L627.84 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -249.48 L676.68 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -249.48 L676.68 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -234.84 L679.74 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -234.84 L679.74 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -237.90 L574.02 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -234.84 L588.72 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -234.84 L588.72 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -237.90 L574.02 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -377.10 L712.80 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -377.10 L712.80 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -362.40 L715.86 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -362.40 L715.86 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -316.14 L676.68 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -316.14 L676.68 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -301.50 L679.74 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -301.50 L679.74 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -370.98 L574.02 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -367.92 L588.72 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -367.92 L588.72 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -370.98 L574.02 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -370.98 L627.84 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -367.92 L642.54 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -367.92 L642.54 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -370.98 L627.84 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -249.48 L676.68 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -249.48 L676.68 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -234.84 L679.74 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -234.84 L679.74 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -237.90 L574.02 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -234.84 L588.72 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -234.84 L588.72 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -237.90 L574.02 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -377.10 L712.80 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -377.10 L712.80 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -362.40 L715.86 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -362.40 L715.86 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -371.34 L574.02 -371.34" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -367.92 L574.02 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -370.98 L574.02 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M557.15 -240.49 C559.60 -238.80 562.50 -237.90 565.47 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M574.02 -367.92 L570.30 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -370.98 L570.30 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M676.68 -237.90 L565.50 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M555.21 -237.67 C558.23 -235.59 561.81 -234.48 565.47 -234.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M555.42 -237.97 C558.37 -235.93 561.88 -234.84 565.47 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M520.83 -297.30 C512.95 -282.48 517.43 -264.10 531.26 -254.58" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M523.53 -295.86 C516.38 -282.41 520.45 -265.74 532.99 -257.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M520.51 -297.47 C512.54 -282.49 517.08 -263.91 531.06 -254.29" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M557.16 -240.48 L532.98 -257.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M555.18 -237.66 L531.06 -254.28" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M555.42 -237.96 L531.24 -254.58" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M558.24 -361.14 L523.50 -295.86" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M558.30 -361.26 L534.30 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M555.30 -362.88 L520.50 -297.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M555.60 -362.70 L520.80 -297.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M570.57 -367.92 C565.53 -367.92 560.84 -365.33 558.15 -361.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M570.57 -371.34 C564.35 -371.34 558.57 -368.14 555.26 -362.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M570.57 -370.98 C564.47 -370.98 558.80 -367.85 555.56 -362.69" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M679.74 -234.42 L565.50 -234.42" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M679.74 -234.84 L565.50 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -370.98 L627.84 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M627.84 -367.92 L642.54 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -367.92 L642.54 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -370.98 L627.84 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -316.14 L676.68 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -316.14 L676.68 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -301.50 L679.74 -301.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -301.50 L679.74 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -249.48 L676.68 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -249.48 L676.68 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M676.68 -234.84 L679.74 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M679.74 -234.84 L679.74 -249.48" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -377.10 L712.80 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -377.10 L712.80 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -362.40 L715.86 -362.40" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -362.40 L715.86 -377.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -370.98 L574.02 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -367.92 L588.72 -367.92" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -367.92 L588.72 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -370.98 L574.02 -370.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -237.90 L574.02 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -234.84 L588.72 -234.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -234.84 L588.72 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M588.72 -237.90 L574.02 -237.90" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M649.56 -361.32 L649.56 -359.88 L649.74 -358.44 L650.10 -357.06 L650.70 -355.74 L651.48 -354.48 L652.44 -353.40 L653.52 -352.44 L654.72 -351.66 L656.04 -351.06 L657.42 -350.70 L658.86 -350.52" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M659.40 -360.30 L659.40 -350.52" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M658.86 -360.30 L658.86 -350.52" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M666.72 -366.36 L668.16 -366.30 L669.60 -366.48 L670.98 -366.90 L672.30 -367.44 L673.56 -368.22 L674.64 -369.18 L675.60 -370.26 L676.38 -371.46 L676.92 -372.78 L677.34 -374.22 L677.52 -375.60" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M667.74 -376.14 L677.52 -376.14" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M667.74 -375.60 L677.52 -375.60" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M649.74 -358.44 L639.48 -358.44" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -358.44 L659.40 -358.44" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M659.16 -361.32 L666.72 -361.32" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -361.32 L649.56 -361.32" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.80 -379.50 L669.78 -379.50" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.80 -382.56 L669.78 -382.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M669.78 -366.36 L669.78 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M669.78 -379.50 L669.78 -376.44" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -358.44 L666.72 -313.08" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M676.68 -237.90 L676.68 -313.08" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M679.74 -234.84 L679.74 -313.08" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M676.68 -313.08 L666.72 -313.08" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M715.86 -313.08 L679.74 -313.08" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.80 -316.14 L669.78 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.80 -379.50 L712.80 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M384.96 -557.88 L642.54 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M388.02 -554.82 L441.90 -554.82" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M444.96 -554.82 L507.96 -554.82" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M511.02 -554.82 L574.02 -554.82" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M577.08 -554.82 L639.48 -554.82" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M511.02 -554.82 L511.02 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M518.22 -489.00 L518.22 -486.00" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M511.02 -472.80 L511.02 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M507.96 -554.82 L507.96 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M507.96 -475.86 L507.96 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M511.02 -472.80 L561.06 -472.80" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M570.66 -472.80 L574.02 -472.80" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M577.08 -472.80 L580.44 -472.80" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M590.04 -472.80 L639.48 -472.80" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M507.96 -475.86 L560.88 -475.86" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M570.48 -475.86 L580.68 -475.86" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M590.22 -475.86 L642.54 -475.86" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -370.98 L639.48 -425.70" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.12 -370.98 L639.12 -425.70" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -428.76 L639.48 -472.80" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -502.20 L639.48 -554.82" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -370.98 L642.54 -429.12" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -432.18 L642.54 -475.86" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -499.14 L642.54 -515.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -556.62 L712.80 -556.62" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M577.08 -554.82 L577.08 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M577.08 -472.80 L577.08 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M574.02 -554.82 L574.02 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M574.02 -472.80 L574.02 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M388.02 -489.00 L518.22 -489.00" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M388.02 -486.00 L518.22 -486.00" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.90 -502.20 L669.96 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M645.60 -429.12 L642.54 -429.12" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M645.60 -432.18 L642.54 -432.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M645.60 -432.18 L645.60 -429.12" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M586.86 -554.82 L586.86 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M629.70 -554.82 L629.70 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M521.10 -554.82 L521.10 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M563.94 -554.82 L563.94 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M455.04 -554.82 L455.04 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M497.88 -554.82 L497.88 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M393.54 -554.82 L393.54 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M436.38 -554.82 L436.38 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -502.20 L590.04 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M580.44 -502.20 L577.08 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M574.02 -502.20 L570.66 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M561.06 -502.20 L511.02 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -499.14 L590.22 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M580.68 -499.14 L570.48 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M560.88 -499.14 L507.96 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -437.58 L666.72 -432.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -422.70 L666.72 -376.44" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -366.36 L666.72 -347.16" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M669.78 -422.70 L669.78 -382.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M508.50 -484.56 L508.74 -483.18 L509.16 -481.80 L509.76 -480.54 L510.60 -479.34 L511.62 -478.32 L512.76 -477.48 L514.02 -476.88 L515.40 -476.40 L516.84 -476.22 L518.22 -476.22" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M517.32 -485.04 L508.50 -485.04" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M517.32 -484.56 L508.50 -484.56" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M570.18 -509.94 L568.74 -509.76 L567.36 -509.34 L566.04 -508.74 L564.78 -507.96 L563.70 -507.00 L562.80 -505.92 L562.02 -504.72 L561.42 -503.40 L561.00 -502.02 L560.82 -500.58 L560.88 -499.14" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M570.66 -500.16 L570.66 -509.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M570.18 -500.16 L570.18 -509.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M590.22 -499.14 L590.28 -500.58 L590.10 -502.02 L589.68 -503.40 L589.14 -504.72 L588.36 -505.92 L587.40 -507.00 L586.32 -507.96 L585.12 -508.74 L583.80 -509.34 L582.36 -509.76 L580.98 -509.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.44 -500.16 L580.44 -509.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.98 -500.16 L580.98 -509.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M560.88 -475.86 L560.82 -474.42 L561.00 -472.98 L561.42 -471.60 L562.02 -470.28 L562.80 -469.08 L563.70 -468.00 L564.78 -467.04 L566.04 -466.26 L567.36 -465.66 L568.74 -465.24 L570.18 -465.06" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M570.66 -474.84 L570.66 -465.06" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M570.18 -474.84 L570.18 -465.06" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.98 -465.06 L582.36 -465.24 L583.80 -465.66 L585.12 -466.26 L586.32 -467.04 L587.40 -468.00 L588.36 -469.08 L589.14 -470.28 L589.68 -471.60 L590.10 -472.98 L590.28 -474.42 L590.22 -475.86" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.44 -474.84 L580.44 -465.06" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.98 -474.84 L580.98 -465.06" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="col" d="M511.02 -557.88 L507.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -557.88 L507.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -543.18 L511.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -543.18 L511.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -464.88 L639.48 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -464.88 L639.48 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -450.18 L642.54 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -450.18 L642.54 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -464.88 L441.90 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -464.88 L441.90 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -450.18 L444.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -450.18 L444.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -464.88 L384.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -464.88 L384.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -450.18 L388.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -450.18 L388.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.90 -499.14 L712.80 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.98 -464.94 L666.72 -464.94" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -464.88 L666.72 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M666.72 -422.70 L668.16 -422.64 L669.60 -422.82 L670.98 -423.24 L672.30 -423.84 L673.56 -424.56 L674.64 -425.52 L675.60 -426.60 L676.38 -427.86 L676.92 -429.18 L677.34 -430.56 L677.52 -432.00" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M667.74 -432.48 L677.52 -432.48" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M667.74 -432.00 L677.52 -432.00" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M666.72 -422.70 L669.78 -422.70" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -557.88 L574.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -557.88 L574.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -543.18 L577.08 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -543.18 L577.08 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -557.88 L441.90 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -557.88 L441.90 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -543.18 L444.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -543.18 L444.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -557.88 L384.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -557.88 L384.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -543.18 L388.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -543.18 L388.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -464.88 L507.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -464.88 L507.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -450.18 L511.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -450.18 L511.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -513.78 L712.80 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -513.78 L712.80 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -499.14 L715.86 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -499.14 L715.86 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.90 -499.14 L666.90 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M329.88 -606.84 L764.76 -606.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M764.76 -606.84 L765.36 -185.16" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M765.36 -185.16 L535.92 -185.16" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M326.82 -464.64 L327.96 -455.58 L329.34 -446.52 L331.02 -437.52 L332.88 -428.58 L334.98 -419.70 L337.32 -410.82 L339.90 -402.06 L342.72 -393.36 L345.72 -384.72 L349.02 -376.20 L352.50 -367.74 L356.22 -359.34 L360.12 -351.12 L364.26 -342.96 L368.64 -334.92 L373.20 -327.00 L378.00 -319.20 L382.98 -311.52 L388.14 -304.02 L393.54 -296.58 L399.12 -289.38 L404.88 -282.24 L410.82 -275.28 L417.00 -268.50 L423.30 -261.90 L429.78 -255.48 L436.44 -249.18 L443.22 -243.06 L450.18 -237.18 L457.32 -231.42 L464.58 -225.90 L472.02 -220.56 L479.58 -215.40 L487.26 -210.42 L495.12 -205.68 L503.04 -201.18 L511.08 -196.86 L519.24 -192.72 L527.52 -188.82 L535.92 -185.16" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M326.82 -464.64 L329.88 -606.84" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M388.02 -543.18 L388.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M384.96 -557.88 L384.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M384.60 -557.88 L384.60 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -428.76 L511.02 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M507.96 -428.76 L444.96 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M444.96 -428.76 L409.50 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -425.70 L409.50 -425.70" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -425.34 L409.50 -425.34" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M384.90 -450.17 C384.95 -436.66 395.91 -425.72 409.43 -425.70" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M384.54 -450.17 C384.60 -436.46 395.72 -425.36 409.43 -425.34" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M387.96 -450.18 C388.01 -438.35 397.60 -428.78 409.43 -428.76" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.90 -499.14 L666.90 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M670.56 -499.14 L670.56 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M696.30 -499.14 L696.30 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M692.64 -499.14 L692.64 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M688.92 -499.14 L688.92 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M685.26 -499.14 L685.26 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M681.60 -499.14 L681.60 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M677.94 -499.14 L677.94 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M674.28 -499.14 L674.28 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.90 -479.46 L699.96 -479.46" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.96 -479.46 L699.96 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.96 -484.56 L666.18 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M667.50 -480.06 L699.36 -480.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.36 -480.06 L699.36 -483.96" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.36 -483.96 L666.78 -483.96" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.96 -483.54 L712.80 -483.54" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.96 -479.82 L712.80 -479.82" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.36 -479.46 L699.36 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M695.70 -479.46 L695.70 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M691.98 -479.46 L691.98 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M688.32 -479.46 L688.32 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M684.66 -479.46 L684.66 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M681.00 -479.46 L681.00 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M677.34 -479.46 L677.34 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M673.62 -479.46 L673.62 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M669.96 -479.46 L669.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M675.42 -491.28 L690.06 -491.28" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.36 -491.28 L674.16 -491.28" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M667.50 -494.82 L666.18 -491.28" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.18 -491.28 L667.50 -487.80" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M667.86 -494.82 L666.36 -491.28" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.36 -491.28 L667.86 -487.98" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M690.78 -491.28 L706.68 -491.28" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M706.68 -491.28 L706.68 -472.74" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M706.68 -472.74 L666.90 -472.74" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M667.50 -483.96 L667.50 -480.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.30 -479.46 L666.30 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M699.96 -499.14 L699.96 -484.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M681.60 -484.56 L692.64 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M681.30 -484.80 L692.34 -499.32" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -557.88 L574.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -557.88 L574.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -543.18 L577.08 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -543.18 L577.08 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -557.88 L507.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -557.88 L507.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -543.18 L511.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -543.18 L511.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -557.88 L441.90 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -557.88 L441.90 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -543.18 L444.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -543.18 L444.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -557.88 L384.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -557.88 L384.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -543.18 L388.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -543.18 L388.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -464.88 L639.48 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -464.88 L639.48 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -450.18 L642.54 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -450.18 L642.54 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -464.88 L507.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -464.88 L507.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -450.18 L511.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -450.18 L511.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -464.88 L441.90 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -464.88 L441.90 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -450.18 L444.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -450.18 L444.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -464.88 L384.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -464.88 L384.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -450.18 L388.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -450.18 L388.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -513.78 L712.80 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -513.78 L712.80 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -499.14 L715.86 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -499.14 L715.86 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -513.78 L712.80 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -513.78 L712.80 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -499.14 L715.86 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -499.14 L715.86 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -557.88 L574.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -557.88 L574.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -543.18 L577.08 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -543.18 L577.08 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -557.88 L507.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -557.88 L507.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -543.18 L511.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -543.18 L511.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -557.88 L441.90 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -557.88 L441.90 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -543.18 L444.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -543.18 L444.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -557.88 L384.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -557.88 L384.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -543.18 L388.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -543.18 L388.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -464.88 L639.48 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -464.88 L639.48 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -450.18 L642.54 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -450.18 L642.54 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -464.88 L507.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -464.88 L507.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -450.18 L511.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -450.18 L511.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -464.88 L441.90 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -464.88 L441.90 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -450.18 L444.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -450.18 L444.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -464.88 L384.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -464.88 L384.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -450.18 L388.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -450.18 L388.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -513.78 L712.80 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -513.78 L712.80 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -499.14 L715.86 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -499.14 L715.86 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -557.88 L574.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -557.88 L574.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -543.18 L577.08 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -543.18 L577.08 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -557.88 L507.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -557.88 L507.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -543.18 L511.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -543.18 L511.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -557.88 L441.90 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -557.88 L441.90 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -543.18 L444.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -543.18 L444.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -557.88 L384.96 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -557.88 L384.96 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -543.18 L388.02 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -543.18 L388.02 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -464.88 L639.48 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -464.88 L639.48 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -450.18 L642.54 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -450.18 L642.54 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -464.88 L507.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -464.88 L507.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M507.96 -450.18 L511.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M511.02 -450.18 L511.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -464.88 L441.90 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -464.88 L441.90 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M441.90 -450.18 L444.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M444.96 -450.18 L444.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -464.88 L384.96 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -464.88 L384.96 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M384.96 -450.18 L388.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M388.02 -450.18 L388.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -513.78 L712.80 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -513.78 L712.80 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -499.14 L715.86 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -499.14 L715.86 -513.78" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M518.22 -498.78 L516.84 -498.78 L515.40 -498.60 L514.02 -498.12 L512.76 -497.52 L511.62 -496.68 L510.60 -495.66 L509.76 -494.46 L509.16 -493.20 L508.74 -491.82 L508.50 -490.44" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M517.32 -489.96 L508.50 -489.96" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M517.32 -490.44 L508.50 -490.44" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="col" d="M577.08 -464.88 L574.02 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -464.88 L574.02 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M574.02 -450.18 L577.08 -450.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M577.08 -450.18 L577.08 -464.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.80 -547.56 L712.80 -532.80" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -502.20 L639.48 -554.82" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M641.46 -516.30 L641.46 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M652.14 -532.80 L652.14 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M653.58 -532.80 L653.58 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M663.54 -532.80 L663.54 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M664.98 -532.80 L664.98 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -547.56 L675.66 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M642.54 -550.62 L712.80 -550.62" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M679.74 -547.56 L690.06 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M691.50 -547.56 L701.04 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M702.54 -547.56 L712.80 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.90 -502.20 L669.96 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M675.66 -516.30 L675.66 -531.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M675.66 -532.80 L675.66 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M679.74 -514.32 L679.74 -534.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M679.74 -532.80 L679.74 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M691.50 -532.80 L691.50 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M690.06 -532.80 L690.06 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M701.04 -532.80 L701.04 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M702.54 -532.80 L702.54 -547.56" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M655.56 -516.30 L675.66 -516.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M655.50 -515.10 L655.56 -516.66 L655.38 -518.28 L655.02 -519.84 L654.42 -521.34 L653.64 -522.72 L652.68 -524.04 L651.54 -525.18 L650.28 -526.14 L648.90 -526.98 L647.40 -527.58 L645.84 -528.00 L644.28 -528.18" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M643.68 -516.30 L643.68 -528.18" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M644.28 -516.30 L644.28 -528.18" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M650.16 -531.30 L654.90 -531.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M662.28 -531.30 L666.24 -531.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M659.41 -541.47 C660.49 -542.52 660.60 -544.22 659.66 -545.39" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M658.18 -545.39 C657.24 -544.22 657.35 -542.52 658.43 -541.47" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M659.98 -540.62 C660.79 -541.32 661.27 -542.32 661.32 -543.39 C661.37 -544.45 660.98 -545.49 660.25 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M660.28 -546.27 C659.43 -546.63 658.47 -546.63 657.62 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M657.59 -546.27 C656.86 -545.49 656.47 -544.45 656.52 -543.39 C656.57 -542.32 657.05 -541.32 657.86 -540.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M656.70 -544.62 L656.70 -547.56 L661.20 -547.56 L661.20 -544.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M642.54 -537.78 L642.54 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M642.30 -532.26 L642.78 -532.26 L642.78 -537.78 L642.30 -537.78 L642.30 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M650.16 -531.33 C650.16 -535.42 646.84 -538.74 642.75 -538.74" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M654.66 -537.78 L654.66 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M654.42 -532.26 L654.90 -532.26 L654.90 -537.78 L654.42 -537.78 L654.42 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M662.28 -531.33 C662.28 -535.42 658.96 -538.74 654.87 -538.74" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M666.00 -537.78 L666.00 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M665.82 -532.26 L666.24 -532.26 L666.24 -537.78 L665.82 -537.78 L665.82 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M673.62 -531.33 C673.62 -535.42 670.30 -538.74 666.21 -538.74" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M655.80 -522.36 L675.54 -522.36" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M655.80 -522.36 L655.80 -516.36" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M688.44 -531.30 L692.82 -531.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M700.20 -531.30 L703.80 -531.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M680.82 -537.78 L680.82 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M680.58 -532.26 L681.06 -532.26 L681.06 -537.78 L680.58 -537.78 L680.58 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M688.44 -531.33 C688.44 -535.42 685.12 -538.74 681.03 -538.74" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M692.58 -537.78 L692.58 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M692.34 -532.26 L692.82 -532.26 L692.82 -537.78 L692.34 -537.78 L692.34 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M700.20 -531.33 C700.20 -535.42 696.88 -538.74 692.79 -538.74" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M703.56 -537.78 L703.56 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M703.32 -532.26 L703.80 -532.26 L703.80 -537.78 L703.32 -537.78 L703.32 -532.26" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M711.18 -531.33 C711.18 -535.42 707.86 -538.74 703.77 -538.74" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="col" d="M715.86 -557.88 L712.80 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -557.88 L712.80 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -543.18 L715.86 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -543.18 L715.86 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -557.88 L639.48 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -557.88 L639.48 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -543.18 L642.54 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -543.18 L642.54 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M679.74 -502.20 L712.80 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M669.96 -502.20 L676.68 -502.20" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M692.70 -508.44 L712.80 -508.44" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M692.64 -508.44 L692.64 -502.38" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M712.80 -508.44 L712.80 -502.20" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M677.94 -502.56 L689.82 -502.56" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M677.94 -503.16 L689.82 -503.16" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M655.50 -515.10 L679.74 -515.10" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -557.88 L712.80 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -557.88 L712.80 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -543.18 L715.86 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -543.18 L715.86 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -557.88 L712.80 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -557.88 L712.80 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -543.18 L715.86 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -543.18 L715.86 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -557.88 L639.48 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -557.88 L639.48 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -543.18 L642.54 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -543.18 L642.54 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -557.88 L712.80 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -557.88 L712.80 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -543.18 L715.86 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -543.18 L715.86 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -557.88 L639.48 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -557.88 L639.48 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -543.18 L642.54 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -543.18 L642.54 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -557.88 L712.80 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -557.88 L712.80 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M712.80 -543.18 L715.86 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M715.86 -543.18 L715.86 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -557.88 L639.48 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -557.88 L639.48 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M639.48 -543.18 L642.54 -543.18" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="col" d="M642.54 -543.18 L642.54 -557.88" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M692.58 -508.44 L712.68 -508.44" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M692.58 -508.44 L692.58 -502.38" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M715.86 -557.88 L715.86 -313.08" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.44 -434.58 L712.80 -316.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M702.48 -455.94 L681.00 -455.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.00 -455.94 L681.00 -440.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.00 -440.94 L702.48 -440.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M702.48 -440.94 L702.48 -455.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M701.94 -455.40 L681.54 -455.40" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -455.40 L681.54 -441.48" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M703.26 -452.58 L703.26 -444.00" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M704.28 -444.00 L704.28 -452.58" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -441.48 L701.94 -455.40" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -454.86 L701.16 -454.86" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -454.38 L700.44 -454.38" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -453.72 L699.54 -453.72" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -453.24 L698.82 -453.24" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -452.76 L698.10 -452.76" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -452.28 L697.38 -452.28" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -451.62 L696.42 -451.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -451.14 L695.70 -451.14" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -450.66 L695.04 -450.66" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -450.00 L694.08 -450.00" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -449.52 L693.36 -449.52" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -449.04 L692.64 -449.04" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -448.38 L691.68 -448.38" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -447.90 L690.96 -447.90" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -447.42 L690.24 -447.42" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -446.76 L689.34 -446.76" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -446.28 L688.62 -446.28" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -441.48 L701.94 -441.48" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M701.94 -441.48 L701.94 -455.40" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -445.80 L687.90 -445.80" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M681.54 -445.14 L686.94 -445.14" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M680.46 -454.50 L680.52 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M704.76 -437.58 L705.00 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M707.82 -437.58 L708.06 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M708.06 -462.06 L715.86 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -437.58 L678.90 -437.58" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M680.70 -437.58 L704.76 -437.58" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M707.82 -437.58 L715.86 -437.58" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M669.78 -434.70 L712.44 -434.58" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M680.70 -437.58 L680.70 -442.26" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M678.90 -442.26 L678.90 -437.58" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M678.60 -454.50 L678.72 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M590.04 -472.80 L639.48 -472.80" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M639.48 -472.80 L639.48 -428.76" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M639.48 -428.76 L577.08 -428.76" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M577.08 -428.76 L577.08 -472.80" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.44 -472.80 L580.44 -465.06" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.41 -465.06 C583.18 -465.09 585.82 -466.28 587.68 -468.33 C589.55 -470.38 590.48 -473.12 590.25 -475.88" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M580.44 -502.20 L580.44 -509.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M590.18 -499.15 C590.44 -501.91 589.52 -504.65 587.66 -506.70 C585.80 -508.75 583.16 -509.93 580.39 -509.94" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M675.66 -531.30 L675.66 -516.30" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M675.66 -516.30 L655.56 -516.30" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M641.46 -516.30 L641.46 -531.30" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M643.68 -516.30 L643.68 -528.18" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M655.51 -515.14 C655.82 -518.49 654.72 -521.82 652.46 -524.31 C650.20 -526.80 646.99 -528.23 643.63 -528.24" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M641.46 -516.30 L641.46 -531.30" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M669.78 -366.36 L666.72 -366.36" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M659.40 -358.44 L659.40 -350.52" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M649.54 -361.31 C649.28 -358.56 650.20 -355.81 652.06 -353.76 C653.92 -351.71 656.56 -350.53 659.33 -350.52" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M649.74 -358.44 L639.48 -358.44" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M649.69 -358.50 C650.62 -353.88 654.66 -350.55 659.36 -350.52" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M558.24 -361.14 L523.50 -295.86" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.98 -464.94 L712.80 -499.14" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M666.72 -462.06 L678.72 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M680.52 -462.06 L705.00 -462.06" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M712.80 -513.78 L712.80 -531.30" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="thin" d="M642.54 -550.62 L712.80 -550.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M712.80 -547.56 L642.54 -547.56" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M715.80 -543.18 L715.80 -513.78" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M712.80 -513.78 L712.80 -543.18" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M647.23 -541.47 C648.31 -542.52 648.42 -544.22 647.48 -545.39" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M646.06 -545.39 C645.12 -544.22 645.23 -542.52 646.31 -541.47" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M647.80 -540.62 C648.61 -541.32 649.09 -542.32 649.14 -543.39 C649.19 -544.45 648.80 -545.49 648.07 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M648.10 -546.27 C647.25 -546.63 646.29 -546.63 645.44 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M645.47 -546.27 C644.74 -545.49 644.35 -544.45 644.40 -543.39 C644.45 -542.32 644.93 -541.32 645.74 -540.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M644.58 -544.62 L644.58 -547.56 L649.02 -547.56 L649.02 -544.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M670.81 -541.47 C671.89 -542.52 672.00 -544.22 671.06 -545.39" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M669.58 -545.39 C668.64 -544.22 668.75 -542.52 669.83 -541.47" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M671.38 -540.62 C672.19 -541.32 672.67 -542.32 672.72 -543.39 C672.77 -544.45 672.38 -545.49 671.65 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M671.68 -546.27 C670.83 -546.63 669.87 -546.63 669.02 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M668.99 -546.27 C668.26 -545.49 667.87 -544.45 667.92 -543.39 C667.97 -542.32 668.45 -541.32 669.26 -540.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M668.10 -544.62 L668.10 -547.56 L672.60 -547.56 L672.60 -544.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M685.33 -541.47 C686.41 -542.52 686.52 -544.22 685.58 -545.39" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M684.16 -545.39 C683.22 -544.22 683.33 -542.52 684.41 -541.47" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M685.90 -540.62 C686.71 -541.32 687.19 -542.32 687.24 -543.39 C687.29 -544.45 686.90 -545.49 686.17 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M686.20 -546.27 C685.35 -546.63 684.39 -546.63 683.54 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M683.57 -546.27 C682.84 -545.49 682.45 -544.45 682.50 -543.39 C682.55 -542.32 683.03 -541.32 683.84 -540.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M682.68 -544.62 L682.68 -547.56 L687.12 -547.56 L687.12 -544.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M696.73 -541.47 C697.81 -542.52 697.92 -544.22 696.98 -545.39" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M695.50 -545.39 C694.56 -544.22 694.67 -542.52 695.75 -541.47" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M697.30 -540.62 C698.11 -541.32 698.59 -542.32 698.64 -543.39 C698.69 -544.45 698.30 -545.49 697.57 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M697.54 -546.27 C696.69 -546.63 695.73 -546.63 694.88 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M694.91 -546.27 C694.18 -545.49 693.79 -544.45 693.84 -543.39 C693.89 -542.32 694.37 -541.32 695.18 -540.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M694.02 -544.62 L694.02 -547.56 L698.52 -547.56 L698.52 -544.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M708.13 -541.47 C709.21 -542.52 709.32 -544.22 708.38 -545.39" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M706.90 -545.39 C705.96 -544.22 706.07 -542.52 707.15 -541.47" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M708.70 -540.62 C709.51 -541.32 709.99 -542.32 710.04 -543.39 C710.09 -544.45 709.70 -545.49 708.97 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M709.00 -546.27 C708.15 -546.63 707.19 -546.63 706.34 -546.27" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M706.31 -546.27 C705.58 -545.49 705.19 -544.45 705.24 -543.39 C705.29 -542.32 705.77 -541.32 706.58 -540.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="thin" d="M705.42 -544.62 L705.42 -547.56 L709.92 -547.56 L709.92 -544.62" fill="none" stroke="var(--plan-thin)" stroke-width="0.263"/>
+<path class="wall" d="M642.54 -367.92 L642.54 -361.32" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+<path class="wall" d="M639.48 -367.92 L639.48 -358.44" fill="none" stroke="var(--plan-wall)" stroke-width="0.482"/>
+</svg>

@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>nurv — Investor Brochure — Jalour Developments</title>
+<!--
+  nurv investor brochure — editable source.
+  Layout follows the Jalour Company Profile template: 1980 x 1080 pt, black ground,
+  running header "JALOUR / title / 2026" at y≈21 pt, 50 pt side margins, numbered openers
+  (80 pt number top-left, 80 pt caps title bottom-left), body column from x = 860 pt.
+  Double-brace tokens are replaced by build.py with inline SVG (logos, plans, map).
+  Fonts: Inter Tight (SIL OFL) as the approved fallback for Aeonik.
+-->
+<style>
+@font-face{font-family:"Inter Tight";font-weight:300;src:url(../fonts/inter-tight-300.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:400;src:url(../fonts/inter-tight-400.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:500;src:url(../fonts/inter-tight-500.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:600;src:url(../fonts/inter-tight-600.woff2) format("woff2")}
+
+:root{
+  --bg:#000; --fg:#fff; --body:#C9CDD3; --mute:#8B929C; --faint:#5C636D; --rule:#272B31;
+  --blue:#4282BC;            /* Jalour template blue (sampled from template imagery) */
+  --accent:#F47A1E;          /* nurv. accent (sampled from DMK wordmark dot) — used sparingly */
+  --panel:#0B0D10;
+  --map-bg:#0B0D10; --map-zone:#17222E; --map-road:#2C323A; --map-label:#7E8794;
+  --map-focus:#4282BC; --map-focus-fill:rgba(66,130,188,.16); --map-focus-label:#DCE6F0; --map-site-label:#fff;
+}
+@page{size:1980pt 1080pt;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{font-family:"Inter Tight",sans-serif;color:var(--fg);-webkit-font-smoothing:antialiased;font-kerning:normal}
+.page{width:1980pt;height:1080pt;position:relative;overflow:hidden;background:var(--bg);break-after:page}
+.page:last-child{break-after:auto}
+
+/* running header — positions measured from the template */
+.hdr{position:absolute;top:20.7pt;left:50pt;right:50pt;height:16pt;font-size:13pt;line-height:16pt;letter-spacing:.06em;text-transform:uppercase;color:var(--fg)}
+.hdr span{position:absolute;top:0}
+.hdr .a{left:0}.hdr .b{left:230.6pt}.hdr .c{right:0}
+
+/* footer — identical on every page */
+.ftr{position:absolute;left:50pt;right:50pt;bottom:26pt;height:16pt;display:flex;align-items:center;gap:28pt;color:var(--mute);font-size:10.5pt;letter-spacing:.02em}
+.ftr .logo{height:13pt;width:auto;color:var(--fg);flex:none}
+.ftr .logo svg{height:13pt;width:auto;display:block}
+.ftr .legal{flex:1}
+.ftr .pg{font-size:13pt;color:var(--fg);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+
+/* opener elements */
+.num{position:absolute;left:50pt;top:104pt;font-size:80pt;line-height:1;font-weight:400;letter-spacing:.02em}
+.title{position:absolute;left:50pt;bottom:56pt;font-size:80pt;line-height:.9;font-weight:400;letter-spacing:.07em;text-transform:uppercase;max-width:1100pt}
+.title.sm{font-size:64pt}
+.col{position:absolute;left:860pt;right:50pt;top:129pt}
+.lead{font-size:30pt;line-height:1.3;font-weight:400;color:var(--fg);margin-bottom:26pt;letter-spacing:-.005em}
+p{font-size:22pt;line-height:1.5;color:var(--body);margin-bottom:18pt;font-weight:300}
+p strong{font-weight:500;color:var(--fg)}
+.kicker{font-size:15pt;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14pt;font-weight:500}
+.rule{height:1px;background:var(--rule)}
+
+img.ph{display:block;object-fit:cover}
+.cap{font-size:11pt;color:var(--faint);margin-top:8pt;letter-spacing:.02em}
+
+/* facts lists */
+.facts{border-top:1px solid var(--rule)}
+.facts .r{display:flex;justify-content:space-between;align-items:baseline;padding:13pt 0;border-bottom:1px solid var(--rule);font-size:20pt;gap:24pt}
+.facts .k{color:var(--mute);font-weight:300}
+.facts .v{color:var(--fg);text-align:right;font-weight:400}
+.tbc{color:var(--accent);font-weight:400}
+.tbc::before{content:"Placeholder · ";color:var(--mute);font-weight:300}
+.sfa{color:var(--fg)}
+
+/* contents */
+.toc{list-style:none}
+.toc li{display:flex;gap:40pt;font-size:26pt;line-height:1;padding:16pt 0;border-bottom:1px solid var(--rule);font-weight:300;color:var(--body)}
+.toc li b{font-weight:400;color:var(--blue);width:52pt;flex:none}
+.toc li i{font-style:normal;margin-left:auto;color:var(--faint);font-size:18pt}
+
+/* level pages */
+.lv-tag{position:absolute;left:50pt;top:117pt;font-size:15pt;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:500}
+.lv-name{position:absolute;left:50pt;top:150pt;font-size:64pt;line-height:1;letter-spacing:.07em;text-transform:uppercase}
+.lv-concept{position:absolute;left:50pt;top:236pt;width:700pt;font-size:32pt;line-height:1.2;font-weight:400}
+.lv-text{position:absolute;left:50pt;top:300pt;width:690pt}
+.lv-text p{font-size:21pt}
+.lv-facts{position:absolute;left:50pt;width:690pt}
+.lv-img{position:absolute;left:50pt;width:690pt;bottom:84pt}
+.planbox{position:absolute;left:820pt;right:50pt;top:96pt;bottom:84pt;background:var(--panel)}
+.planbox .inner{position:absolute;inset:34pt 40pt 56pt 40pt}
+.planbox svg.plan{position:absolute;inset:0;width:100%;height:100%}
+.planbox .pl-cap{position:absolute;left:40pt;bottom:20pt;font-size:12pt;color:var(--faint);letter-spacing:.03em}
+.planbox .pl-name{position:absolute;right:40pt;bottom:20pt;font-size:12pt;color:var(--mute);letter-spacing:.14em;text-transform:uppercase}
+.lbl{position:absolute;transform:translate(-50%,-50%);font-size:12.5pt;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);background:var(--panel);padding:2pt 7pt;border:1px solid #3A4048;white-space:nowrap}
+.lbl.blue{border-color:var(--blue)}
+.placeholder{position:absolute;inset:34pt 40pt 56pt 40pt;border:1.5px dashed #3A4048;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14pt}
+.placeholder .t{font-size:30pt;font-weight:400;letter-spacing:.02em}
+.placeholder .s{font-size:18pt;color:var(--mute);font-weight:300;max-width:640pt;line-height:1.45}
+.placeholder .badge{font-size:13pt;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:4pt 10pt}
+
+/* glance */
+.gl{width:100%;border-collapse:collapse}
+.gl th{font-size:14pt;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:400;text-align:left;padding:0 0 14pt;border-bottom:1px solid #3A4048}
+.gl td{font-size:20pt;padding:15pt 18pt 15pt 0;border-bottom:1px solid var(--rule);vertical-align:top;font-weight:300;color:var(--body)}
+.gl td:first-child{color:var(--fg);font-weight:400;width:230pt}
+.gl td.n{white-space:nowrap}
+.gl .sfa{font-size:15pt;display:block;color:var(--mute);margin-top:4pt}
+.stack{position:absolute;left:50pt;top:300pt;width:520pt}
+.stack .lvl{display:flex;align-items:center;border:1px solid #3A4048;border-bottom:none;padding:0 18pt;font-size:15pt;letter-spacing:.1em;text-transform:uppercase;color:var(--body)}
+.stack .lvl:last-child{border-bottom:1px solid #3A4048}
+.stack .lvl span{margin-left:auto;color:var(--mute);letter-spacing:.04em;text-transform:none}
+.stack .lvl.roof{border-style:dashed;color:var(--fg)}
+.stack .lvl.third{border-style:dashed}
+.stack .lvl.gf{background:rgba(66,130,188,.10)}
+.stack .lvl.bs{background:#0B0D10}
+.stack .grade{height:0;border-top:2px solid var(--blue)}
+
+/* spec */
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:34pt 56pt}
+.spec h4{font-size:15pt;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:500;padding-bottom:12pt;border-bottom:1px solid #3A4048;margin-bottom:4pt}
+.spec ul{list-style:none}
+.spec li{font-size:19pt;line-height:1.35;padding:9pt 0;border-bottom:1px solid var(--rule);color:var(--body);font-weight:300}
+
+/* why */
+.why{list-style:none;counter-reset:w}
+.why li{display:grid;grid-template-columns:70pt 1fr;padding:17pt 0;border-bottom:1px solid var(--rule);counter-increment:w}
+.why li::before{content:counter(w,decimal-leading-zero);font-size:20pt;color:var(--blue);padding-top:3pt}
+.why b{display:block;font-size:24pt;font-weight:400;color:var(--fg);margin-bottom:5pt}
+.why span{font-size:19pt;line-height:1.4;color:var(--body);font-weight:300}
+
+.bullets{list-style:none;margin-top:8pt}
+.bullets li{font-size:20pt;line-height:1.35;padding:11pt 0 11pt 26pt;border-bottom:1px solid var(--rule);color:var(--body);position:relative;font-weight:300}
+.bullets li::before{content:"";position:absolute;left:0;top:22pt;width:10pt;height:1px;background:var(--blue)}
+
+/* cover */
+.cover-mark{position:absolute;left:50pt;top:330pt;width:600pt;color:var(--fg)}
+.cover-mark svg{width:100%;height:auto;display:block}
+.cover-sub{position:absolute;left:50pt;top:520pt;font-size:34pt;line-height:1.3;font-weight:300;color:var(--fg)}
+.cover-sub .k{display:block;font-size:16pt;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:16pt}
+.cover-by{position:absolute;left:50pt;bottom:96pt;font-size:16pt;line-height:1.55;color:var(--mute);font-weight:300}
+.cover-by b{color:var(--fg);font-weight:400}
+.cover-img{position:absolute;left:1102pt;top:60pt;width:828pt;height:960pt}
+
+/* map */
+.mapbox{position:absolute;left:860pt;top:110pt;width:1070pt}
+.mapbox svg.map{display:block;width:1070pt;height:713pt}
+.mapnote{font-size:11pt;color:var(--faint);margin-top:8pt}
+.kv{display:grid;grid-template-columns:repeat(4,1fr);gap:0 28pt;position:absolute;left:860pt;right:50pt;bottom:96pt}
+.kv div{border-top:1px solid #3A4048;padding-top:12pt}
+.kv b{display:block;font-size:30pt;font-weight:400;color:var(--fg);margin-bottom:6pt;letter-spacing:-.01em}
+.kv span{font-size:15pt;color:var(--mute);line-height:1.35;display:block;font-weight:300}
+
+.logos{display:flex;align-items:center;gap:70pt}
+.logos .lg{color:var(--fg)}
+.mlogo{height:64pt;color:var(--fg);margin-bottom:34pt}
+.mlogo svg{height:100%;width:auto;display:block}
+.logos svg{display:block;height:100%;width:auto}
+.contact{font-size:30pt;line-height:1.5;font-weight:300;color:var(--body)}
+.contact .nm{font-size:44pt;font-weight:400;color:var(--fg);line-height:1.15}
+.contact .role{color:var(--fg);font-weight:400}
+.contact a{color:var(--fg);text-decoration:none}
+.legalbox{border:1.5px dashed #3A4048;padding:30pt 34pt}
+.legalbox .badge{display:inline-block;font-size:13pt;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:4pt 10pt;margin-bottom:22pt}
+.legalbox p{font-size:20pt}
+</style>
+</head>
+<body>
+
+<!-- ============ 01 COVER ============ -->
+<section class="page" id="p-cover">
+  {{HEADER}}
+  <div class="cover-mark">{{NURV_LOGO}}</div>
+  <div class="cover-sub"><span class="k">El Sherouk, Cairo</span>A mixed-use commercial development</div>
+  <div class="cover-by"><b>Developed by</b> Jalour Developments, Al Jalal Holding<br><b>Managed by</b> Meadis Group</div>
+  <img class="ph cover-img" src="../assets/img/cover.jpg" alt="nurv, evening view of the ground-floor dining frontage and nurv. sign">
+  {{FOOTER}}
+</section>
+
+<!-- ============ CONTENTS ============ -->
+<section class="page" id="p-contents">
+  {{HEADER}}
+  <div class="col" style="top:117pt">
+    <ul class="toc">
+      <li><b>01</b>About Jalour<i>03</i></li>
+      <li><b>02</b>Vision and Positioning<i>04</i></li>
+      <li><b>03</b>Location<i>05</i></li>
+      <li><b>04</b>nurv at a Glance<i>06</i></li>
+      <li><b>05</b>Level by Level<i>07</i></li>
+      <li><b>06</b>Design and Specification<i>13</i></li>
+      <li><b>07</b>Why nurv<i>14</i></li>
+      <li><b>08</b>Management and Operations<i>15</i></li>
+      <li><b>09</b>Developer Credentials<i>16</i></li>
+      <li><b>&nbsp;</b>Legal Notice<i>17</i></li>
+      <li><b>&nbsp;</b>Contact<i>18</i></li>
+    </ul>
+  </div>
+  <div class="title">Contents</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 01 ABOUT JALOUR ============ -->
+<section class="page" id="p-about">
+  {{HEADER}}
+  <div class="num">01</div>
+  <div class="col">
+    <p class="lead">Jalour Developments is the development arm of Al Jalal Holding, an Egyptian real estate group specialising in commercial and administrative property.</p>
+    <p>Since its establishment in 1985, the Group has delivered residential, administrative, commercial and industrial projects in Egypt and beyond.</p>
+    <p>Under the Jalour platform, the Group brings development, project delivery and property management together in one corporate structure, with a focus on quality of delivery and long-term stewardship of the assets it creates.</p>
+  </div>
+  <div class="title">About Jalour</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 02 VISION ============ -->
+<section class="page" id="p-vision">
+  {{HEADER}}
+  <div class="num">02</div>
+  <div class="col">
+    <p class="lead">A new commercial address for El Sherouk.</p>
+    <p>nurv is conceived as a curated destination for dining, lifestyle, wellness and everyday retail: a place people choose to visit, not simply pass through. The building is planned floor by floor, so that each level has a clear purpose and the whole reads as one unified offer.</p>
+    <p>The positioning is upscale and calm: clean architecture, generous glazing, an open public plaza and a rooftop running track that gives the building an identity of its own.</p>
+  </div>
+  <img class="ph" src="../assets/img/vision.jpg" alt="nurv, daytime view of the glazed façade and plaza" style="position:absolute;left:860pt;top:590pt;width:1011pt;height:390pt;object-position:50% 40%">
+  <div class="title">Vision and<br>Positioning</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 03 LOCATION ============ -->
+<section class="page" id="p-location">
+  {{HEADER}}
+  <div class="num">03</div>
+  <div style="position:absolute;left:50pt;top:240pt;width:700pt">
+    <p class="lead">El Sherouk, with main-road visibility.</p>
+    <p>nurv sits in El Sherouk, on a plot with main-road visibility and walkable access to the main road. An established residential catchment surrounds the site.</p>
+    <p style="font-size:16pt;color:var(--mute)">Site coordinates: 30.126386, 31.627335</p>
+  </div>
+  <div class="mapbox">{{MAP}}<div class="mapnote">Schematic map redrawn from the project sales material. Indicative only; not to scale.</div></div>
+  <div class="kv">
+    <div><b>30–40 m</b><span>Road frontage, approximately</span></div>
+    <div><b>0.6 km</b><span>La Vista CASA residential compound, approximately</span></div>
+    <div><b>0.8 km</b><span>Street Side Mall, approximately</span></div>
+    <div><b>Walkable</b><span>Access to the main road for pedestrians and vehicles</span></div>
+  </div>
+  <div class="title">Location</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 04 AT A GLANCE ============ -->
+<section class="page" id="p-glance">
+  {{HEADER}}
+  <div class="num">04</div>
+  <div class="stack">
+    <div class="lvl roof" style="height:52pt">Rooftop · On-Air Track</div>
+    <div class="lvl third" style="height:76pt">Third floor · Subject to final approvals.<span>4 m</span></div>
+    <div class="lvl" style="height:76pt">Second floor<span>4 m</span></div>
+    <div class="lvl" style="height:76pt">First floor<span>4 m</span></div>
+    <div class="lvl gf" style="height:95pt">Ground floor<span>5 m</span></div>
+    <div class="grade"></div>
+    <div class="lvl bs" style="height:76pt">Basement<span>4 m</span></div>
+    <p style="font-size:13pt;color:var(--faint);margin-top:12pt">Schematic stacking; floor heights drawn to scale.</p>
+  </div>
+  <div class="col" style="top:117pt">
+    <table class="gl">
+      <thead><tr><th>Level</th><th>Concept</th><th>Gross area (BUA)</th><th>Floor height</th></tr></thead>
+      <tbody>
+        <tr><td>Rooftop</td><td>On-Air Track</td><td><span class="tbc">to be confirmed</span></td><td>—</td></tr>
+        <tr><td>Third floor</td><td>Flexible level<span class="sfa">Subject to final approvals.</span></td><td class="n">675 sqm<span class="sfa">Subject to final approvals.</span></td><td>4 m</td></tr>
+        <tr><td>Second floor</td><td>The Wellness Arena</td><td class="n">675 sqm</td><td>4 m</td></tr>
+        <tr><td>First floor</td><td>Lifestyle and Shopping</td><td class="n">675 sqm</td><td>4 m</td></tr>
+        <tr><td>Ground floor</td><td>The Dining Experience</td><td class="n">675 sqm</td><td>5 m</td></tr>
+        <tr><td>Basement</td><td>Loading, deliveries and building services</td><td><span class="tbc">to be confirmed</span></td><td>4 m</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:17pt;color:var(--mute);margin-top:22pt">Approximately 11 units per floor on the ground, first and second floors (approximate; the structural grid allows units to be combined or subdivided). Tenant mix is a planned curation and is indicative.</p>
+  </div>
+  <div class="title">nurv at<br>a Glance</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 05 BASEMENT ============ -->
+<section class="page level" id="p-basement">
+  {{HEADER}}
+  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-name">Basement</div>
+  <div class="lv-concept">Loading, deliveries and building services</div>
+  <div class="lv-text">
+    <p>The basement concentrates the building's back-of-house. All loading and deliveries are routed here, kept separate from the customer entrance, and waste is collected by chute to a dedicated basement waste room.</p>
+  </div>
+  <div class="lv-facts facts" style="top:560pt">
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v tbc">to be confirmed</span></div>
+    <div class="r"><span class="k">Floor height</span><span class="v">4 m</span></div>
+    <div class="r"><span class="k">Use</span><span class="v">Loading, deliveries, services</span></div>
+  </div>
+  <div class="planbox"><div class="inner">{{PLAN1}}
+    <div class="lbl" style="left:80.5%;top:32%">Stairs</div>
+    <div class="lbl" style="left:80.5%;top:41%">Elevator</div>
+    <div class="lbl blue" style="left:92%;top:60%">Vehicle ramp</div>
+    <div class="lbl blue" style="left:42%;top:56%">Loading and deliveries</div>
+  </div><div class="pl-cap">Plan redrawn from architectural drawings. Indicative; not to scale.</div><div class="pl-name">Basement</div></div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 05 GROUND ============ -->
+<section class="page level" id="p-ground">
+  {{HEADER}}
+  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-name">Ground Floor</div>
+  <div class="lv-concept">The Dining Experience</div>
+  <div class="lv-text">
+    <p>The ground floor is planned for food and beverage, the use that generates footfall and animates the plaza. With a 5 m floor height and purpose-built F&amp;B infrastructure built into the building, the level is set up for dining operators from the outset.</p>
+  </div>
+  <div class="lv-facts facts" style="top:518pt">
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v">675 sqm</span></div>
+    <div class="r"><span class="k">Floor height</span><span class="v">5 m</span></div>
+    <div class="r"><span class="k">Units</span><span class="v">Approximately 11</span></div>
+  </div>
+  <img class="ph lv-img" src="../assets/img/ground.jpg" alt="Dining terrace at ground level" style="height:255pt">
+  <div class="planbox"><div class="inner">{{PLAN2}}
+    <div class="lbl" style="left:80.5%;top:30%">Stairs</div>
+    <div class="lbl" style="left:80.5%;top:39%">Elevator</div>
+    <div class="lbl blue" style="left:30%;top:72%">Plaza</div>
+    <div class="lbl blue" style="left:93%;top:46%">Ramp to loading</div>
+    <div class="lbl blue" style="left:90%;top:84%">Outdoor parking</div>
+  </div><div class="pl-cap">Plan redrawn from architectural drawings. Indicative; not to scale.</div><div class="pl-name">Ground floor</div></div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 05 FIRST ============ -->
+<section class="page level" id="p-first">
+  {{HEADER}}
+  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-name">First Floor</div>
+  <div class="lv-concept">Lifestyle and Shopping</div>
+  <div class="lv-text">
+    <p>The first floor is curated for home comfort and lifestyle retail: a considered shopping level that complements the dining below and the wellness offer above.</p>
+  </div>
+  <div class="lv-facts facts" style="top:480pt">
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v">675 sqm</span></div>
+    <div class="r"><span class="k">Floor height</span><span class="v">4 m</span></div>
+    <div class="r"><span class="k">Units</span><span class="v">Approximately 11</span></div>
+  </div>
+  <img class="ph lv-img" src="../assets/img/first.jpg" alt="Upper-floor glazing" style="height:294pt">
+  <div class="planbox"><div class="inner">{{PLAN3}}
+    <div class="lbl" style="left:82%;top:27%">Stairs</div>
+    <div class="lbl" style="left:82%;top:36%">Elevator</div>
+  </div><div class="pl-cap">Plan redrawn from architectural drawings. Indicative; not to scale.</div><div class="pl-name">First floor</div></div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 05 SECOND ============ -->
+<section class="page level" id="p-second">
+  {{HEADER}}
+  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-name">Second Floor</div>
+  <div class="lv-concept">The Wellness Arena</div>
+  <div class="lv-text">
+    <p>The Wellness Arena brings fitness, treatment and wellbeing together on one level, conceived as a calm retreat from the street and connected naturally with the rooftop track above.</p>
+  </div>
+  <div class="lv-facts facts" style="top:480pt">
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v">675 sqm</span></div>
+    <div class="r"><span class="k">Floor height</span><span class="v">4 m</span></div>
+    <div class="r"><span class="k">Units</span><span class="v">Approximately 11</span></div>
+  </div>
+  <img class="ph lv-img" src="../assets/img/second.jpg" alt="Wellness studio interior" style="height:294pt">
+  <div class="planbox"><div class="inner">{{PLAN4}}
+    <div class="lbl" style="left:82%;top:27%">Stairs</div>
+    <div class="lbl" style="left:82%;top:36%">Elevator</div>
+  </div><div class="pl-cap">Plan redrawn from architectural drawings. Indicative; not to scale.</div><div class="pl-name">Second floor</div></div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 05 THIRD ============ -->
+<section class="page level" id="p-third">
+  {{HEADER}}
+  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-name">Third Floor</div>
+  <div class="lv-concept">Subject to final approvals.</div>
+  <div class="lv-text">
+    <p>A third floor at the same footprint is planned. Subject to final approvals. It is intended as a flexible level, allocated between beauty clinics and co-working depending on demand.</p>
+  </div>
+  <div class="lv-facts facts" style="top:480pt">
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v">675 sqm · Subject to final approvals.</span></div>
+    <div class="r"><span class="k">Floor height</span><span class="v">4 m</span></div>
+    <div class="r"><span class="k">Planned use</span><span class="v">Beauty clinics or co-working</span></div>
+  </div>
+  <div class="planbox"><div class="placeholder">
+    <span class="badge">Placeholder</span>
+    <span class="t">Third floor plan to follow</span>
+    <span class="s">Subject to final approvals. Same footprint as the floors below.</span>
+  </div><div class="pl-name">Third floor · Subject to final approvals.</div></div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 05 ROOF ============ -->
+<section class="page level" id="p-roof">
+  {{HEADER}}
+  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-name">Rooftop</div>
+  <div class="lv-concept">On-Air Track</div>
+  <div class="lv-text">
+    <p>On-Air is a rubberised running track around the full perimeter of the rooftop, lit for evening use. It gives the building a recognisable landmark and extends the wellness offer into the open air.</p>
+  </div>
+  <div class="lv-facts facts" style="top:480pt">
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v tbc">to be confirmed</span></div>
+    <div class="r"><span class="k">Feature</span><span class="v">Perimeter running track, lit</span></div>
+  </div>
+  <img class="ph lv-img" src="../assets/img/roof.jpg" alt="Rooftop running track" style="height:340pt">
+  <div class="planbox"><div class="placeholder">
+    <span class="badge">Placeholder</span>
+    <span class="t">Roof plan to follow</span>
+    <span class="s">No roof plan has been issued. The track runs the full perimeter of the rooftop.</span>
+  </div><div class="pl-name">Rooftop</div></div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 06 DESIGN AND SPECIFICATION ============ -->
+<section class="page" id="p-spec">
+  {{HEADER}}
+  <div class="num">06</div>
+  <img class="ph" src="../assets/img/design.jpg" alt="nurv, evening view of the façade" style="position:absolute;left:50pt;top:230pt;width:710pt;height:473pt">
+  <div class="col" style="top:117pt">
+    <div class="spec">
+      <div><h4>Architecture</h4><ul>
+        <li>Predominantly glass curtain-wall façade</li>
+        <li>Outdoor plaza at the public frontage</li>
+        <li>Flexible structural grid for unit subdivision</li>
+        <li>Outdoor parking area</li>
+      </ul></div>
+      <div><h4>Building systems</h4><ul>
+        <li>Purpose-built F&amp;B infrastructure</li>
+        <li>Passenger elevator</li>
+        <li>Individual split-unit cooling per tenant</li>
+        <li>Backup generator</li>
+      </ul></div>
+      <div><h4>Operations</h4><ul>
+        <li>Chute-based, centralised waste management</li>
+        <li>Basement loading, separate from the customer entrance</li>
+        <li>Rubberised rooftop running track, lit for evening use</li>
+      </ul></div>
+      <div><h4>Safety and security</h4><ul>
+        <li>Sprinklers and smoke detection</li>
+        <li>Fire-rated escape stairs</li>
+        <li>Building-wide CCTV</li>
+        <li>24/7 staffed security</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="title">Design and<br>Specification</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 07 WHY NURV ============ -->
+<section class="page" id="p-why">
+  {{HEADER}}
+  <div class="num">07</div>
+  <div class="col" style="top:105pt">
+    <ul class="why">
+      <li><div><b>A clear destination identity</b><span>Floor-by-floor curation (dining, lifestyle retail and wellness) rather than unrelated tenancies.</span></div></li>
+      <li><div><b>Built for F&amp;B</b><span>Purpose-built food and beverage infrastructure, built into the building rather than retrofitted.</span></div></li>
+      <li><div><b>A landmark rooftop</b><span>The On-Air running track is a physical point of distinction for the building.</span></div></li>
+      <li><div><b>Operational discipline</b><span>Centralised waste management, separate basement loading and building-wide security.</span></div></li>
+      <li><div><b>Adaptable space</b><span>A flexible structural grid allows units to be combined or subdivided.</span></div></li>
+      <li><div><b>A visible location</b><span>Main-road frontage within an established El Sherouk residential catchment.</span></div></li>
+      <li><div><b>Professional management</b><span>Day-to-day operations by Meadis Group from opening, with regular reporting.</span></div></li>
+    </ul>
+  </div>
+  <div class="title">Why nurv</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 08 MANAGEMENT ============ -->
+<section class="page" id="p-mgmt">
+  {{HEADER}}
+  <div class="num">08</div>
+  <img class="ph" src="../assets/img/management.jpg" alt="nurv, completed building at dusk (still from the construction visualisation)" style="position:absolute;left:50pt;top:230pt;width:710pt;height:400pt">
+  <div class="col">
+    <div class="mlogo">{{MEADIS_LOGO}}</div>
+    <p class="lead">nurv is managed by Meadis Group, Jalour's retail and commercial expertise partner.</p>
+    <p>Management is structured as a permanent operating function from opening, covering day-to-day building operations, security, waste management and the tenant experience.</p>
+    <p>Tenant selection follows a planned curation process led by a dedicated tenant mix consultant, so that each floor holds to its intended concept.</p>
+    <ul class="bullets">
+      <li>Professional management by Meadis Group from opening</li>
+      <li>Planned, floor-by-floor tenant curation</li>
+      <li>Building-wide CCTV and 24/7 staffed security</li>
+      <li>Centralised waste management</li>
+      <li>Regular reporting</li>
+    </ul>
+  </div>
+  <div class="title">Management and<br>Operations</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 09 CREDENTIALS ============ -->
+<section class="page" id="p-cred">
+  {{HEADER}}
+  <div class="num">09</div>
+  <img class="ph" src="../assets/img/credentials.jpg" alt="Structural frame (still from the construction visualisation)" style="position:absolute;left:50pt;top:230pt;width:710pt;height:400pt">
+  <div class="col">
+    <p class="lead">Experience across residential, administrative, commercial and industrial development since 1985.</p>
+    <p>Selected work by Al Jalal Holding includes Nozha Towers in Heliopolis, the Amoun administrative building, the Katameya Business Complex and its later renovation, and a large-scale urban and agricultural development in North Sudan.</p>
+    <p>Under Jalour, that experience is organised into three specialised businesses:</p>
+    <div class="facts" style="margin-top:6pt">
+      <div class="r"><span class="v" style="text-align:left">Jalour Management</span><span class="k">Strategy, asset and operational management</span></div>
+      <div class="r"><span class="v" style="text-align:left">Jalour Works</span><span class="k">Project management, construction and delivery</span></div>
+      <div class="r"><span class="v" style="text-align:left">Jalour Developments</span><span class="k">Real estate development</span></div>
+    </div>
+  </div>
+  <div class="title">Developer<br>Credentials</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ LEGAL ============ -->
+<section class="page" id="p-legal">
+  {{HEADER}}
+  <div class="col">
+    <div class="legalbox">
+      <span class="badge">Placeholder · Approved legal text to be supplied</span>
+      <p>[APPROVED LEGAL DISCLAIMER TEXT TO BE INSERTED HERE]</p>
+      <p style="color:var(--mute);font-size:17pt;margin-top:24pt">Interim working text, to be replaced:</p>
+      <p>This brochure is provided for general information only. It does not constitute an offer, a solicitation or a contract. All visuals are artist's impressions. Plans, areas, specifications and the tenant mix are indicative and may change without notice. Third floor: Subject to final approvals.</p>
+    </div>
+  </div>
+  <div class="title">Legal Notice</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="page" id="p-contact">
+  {{HEADER}}
+  <div class="col">
+    <div class="contact">
+      <div class="nm">Abdelnabi</div>
+      <div class="role">Head of Business Development</div>
+      <div>Jalour Developments, Al Jalal Holding</div>
+      <div style="margin-top:30pt"><a href="mailto:abdelnabi@aljalalholding.com">abdelnabi@aljalalholding.com</a></div>
+      <div><a href="tel:+201000775002">+20 100 077 5002</a></div>
+    </div>
+    <div class="logos" style="margin-top:110pt;height:60pt">
+      <div class="lg" style="height:60pt">{{NURV_LOGO}}</div>
+      <div class="lg" style="height:34pt">{{JALOUR_LOGO}}</div>
+      <div class="lg" style="height:48pt">{{MEADIS_LOGO}}</div>
+    </div>
+  </div>
+  <div class="title">Contact</div>
+  {{FOOTER}}
+</section>
+
+</body>
+</html>

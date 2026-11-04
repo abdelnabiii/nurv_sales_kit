@@ -1,0 +1,59 @@
+<!-- Location map: clean schematic redraw of Nurv._compressed.pdf p.5 (source 869x579 px).
+     Geometry traced by eye from the source; indicative, not to scale. Road numbers and
+     map-app interface text from the source are intentionally omitted. -->
+<svg class="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 869 579" role="img" aria-label="Location map, El Sherouk">
+  <rect width="869" height="579" fill="var(--map-bg)"/>
+  <!-- district zones -->
+  <g fill="var(--map-zone)" stroke="none">
+    <path d="M62,100 L232,82 L286,214 L252,258 L112,250 L62,182 Z"/>
+    <ellipse cx="530" cy="183" rx="46" ry="14"/>
+    <path d="M590,200 C640,190 700,196 712,214 C690,226 620,230 596,222 Z"/>
+    <path d="M600,232 C650,226 690,236 700,252 C680,262 630,262 604,254 Z"/>
+    <ellipse cx="728" cy="302" rx="48" ry="28"/>
+    <path d="M470,365 C500,350 560,352 575,370 C580,400 560,430 530,430 C500,428 475,410 470,365 Z"/>
+    <path d="M590,375 C620,368 650,380 652,400 C645,420 610,428 592,415 Z"/>
+    <path d="M40,579 C45,520 90,480 160,470 C240,462 320,480 360,520 C390,550 395,570 400,579 Z"/>
+  </g>
+  <!-- roads -->
+  <g fill="none" stroke="var(--map-road)" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="4" d="M0,333 C120,305 250,262 380,212"/>
+    <path stroke-width="4" d="M0,492 C110,468 230,440 310,428 S390,395 415,378 C470,350 560,338 600,336 L869,328"/>
+    <path stroke-width="3" d="M415,0 C500,60 600,120 700,150 S820,185 869,190"/>
+    <path stroke-width="2.4" d="M495,170 C560,100 610,40 655,0"/>
+    <path stroke-width="2.4" d="M185,40 C215,100 245,160 345,215"/>
+    <path stroke-width="2.4" d="M635,335 C650,400 670,450 690,500"/>
+    <path stroke-width="2.4" d="M775,330 C772,420 768,500 765,579"/>
+    <path stroke-width="2.4" d="M505,490 C600,480 760,472 869,468"/>
+    <path stroke-width="2.4" d="M95,330 C90,420 82,500 75,579"/>
+    <path stroke-width="2.4" d="M415,395 C450,430 480,465 505,490"/>
+    <path stroke-width="1.4" d="M250,262 C262,330 275,390 290,440"/>
+    <path stroke-width="1.4" d="M170,290 C185,350 200,410 215,450"/>
+  </g>
+  <!-- El Sherouk -->
+  <path d="M378,212 L490,188 L545,200 L592,325 L470,350 L415,378 L372,330 Z" fill="var(--map-focus-fill)" stroke="var(--map-focus)" stroke-width="1.6"/>
+  <!-- labels -->
+  <g fill="var(--map-label)" font-family="Inter Tight, sans-serif" font-size="14" letter-spacing="0.6">
+    <text x="92" y="214">El Obour City</text>
+    <text x="262" y="246">Future City</text>
+    <text x="580" y="172" text-anchor="middle">New Heliopolis City</text>
+    <text x="728" y="262" text-anchor="middle">Badr City</text>
+    <text x="522" y="396" text-anchor="middle">Madinaty</text>
+    <text x="205" y="535" text-anchor="middle" font-size="16">New Cairo City</text>
+    <text x="14" y="404">To Cairo International Airport</text>
+  </g>
+  <text x="400" y="246" fill="var(--map-focus-label)" font-family="Inter Tight, sans-serif" font-size="16" font-weight="500" letter-spacing="1.6">EL SHEROUK</text>
+  <!-- site marker (position as in source) -->
+  <g transform="translate(484,322)">
+    <circle r="15" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity="0.7"/>
+    <circle r="6.5" fill="var(--accent)"/>
+  </g>
+  <g transform="translate(503,312)" fill="var(--map-site-label)" font-family="Inter Tight, sans-serif">
+    <text x="0" y="0" font-size="15" font-weight="600" letter-spacing="0.4">nurv</text>
+    <text x="0" y="17" font-size="11.5" letter-spacing="0.4" fill="var(--map-label)">Site</text>
+  </g>
+  <!-- north arrow -->
+  <g transform="translate(835,36)" fill="var(--map-label)" font-family="Inter Tight, sans-serif">
+    <path d="M0,-16 L6,4 L0,0 L-6,4 Z"/>
+    <text x="0" y="20" font-size="12" text-anchor="middle">N</text>
+  </g>
+</svg>
