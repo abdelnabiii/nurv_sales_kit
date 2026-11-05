@@ -7,7 +7,7 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
 
 | # | Item | Status |
 |---|---|---|
-| A1 | **Basement image.** You asked for an underground-parking picture on the Basement page (p.8). Not done, for two reasons: the Site Specification states "no basement car parking" (the basement holds loading, deliveries and services), and no official render of the basement exists. A stock photo would misrepresent the building. p.8 keeps the construction-visualisation still. | Please confirm: should the basement now include parking (if so, the specification and copy also change), and can you supply an official render? |
+| A1 | **Basement image (p.8).** Per your instruction, p.8 shows an underground loading bay. No official basement render exists, so this is an illustrative image generated for the brochure (Higgsfield, GPT Image model; no text, logos or people), captioned "Illustrative image of a basement loading bay; not the nurv basement." | Replace with an official render when available. |
 | A2 | **Legal disclaimer page removed** at your request. The short legal line remains in every page footer: "For information only. Not an offer or a contract. Visuals are artist's impressions; plans, areas and specifications are indicative and subject to change." | Confirm that the footer line is sufficient, or supply approved legal text. |
 | A3 | **Google Maps content (p.6).** The map is a genuine Google Maps capture (Map data ©2026 Google), with Google's attribution kept. Google's map shows third-party place pins (schools, shops, a gym and others), which cannot be switched off in a standard Google map. | Confirm this is acceptable, or ask for a satellite view without labels. |
 
