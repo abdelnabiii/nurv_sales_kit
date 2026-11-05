@@ -46,6 +46,7 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
   - the On-Air Track.
 - **p.9 (Ground floor):** the dining bar image from `Nurv Presentation V2.pdf` p.36 ("The Elite Dining Experience"), 1076x606, shown in full (not cropped).
 - **p.10 (1st floor):** the home comfort image from `Nurv Presentation V2.pdf` p.23, 436x930, shown in full (not cropped).
+- **p.12 (Third floor):** meeting-room image from `Nurv Presentation V2.pdf` p.3 (1014x572), shown uncropped, to illustrate the planned co-working use.
 - **p.14:** night render of the glass curtain-wall façade, supplied by you in chat (2000x1131; the white car at the right edge is cropped out). **Please note:** this render shows the curved-roof design used in the NURV. - 20260311 render set (and the REGALIA images), not the "nurv. + RESTAURANT" design used elsewhere in the brochure. Confirm the two are meant to appear together.
 - **Excluded:**
   - the REGALIA images (WhatsApp image, 3.webp, 4.webp) and 2.webp;
