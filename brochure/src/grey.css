@@ -1,0 +1,16 @@
+/* Jalour Grey + Jalour Blue theme (values from JALOUR - BRAND PRESENTATION p.9:
+   Jalour Blue #2E7CCC, Jalour Grey #BEBFBE, black #0B0A0B). Applied on top of
+   brochure.html by build.py to produce build/brochure-grey.html. Colours only. */
+:root{
+  --bg:#BEBFBE; --fg:#0B0A0B; --body:#232425; --mute:#454748; --faint:#5A5C5D; --rule:#A4A5A4;
+  --panel:#CBCCCB;
+  --blue:#2E7CCC; --accent:#2E7CCC;
+}
+.lbl,.placeholder,.gl th,.stack .lvl,.stack .lvl:last-child,.spec h4,.kv div,.legalbox{border-color:#8E908F}
+.lbl.blue{border-color:#2E7CCC}
+.stack .lvl.bs{background:#B0B1B0}
+.stack .lvl.gf{background:rgba(46,124,204,.16)}
+/* Jalour Blue section numbers, so the blue carries the page as the second brand colour */
+.num{color:#2E7CCC}
+/* plan linework: dark lines on the lighter grey panel */
+svg.plan{--plan-wall:#0B0A0B !important;--plan-thin:#4E5051 !important;--plan-hatch:#A4A5A4 !important;--plan-plot:#6E7071 !important}
