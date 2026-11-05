@@ -69,7 +69,7 @@ assert count == pages, "every page needs a footer"
 os.makedirs(os.path.join(ROOT, "build"), exist_ok=True)
 open(os.path.join(ROOT, "build", "brochure.html"), "w", encoding="utf-8").write(html)
 # Colour variants: same document plus a colour theme (colours only).
-for name in ("light", "grey"):
+for name in ("light", "grey", "blue"):
     themed = html.replace("</head>", "<style>\n" + rd(f"src/{name}.css") + "</style>\n</head>", 1)
     open(os.path.join(ROOT, "build", f"brochure-{name}.html"), "w", encoding="utf-8").write(themed)
 print("pages", pages, "footers", count)

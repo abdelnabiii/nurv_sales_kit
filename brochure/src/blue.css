@@ -1,0 +1,15 @@
+/* Jalour Blue theme (JALOUR - BRAND PRESENTATION p.9: Jalour Blue #2E7CCC, black #0B0A0B,
+   white). Applied on top of brochure.html by build.py to produce build/brochure-blue.html.
+   Colours only. */
+:root{
+  --bg:#2E7CCC; --fg:#FFFFFF; --body:#F0F5FB; --mute:#D6E4F3; --faint:#C2D6EC; --rule:#5D9AD9;
+  --panel:#26679F;
+  --blue:#0B0A0B; --accent:#0B0A0B;
+}
+.lbl,.placeholder,.gl th,.stack .lvl,.stack .lvl:last-child,.spec h4,.kv div,.legalbox{border-color:#8DB8E5}
+.lbl.blue{border-color:#FFFFFF}
+.stack .lvl.bs{background:#26679F}
+.stack .lvl.gf{background:rgba(11,10,11,.14)}
+.stack .grade{border-top-color:#0B0A0B}
+/* plan linework: white lines on the deeper blue panel */
+svg.plan{--plan-wall:#FFFFFF !important;--plan-thin:#BCD3EC !important;--plan-hatch:#4F8BC6 !important;--plan-plot:#9DC0E6 !important}
