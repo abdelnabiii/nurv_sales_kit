@@ -18,7 +18,7 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
 | B1 | **Aeonik font files (licensed).** | The brochure uses Inter Tight (SIL OFL), as approved. Switching to Aeonik is a one-line change to the `@font-face` rules. |
 | B2 | **Original vector logos.** | Logos were traced to vector from raster sources. Per your edit, the nurv. wordmark is now all white. The logo row on the Contact page has been removed. |
 | B3 | **Higher-resolution exterior renders.** | Every image is placed at or below its native size. The best available exterior views are 1010–1441 px wide; higher-resolution renders would allow full-bleed pages. |
-| B4 | **Home comfort imagery (1st floor, p.10).** | Uses the armchair cropped from the deck's home comfort page (360x290 px). A proper render would be better. |
+| B4 | **Home comfort imagery (1st floor, p.10).** | Resolved: uses the home comfort image from Nurv Presentation V2 (p.23), shown uncropped. |
 
 ## C. Decisions and data applied
 
@@ -44,7 +44,8 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
   - the evening restaurant frontage with the nurv. sign (Audi cropped out);
   - the Wellness Arena;
   - the On-Air Track.
-- **p.9 (Ground floor):** a wider daytime view of the restaurant frontage, terraces and nurv. sign (Audi cropped out).
+- **p.9 (Ground floor):** the dining bar image from `Nurv Presentation V2.pdf` p.36 ("The Elite Dining Experience"), 1076x606, shown in full (not cropped).
+- **p.10 (1st floor):** the home comfort image from `Nurv Presentation V2.pdf` p.23, 436x930, shown in full (not cropped).
 - **p.14:** night render of the glass curtain-wall façade, supplied by you in chat (2000x1131; the white car at the right edge is cropped out). **Please note:** this render shows the curved-roof design used in the NURV. - 20260311 render set (and the REGALIA images), not the "nurv. + RESTAURANT" design used elsewhere in the brochure. Confirm the two are meant to appear together.
 - **Excluded:**
   - the REGALIA images (WhatsApp image, 3.webp, 4.webp) and 2.webp;
