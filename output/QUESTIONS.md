@@ -45,7 +45,7 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
   - the Wellness Arena;
   - the On-Air Track.
 - **p.9 (Ground floor):** a wider daytime view of the restaurant frontage, terraces and nurv. sign (Audi cropped out).
-- **p.14:** the evening façade and restaurant frontage.
+- **p.14:** night render of the glass curtain-wall façade, supplied by you in chat (2000x1131; the white car at the right edge is cropped out). **Please note:** this render shows the curved-roof design used in the NURV. - 20260311 render set (and the REGALIA images), not the "nurv. + RESTAURANT" design used elsewhere in the brochure. Confirm the two are meant to appear together.
 - **Excluded:**
   - the REGALIA images (WhatsApp image, 3.webp, 4.webp) and 2.webp;
   - deck target-group, moodboard, sponsorship, bank/telecom and "Luster & Luxe" imagery;
