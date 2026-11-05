@@ -23,7 +23,7 @@ def strip(svg):
     return re.sub(r"<!--.*?-->", "", svg, flags=re.S).strip()
 
 
-# nurv. wordmark: the full stop (rightmost sub-path) takes the nurv. accent colour.
+# nurv. wordmark (all white per client; the full stop is kept as its own sub-path).
 nurv = strip(rd("assets/logo/nurv.svg"))
 d = re.search(r' d="([^"]+)"', nurv).group(1)
 subs = [s.strip() for s in re.split(r"(?=M)", d) if s.strip()]
@@ -38,7 +38,7 @@ letters = " ".join(s for s in subs if s is not dot)
 vb = re.search(r'viewBox="([^"]+)"', nurv).group(1)
 NURV = (f'<svg viewBox="{vb}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="nurv.">'
         f'<path fill="currentColor" fill-rule="evenodd" d="{letters}"/>'
-        f'<path fill="var(--accent)" d="{dot}"/></svg>')
+        f'<path fill="currentColor" d="{dot}"/></svg>')
 JALOUR = strip(rd("assets/logo/jalour.svg")).replace("<svg ", '<svg role="img" aria-label="Jalour" ', 1)
 MEADIS = strip(rd("assets/logo/meadis.svg")).replace("<svg ", '<svg role="img" aria-label="Meadis Group" ', 1)
 

@@ -128,25 +128,27 @@ img.ph{display:block;object-fit:cover}
 .bullets li::before{content:"";position:absolute;left:0;top:22pt;width:10pt;height:1px;background:var(--blue)}
 
 /* render gallery */
-.gal{position:absolute;margin:0}
-.gal img{display:block;width:100%;height:100%;object-fit:cover}
-.gal figcaption{position:absolute;left:0;bottom:-24pt;font-size:12.5pt;letter-spacing:.06em;color:var(--mute)}
-.gal-a{left:50pt;top:96pt;width:1240pt;height:698pt}
-.gal-b{left:1320pt;top:96pt;width:610pt;height:331pt}
-.gal-c{left:1320pt;top:463pt;width:610pt;height:331pt}
-.gal-note{position:absolute;right:50pt;bottom:62pt;font-size:12.5pt;color:var(--faint)}
+.gal-a{position:absolute;left:920pt;top:117pt;width:1010pt;height:560pt}
+.gal-b{position:absolute;left:920pt;top:693pt;width:497pt;height:307pt}
+.gal-c{position:absolute;left:1433pt;top:693pt;width:497pt;height:307pt}
+.gal-legend{position:absolute;left:50pt;top:300pt;width:700pt;list-style:none}
+.gal-legend li{font-size:19pt;line-height:1.35;padding:11pt 0;border-bottom:1px solid var(--rule);color:var(--body);font-weight:300}
+.gal-legend b{display:inline-block;width:90pt;font-weight:400;color:var(--blue);font-size:14pt;letter-spacing:.12em;text-transform:uppercase}
+.gal-legend li.n{border:none;font-size:14pt;color:var(--faint);padding-top:16pt}
 /* cover */
-.cover-mark{position:absolute;left:50pt;top:330pt;width:600pt;color:var(--fg)}
+.cover-mark{position:absolute;left:50pt;top:330pt;width:560pt;color:var(--fg)}
 .cover-mark svg{width:100%;height:auto;display:block}
-.cover-sub{position:absolute;left:50pt;top:520pt;font-size:34pt;line-height:1.3;font-weight:300;color:var(--fg)}
+.cover-sub{position:absolute;left:50pt;top:510pt;width:600pt;font-size:30pt;line-height:1.3;font-weight:300;color:var(--fg)}
 .cover-sub .k{display:block;font-size:16pt;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:16pt}
 .cover-by{position:absolute;left:50pt;bottom:96pt;font-size:16pt;line-height:1.55;color:var(--mute);font-weight:300}
 .cover-by b{color:var(--fg);font-weight:400}
-.cover-img{position:absolute;left:1102pt;top:60pt;width:828pt;height:960pt}
+.cover-img{position:absolute;left:680pt;top:188pt;width:1250pt;height:703pt}
 
 /* map */
 .mapbox{position:absolute;left:860pt;top:110pt;width:1070pt}
-.mapbox svg.map{display:block;width:1070pt;height:713pt}
+.gmap{position:relative;width:1070pt;height:713pt;overflow:hidden}
+.gmap img{display:block;width:100%;height:100%;object-fit:cover}
+.pin-lbl{position:absolute;left:44.2%;top:40.6%;font-size:15pt;font-weight:600;letter-spacing:.03em;color:#fff;background:#000;padding:3pt 8pt}
 .mapnote{font-size:11pt;color:var(--faint);margin-top:8pt}
 .kv{display:grid;grid-template-columns:repeat(4,1fr);gap:0 28pt;position:absolute;left:860pt;right:50pt;bottom:96pt}
 .kv div{border-top:1px solid #3A4048;padding-top:12pt}
@@ -175,7 +177,7 @@ img.ph{display:block;object-fit:cover}
   <div class="cover-mark">{{NURV_LOGO}}</div>
   <div class="cover-sub"><span class="k">El Sherouk, Cairo</span>A mixed-use commercial development</div>
   <div class="cover-by"><b>Developed by</b> Jalour Developments, Al Jalal Holding<br><b>Managed by</b> Meadis Group</div>
-  <img class="ph cover-img" src="../assets/img/cover.jpg" alt="nurv, evening view of the ground-floor dining frontage and nurv. sign">
+  <img class="ph cover-img" src="../assets/img/cover.jpg" alt="nurv, the completed building at dusk">
   {{FOOTER}}
 </section>
 
@@ -186,16 +188,15 @@ img.ph{display:block;object-fit:cover}
     <ul class="toc">
       <li><b>01</b>About Jalour<i>03</i></li>
       <li><b>02</b>Vision and Positioning<i>04</i></li>
-      <li><b>&nbsp;</b>The Building<i>05</i></li>
-      <li><b>03</b>Location<i>06</i></li>
-      <li><b>04</b>nurv at a Glance<i>07</i></li>
-      <li><b>05</b>Level by Level<i>08</i></li>
-      <li><b>06</b>Design and Specification<i>14</i></li>
-      <li><b>07</b>Why nurv<i>15</i></li>
-      <li><b>08</b>Management and Operations<i>16</i></li>
-      <li><b>09</b>Developer Credentials<i>17</i></li>
-      <li><b>&nbsp;</b>Legal Notice<i>18</i></li>
-      <li><b>&nbsp;</b>Contact<i>19</i></li>
+      <li><b>03</b>The Building<i>05</i></li>
+      <li><b>04</b>Location<i>06</i></li>
+      <li><b>05</b>nurv at a Glance<i>07</i></li>
+      <li><b>06</b>Level by Level<i>08</i></li>
+      <li><b>07</b>Design and Specification<i>14</i></li>
+      <li><b>08</b>Why nurv<i>15</i></li>
+      <li><b>09</b>Management and Operations<i>16</i></li>
+      <li><b>10</b>Developer Credentials<i>17</i></li>
+      <li><b>11</b>Contact<i>18</i></li>
     </ul>
   </div>
   <div class="title">Contents</div>
@@ -232,24 +233,30 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ THE BUILDING (render gallery) ============ -->
 <section class="page" id="p-gallery">
   {{HEADER}}
-  <figure class="gal gal-a"><img class="ph" src="../assets/img/gallery-exterior.jpg" alt="nurv, completed building at dusk"><figcaption>The completed building at dusk</figcaption></figure>
-  <figure class="gal gal-b"><img class="ph" src="../assets/img/second.jpg" alt="The Wellness Arena, second floor"><figcaption>The Wellness Arena, second floor</figcaption></figure>
-  <figure class="gal gal-c"><img class="ph" src="../assets/img/roof.jpg" alt="On-Air Track, rooftop"><figcaption>On-Air Track, rooftop</figcaption></figure>
-  <div class="title sm" style="bottom:56pt">The Building</div>
-  <div class="gal-note">Artist's impressions. Final design may vary.</div>
+  <div class="num">03</div>
+  <img class="ph gal-a" src="../assets/img/gallery-exterior.jpg" alt="nurv, restaurant frontage and nurv. sign, evening">
+  <img class="ph gal-b" src="../assets/img/second.jpg" alt="The Wellness Arena, second floor">
+  <img class="ph gal-c" src="../assets/img/roof.jpg" alt="On-Air Track, rooftop">
+  <ul class="gal-legend">
+    <li><b>Above</b>The restaurant frontage and nurv. sign, evening</li>
+    <li><b>Left</b>The Wellness Arena, second floor</li>
+    <li><b>Right</b>On-Air Track, rooftop</li>
+    <li class="n">Artist's impressions. Final design may vary.</li>
+  </ul>
+  <div class="title">The Building</div>
   {{FOOTER}}
 </section>
 
 <!-- ============ 03 LOCATION ============ -->
 <section class="page" id="p-location">
   {{HEADER}}
-  <div class="num">03</div>
+  <div class="num">04</div>
   <div style="position:absolute;left:50pt;top:240pt;width:700pt">
     <p class="lead">El Sherouk, with main-road visibility.</p>
     <p>nurv sits in El Sherouk, on a plot with main-road visibility and walkable access to the main road. An established residential catchment surrounds the site.</p>
     <p style="font-size:16pt;color:var(--mute)">Site coordinates: 30.126386, 31.627335</p>
   </div>
-  <div class="mapbox">{{MAP}}<div class="mapnote">Schematic map redrawn from the project sales material. Indicative only; not to scale.</div></div>
+  <div class="mapbox"><div class="gmap"><img src="../assets/img/map-google.jpg" alt="Google Maps view of the site, El Sherouk"><span class="pin-lbl">nurv</span></div><div class="mapnote">Map: Google Maps (Map data ©2026 Google). The red marker shows the site.</div></div>
   <div class="kv">
     <div><b>30–40 m</b><span>Road frontage, approximately</span></div>
     <div><b>0.6 km</b><span>La Vista CASA residential compound, approximately</span></div>
@@ -263,7 +270,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 04 AT A GLANCE ============ -->
 <section class="page" id="p-glance">
   {{HEADER}}
-  <div class="num">04</div>
+  <div class="num">05</div>
   <div class="stack">
     <div class="lvl roof" style="height:52pt">Rooftop · On-Air Track</div>
     <div class="lvl third" style="height:76pt">Third floor · Subject to final approvals.<span>4 m</span></div>
@@ -278,12 +285,12 @@ img.ph{display:block;object-fit:cover}
     <table class="gl">
       <thead><tr><th>Level</th><th>Concept</th><th>Gross area (BUA)</th><th>Floor height</th></tr></thead>
       <tbody>
-        <tr><td>Rooftop</td><td>On-Air Track</td><td><span class="tbc">to be confirmed</span></td><td>—</td></tr>
+        <tr><td>Rooftop</td><td>On-Air Track</td><td class="n">200 sqm</td><td>—</td></tr>
         <tr><td>Third floor</td><td>Flexible level<span class="sfa">Subject to final approvals.</span></td><td class="n">675 sqm<span class="sfa">Subject to final approvals.</span></td><td>4 m</td></tr>
         <tr><td>Second floor</td><td>The Wellness Arena</td><td class="n">675 sqm</td><td>4 m</td></tr>
         <tr><td>First floor</td><td>Lifestyle and Shopping</td><td class="n">675 sqm</td><td>4 m</td></tr>
         <tr><td>Ground floor</td><td>The Dining Experience</td><td class="n">675 sqm</td><td>5 m</td></tr>
-        <tr><td>Basement</td><td>Loading, deliveries and building services</td><td><span class="tbc">to be confirmed</span></td><td>4 m</td></tr>
+        <tr><td>Basement</td><td>Loading, deliveries and building services</td><td class="n">1,100 sqm</td><td>4 m</td></tr>
       </tbody>
     </table>
     <p style="font-size:17pt;color:var(--mute);margin-top:22pt">Approximately 11 units per floor on the ground, first and second floors (approximate; the structural grid allows units to be combined or subdivided). Tenant mix is a planned curation and is indicative.</p>
@@ -295,14 +302,14 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 05 BASEMENT ============ -->
 <section class="page level" id="p-basement">
   {{HEADER}}
-  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-tag">06 · Level by Level</div>
   <div class="lv-name">Basement</div>
   <div class="lv-concept">Loading, deliveries and building services</div>
   <div class="lv-text">
     <p>The basement concentrates the building's back-of-house. All loading and deliveries are routed here, kept separate from the customer entrance, and waste is collected by chute to a dedicated basement waste room.</p>
   </div>
   <div class="lv-facts facts" style="top:480pt">
-    <div class="r"><span class="k">Gross area (BUA)</span><span class="v tbc">to be confirmed</span></div>
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v">1,100 sqm</span></div>
     <div class="r"><span class="k">Floor height</span><span class="v">4 m</span></div>
     <div class="r"><span class="k">Use</span><span class="v">Loading, deliveries, services</span></div>
   </div>
@@ -319,7 +326,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 05 GROUND ============ -->
 <section class="page level" id="p-ground">
   {{HEADER}}
-  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-tag">06 · Level by Level</div>
   <div class="lv-name">Ground Floor</div>
   <div class="lv-concept">The Dining Experience</div>
   <div class="lv-text">
@@ -344,7 +351,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 05 FIRST ============ -->
 <section class="page level" id="p-first">
   {{HEADER}}
-  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-tag">06 · Level by Level</div>
   <div class="lv-name">First Floor</div>
   <div class="lv-concept">Lifestyle and Shopping</div>
   <div class="lv-text">
@@ -366,7 +373,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 05 SECOND ============ -->
 <section class="page level" id="p-second">
   {{HEADER}}
-  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-tag">06 · Level by Level</div>
   <div class="lv-name">Second Floor</div>
   <div class="lv-concept">The Wellness Arena</div>
   <div class="lv-text">
@@ -388,7 +395,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 05 THIRD ============ -->
 <section class="page level" id="p-third">
   {{HEADER}}
-  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-tag">06 · Level by Level</div>
   <div class="lv-name">Third Floor</div>
   <div class="lv-concept">Subject to final approvals.</div>
   <div class="lv-text">
@@ -409,14 +416,14 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 05 ROOF ============ -->
 <section class="page level" id="p-roof">
   {{HEADER}}
-  <div class="lv-tag">05 · Level by Level</div>
+  <div class="lv-tag">06 · Level by Level</div>
   <div class="lv-name">Rooftop</div>
   <div class="lv-concept">On-Air Track</div>
   <div class="lv-text">
     <p>On-Air is a rubberised running track around the full perimeter of the rooftop, lit for evening use. It gives the building a recognisable landmark and extends the wellness offer into the open air.</p>
   </div>
   <div class="lv-facts facts" style="top:480pt">
-    <div class="r"><span class="k">Gross area (BUA)</span><span class="v tbc">to be confirmed</span></div>
+    <div class="r"><span class="k">Gross area (BUA)</span><span class="v">200 sqm</span></div>
     <div class="r"><span class="k">Feature</span><span class="v">Perimeter running track, lit</span></div>
   </div>
   <img class="ph lv-img" src="../assets/img/roof.jpg" alt="Rooftop running track" style="height:340pt">
@@ -430,7 +437,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 06 DESIGN AND SPECIFICATION ============ -->
 <section class="page" id="p-spec">
   {{HEADER}}
-  <div class="num">06</div>
+  <div class="num">07</div>
   <img class="ph" src="../assets/img/design.jpg" alt="Glass curtain-wall façade at dusk (still from the construction visualisation)" style="position:absolute;left:50pt;top:230pt;width:710pt;height:400pt">
   <div class="col" style="top:117pt">
     <div class="spec">
@@ -466,7 +473,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 07 WHY NURV ============ -->
 <section class="page" id="p-why">
   {{HEADER}}
-  <div class="num">07</div>
+  <div class="num">08</div>
   <div class="col" style="top:105pt">
     <ul class="why">
       <li><div><b>A clear destination identity</b><span>Floor-by-floor curation (dining, lifestyle retail and wellness) rather than unrelated tenancies.</span></div></li>
@@ -485,7 +492,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 08 MANAGEMENT ============ -->
 <section class="page" id="p-mgmt">
   {{HEADER}}
-  <div class="num">08</div>
+  <div class="num">09</div>
   <img class="ph" src="../assets/img/management.jpg" alt="nurv. reception and lounge interior" style="position:absolute;left:50pt;top:230pt;width:710pt;height:400pt">
   <div class="col">
     <div class="mlogo">{{MEADIS_LOGO}}</div>
@@ -507,7 +514,7 @@ img.ph{display:block;object-fit:cover}
 <!-- ============ 09 CREDENTIALS ============ -->
 <section class="page" id="p-cred">
   {{HEADER}}
-  <div class="num">09</div>
+  <div class="num">10</div>
   <img class="ph" src="../assets/img/credentials.jpg" alt="Structural frame (still from the construction visualisation)" style="position:absolute;left:50pt;top:230pt;width:710pt;height:400pt">
   <div class="col">
     <p class="lead">Experience across residential, administrative, commercial and industrial development since 1985.</p>
@@ -523,21 +530,6 @@ img.ph{display:block;object-fit:cover}
   {{FOOTER}}
 </section>
 
-<!-- ============ LEGAL ============ -->
-<section class="page" id="p-legal">
-  {{HEADER}}
-  <div class="col">
-    <div class="legalbox">
-      <span class="badge">Placeholder · Approved legal text to be supplied</span>
-      <p>[APPROVED LEGAL DISCLAIMER TEXT TO BE INSERTED HERE]</p>
-      <p style="color:var(--mute);font-size:17pt;margin-top:24pt">Interim working text, to be replaced:</p>
-      <p>This brochure is provided for general information only. It does not constitute an offer, a solicitation or a contract. All visuals are artist's impressions. Plans, areas, specifications and the tenant mix are indicative and may change without notice. Third floor: Subject to final approvals.</p>
-    </div>
-  </div>
-  <div class="title">Legal Notice</div>
-  {{FOOTER}}
-</section>
-
 <!-- ============ CONTACT ============ -->
 <section class="page" id="p-contact">
   {{HEADER}}
@@ -549,13 +541,10 @@ img.ph{display:block;object-fit:cover}
       <div style="margin-top:30pt"><a href="mailto:abdelnabi@aljalalholding.com">abdelnabi@aljalalholding.com</a></div>
       <div><a href="tel:+201000775002">+20 100 077 5002</a></div>
     </div>
-    <div class="logos" style="margin-top:110pt;height:60pt">
-      <div class="lg" style="height:60pt">{{NURV_LOGO}}</div>
-      <div class="lg" style="height:34pt">{{JALOUR_LOGO}}</div>
-      <div class="lg" style="height:48pt">{{MEADIS_LOGO}}</div>
-    </div>
+
   </div>
-  <img class="ph" src="../assets/img/contact.jpg" alt="Rooftop On-Air track" style="position:absolute;left:50pt;top:117pt;width:653pt;height:482pt">
+  <div class="num">11</div>
+  <img class="ph" src="../assets/img/contact.jpg" alt="Rooftop On-Air track" style="position:absolute;left:50pt;top:230pt;width:653pt;height:482pt">
   <div class="title">Contact</div>
   {{FOOTER}}
 </section>
