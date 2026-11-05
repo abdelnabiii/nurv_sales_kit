@@ -1,0 +1,11 @@
+/* Light-background theme. Applied on top of brochure.html by build.py to produce
+   build/brochure-light.html. Only colours change; layout, copy and images are identical. */
+:root{
+  --bg:#F6F4F0; --fg:#111316; --body:#3B4047; --mute:#6A7079; --faint:#8D939B; --rule:#DDD9D2;
+  --panel:#ECE9E3;
+}
+.lbl,.placeholder,.gl th,.stack .lvl,.stack .lvl:last-child,.spec h4,.kv div,.legalbox{border-color:#C9C4BB}
+.stack .lvl.bs{background:#E4E0D9}
+.stack .lvl.gf{background:rgba(66,130,188,.12)}
+/* plan linework: dark lines on the light panel */
+svg.plan{--plan-wall:#23272D !important;--plan-thin:#6E747C !important;--plan-hatch:#B9B4AB !important;--plan-plot:#8E949C !important}

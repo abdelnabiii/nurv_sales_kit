@@ -1,12 +1,12 @@
 // Render build/brochure.html to PDF (Chromium embeds the fonts) and optional per-page PNG previews.
-// Usage: node render.js [out.pdf] [previewDir]
+// Usage: node render.js [out.pdf] [previewDir|''] [brochure.html|brochure-light.html]
 const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
 
 (async () => {
   const root = __dirname;
-  const src = 'file://' + path.join(root, 'build', 'brochure.html');
+  const src = 'file://' + path.join(root, 'build', process.argv[4] || 'brochure.html');
   const out = process.argv[2] || path.join(root, '..', 'output', 'nurv_Investor_Brochure_2026.pdf');
   const prev = process.argv[3];
   fs.mkdirSync(path.dirname(out), { recursive: true });

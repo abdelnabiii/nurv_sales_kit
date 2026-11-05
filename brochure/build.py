@@ -68,4 +68,7 @@ assert "{{" not in html, "unreplaced token"
 assert count == pages, "every page needs a footer"
 os.makedirs(os.path.join(ROOT, "build"), exist_ok=True)
 open(os.path.join(ROOT, "build", "brochure.html"), "w", encoding="utf-8").write(html)
+# Light-background version: same document plus the light colour theme.
+light = html.replace("</head>", "<style>\n" + rd("src/light.css") + "</style>\n</head>", 1)
+open(os.path.join(ROOT, "build", "brochure-light.html"), "w", encoding="utf-8").write(light)
 print("pages", pages, "footers", count)
