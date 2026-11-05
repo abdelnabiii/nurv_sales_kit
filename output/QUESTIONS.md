@@ -22,7 +22,7 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
 
 ## C. Decisions and data applied
 
-1. **Design:** only the "nurv. + RESTAURANT" design (Design A) is used. The REGALIA-associated render set is excluded.
+1. **Design:** since your updated Presentation V2 uses both building designs ("nurv. + RESTAURANT" and the curved-roof "SHOP" design), the brochure now uses renders of both (cover, pp.4 and 14 show the curved-roof design). The REGALIA images themselves remain excluded.
 2. **Areas:**
    - Basement 1,100 sqm.
    - Ground, 1st and 2nd 675 sqm each.
@@ -38,8 +38,8 @@ Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && 
 
 ## D. Images: sources and exclusions
 
-- **Cover (p.1):** the completed building at dusk, a 1920x1080 frame from the construction video, shown in full (zoomed out).
-- **p.4:** the full daytime ("morning") view of the building, cropped above the cars so the Audi badge is excluded.
+- **Cover (p.1):** brighter blue-hour render of the full building, `Nurv Presentation V2.pdf` p.49 (1923x1084), shown uncropped.
+- **p.4:** full daytime render of the building, `Nurv Presentation V2.pdf` p.24 (1924x1082), shown uncropped (zoomed out).
 - **p.5, The Building:**
   - the evening restaurant frontage with the nurv. sign (Audi cropped out);
   - the Wellness Arena;
