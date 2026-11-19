@@ -44,7 +44,7 @@ MEADIS = strip(rd("assets/logo/meadis.svg")).replace("<svg ", '<svg role="img" a
 
 html = rd("src/brochure.html")
 pages = html.count('<section class="page')
-HEADER = ('<div class="hdr"><span class="a">Jalour</span><span class="b">nurv</span>'
+HEADER = ('<div class="hdr"><span class="a">Jalour</span><span class="b">Shorouk Mall</span>'
           '<span class="c">2026</span></div>')
 html = html.replace("{{HEADER}}", HEADER)
 
