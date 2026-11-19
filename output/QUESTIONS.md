@@ -1,7 +1,9 @@
 # nurv Investor Brochure — Open Questions and Notes
 
-Deliverable: `nurv_Investor_Brochure_2026.pdf` (18 pages, 1980 x 1080 pt, fonts embedded).
+Deliverable: `nurv_Investor_Brochure_2026.pdf` (17 pages, 1980 x 1080 pt, fonts embedded).
 Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && node render.js`).
+
+> **Latest change:** the third floor has been removed from the brochure entirely (page, table row, stacking diagram and text). Ground, 1st and 2nd floor gross area is now 650 sqm each. Notes below that refer to the third floor or 675 sqm are superseded.
 
 ## A. Open items
 
