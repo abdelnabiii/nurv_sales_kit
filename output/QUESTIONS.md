@@ -1,9 +1,15 @@
 # nurv Investor Brochure — Open Questions and Notes
 
-Deliverable: `nurv_Investor_Brochure_2026.pdf` (17 pages, 1980 x 1080 pt, fonts embedded).
+Deliverable: `nurv_Investor_Brochure_2026.pdf` (19 pages, 1980 x 1080 pt, fonts embedded).
 Editable source: `brochure/` (HTML/CSS + SVG; rebuild with `python3 build.py && node render.js`).
 
 > **Latest change:** the third floor has been removed from the brochure entirely (page, table row, stacking diagram and text). Ground, 1st and 2nd floor gross area is now 650 sqm each. Notes below that refer to the third floor or 675 sqm are superseded.
+
+> **Pricing and returns pages (pp.17-18), added at your request.** These reverse the original brief's exclusion of prices, ROI and returns; the banned-term search no longer applies to these two pages. Open points:
+> - **Meadis guarantee:** the page says Meadis guarantees the annual rental income. Please confirm the guarantee period and the guaranteed amount (the low end of EGP 35M, or a range?), and have legal approve the wording.
+> - **Management fee:** net income uses gross rent less 20%, as you specified; the page describes the 20% as management and operating costs. Confirm.
+> - **Delivery:** stated as contractual handover within 2 years of contract signing. No construction stage is stated.
+> - **Disclaimer** under the returns is interim wording; please have it approved.
 
 ## A. Open items
 

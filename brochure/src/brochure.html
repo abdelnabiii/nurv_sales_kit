@@ -134,6 +134,28 @@ img.ph{display:block;object-fit:cover}
 .gal-legend li{font-size:19pt;line-height:1.35;padding:11pt 0;border-bottom:1px solid var(--rule);color:var(--body);font-weight:300}
 .gal-legend b{display:inline-block;width:90pt;font-weight:400;color:var(--blue);font-size:14pt;letter-spacing:.12em;text-transform:uppercase}
 .gal-legend li.n{border:none;font-size:14pt;color:var(--faint);padding-top:16pt}
+/* pricing + returns */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22pt;margin-top:6pt}
+.plan{border:1px solid #3A4048;padding:22pt 22pt 18pt}
+.plan.hl{border-color:var(--blue)}
+.plan .pt{font-size:14pt;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:12pt}
+.plan .pp{font-size:34pt;font-weight:400;color:var(--fg);line-height:1.05}
+.plan .pc{font-size:14pt;color:var(--mute);margin:4pt 0 14pt}
+.plan .pr{display:flex;justify-content:space-between;font-size:16pt;padding:8pt 0;border-top:1px solid var(--rule);color:var(--body);font-weight:300}
+.plan .pr b{font-weight:400;color:var(--fg)}
+.pricehead{display:flex;align-items:baseline;gap:22pt;margin-bottom:24pt}
+.pricehead .big{font-size:60pt;font-weight:400;color:var(--fg);line-height:1}
+.pricehead .lbl2{font-size:17pt;color:var(--mute);line-height:1.4}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 44pt;margin-top:30pt}
+.two h4{font-size:14pt;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:500;padding-bottom:10pt;border-bottom:1px solid #3A4048}
+.two li{font-size:17pt;line-height:1.35;padding:8pt 0;border-bottom:1px solid var(--rule);color:var(--body);font-weight:300;list-style:none}
+.roi td,.roi th{text-align:right}
+.roi td:first-child,.roi th:first-child{text-align:left}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28pt;margin:30pt 0 0}
+.kpis div{border-top:1px solid #3A4048;padding-top:12pt}
+.kpis b{display:block;font-size:30pt;font-weight:400;color:var(--fg);margin-bottom:6pt}
+.kpis span{font-size:14pt;color:var(--mute);line-height:1.35;display:block;font-weight:300}
+.disc{font-size:12.5pt;line-height:1.45;color:var(--faint);margin-top:22pt}
 /* cover */
 .cover-mark{position:absolute;left:50pt;top:330pt;width:560pt;color:var(--fg)}
 .cover-mark svg{width:100%;height:auto;display:block}
@@ -196,7 +218,9 @@ img.ph{display:block;object-fit:cover}
       <li><b>08</b>Why Shorouk Mall<i>14</i></li>
       <li><b>09</b>Management and Operations<i>15</i></li>
       <li><b>10</b>Developer Credentials<i>16</i></li>
-      <li><b>11</b>Contact<i>17</i></li>
+      <li><b>11</b>Price and Payment Plan<i>17</i></li>
+      <li><b>12</b>Expected Returns<i>18</i></li>
+      <li><b>13</b>Contact<i>19</i></li>
     </ul>
   </div>
   <div class="title">Contents</div>
@@ -508,6 +532,75 @@ img.ph{display:block;object-fit:cover}
   {{FOOTER}}
 </section>
 
+<!-- ============ 11 PRICE AND PAYMENT ============ -->
+<section class="page" id="p-price">
+  {{HEADER}}
+  <div class="num">11</div>
+  <div class="col" style="top:105pt">
+    <div class="pricehead"><span class="big">EGP 350,000,000</span><span class="lbl2">Fixed price for the whole building,<br>land included</span></div>
+    <div class="plans">
+      <div class="plan hl"><div class="pt">Cash</div><div class="pp">EGP 245M</div><div class="pc">30% discount</div>
+        <div class="pr"><span>Payment</span><b>100% on contract</b></div></div>
+      <div class="plan"><div class="pt">2-year plan</div><div class="pp">EGP 297.5M</div><div class="pc">15% discount</div>
+        <div class="pr"><span>Down payment (50%)</span><b>EGP 148.75M</b></div>
+        <div class="pr"><span>8 quarterly instalments</span><b>EGP 18.59M</b></div></div>
+      <div class="plan"><div class="pt">4-year plan</div><div class="pp">EGP 350M</div><div class="pc">No discount</div>
+        <div class="pr"><span>Down payment (20%)</span><b>EGP 70M</b></div>
+        <div class="pr"><span>16 quarterly instalments</span><b>EGP 17.5M</b></div></div>
+    </div>
+    <p style="font-size:15pt;color:var(--mute);margin-top:14pt">All instalment plans are interest-free. No reservation fee and no additional costs.</p>
+    <div class="two">
+      <div><h4>Handover condition</h4><ul>
+        <li>Core and shell</li>
+        <li>Glass curtain-wall façade</li>
+        <li>Passenger elevator</li>
+        <li>Fire safety systems</li>
+        <li>Finished outdoor plaza and parking</li></ul></div>
+      <div><h4>Delivery</h4><ul>
+        <li>Contractual handover within 2 years of contract signing</li>
+        <li>Sold as a whole building, land included</li></ul></div>
+    </div>
+  </div>
+  <div class="title">Price and<br>Payment Plan</div>
+  {{FOOTER}}
+</section>
+
+<!-- ============ 12 RETURNS ============ -->
+<section class="page" id="p-returns">
+  {{HEADER}}
+  <div class="num">12</div>
+  <div style="position:absolute;left:50pt;top:250pt;width:700pt">
+    <p class="lead">Optional management by Meadis Group, with guaranteed rental income.</p>
+    <p>Buyers may choose to continue the property management contract with Meadis Group. The contract is optional and offered as added value. Under it, Meadis manages leasing, tenant mix, maintenance, security and reporting, and guarantees the building's annual rental income from handover.</p>
+    <p style="font-size:16pt;color:var(--mute)">Basis: total annual rent of EGP 35&ndash;40 million in year 1, 100% occupancy, 10% annual increase, from handover. Net income is gross rent less 20% (management and operating costs).</p>
+  </div>
+  <div class="col" style="top:105pt">
+    <table class="gl roi">
+      <thead><tr><th>Year from handover</th><th>Gross rent (EGP M)</th><th>Net income (EGP M)</th><th>Cumulative net (EGP M)</th></tr></thead>
+      <tbody>
+        <tr><td>Year 1</td><td>35.0 &ndash; 40.0</td><td>28.0 &ndash; 32.0</td><td>28.0 &ndash; 32.0</td></tr>
+        <tr><td>Year 2</td><td>38.5 &ndash; 44.0</td><td>30.8 &ndash; 35.2</td><td>58.8 &ndash; 67.2</td></tr>
+        <tr><td>Year 3</td><td>42.4 &ndash; 48.4</td><td>33.9 &ndash; 38.7</td><td>92.7 &ndash; 105.9</td></tr>
+        <tr><td>Year 4</td><td>46.6 &ndash; 53.2</td><td>37.3 &ndash; 42.6</td><td>129.9 &ndash; 148.5</td></tr>
+        <tr><td>Year 5</td><td>51.2 &ndash; 58.6</td><td>41.0 &ndash; 46.9</td><td>170.9 &ndash; 195.4</td></tr>
+      </tbody>
+    </table>
+    <div class="kpis">
+      <div><b>10.0 &ndash; 11.4%</b><span>Gross yield, year 1, on the EGP 350M price</span></div>
+      <div><b>8.0 &ndash; 9.1%</b><span>Net yield, year 1, on the EGP 350M price</span></div>
+      <div><b>7.7 &ndash; 8.5 yrs</b><span>Payback on the EGP 350M price, from handover</span></div>
+    </div>
+    <div class="kpis" style="margin-top:22pt">
+      <div><b>11.4 &ndash; 13.1%</b><span>Net yield, year 1, on the EGP 245M cash price</span></div>
+      <div><b>9.4 &ndash; 10.8%</b><span>Net yield, year 1, on the EGP 297.5M 2-year price</span></div>
+      <div><b>6.0 &ndash; 6.6 yrs</b><span>Payback on the EGP 245M cash price, from handover</span></div>
+    </div>
+    <p class="disc">Figures are projections based on the assumptions stated and are rounded. Projected returns are estimates and are not guaranteed except to the extent set out in the Meadis Group management contract. The management contract is optional. Yields are year-1 net or gross rent divided by the purchase price; payback is the time for cumulative net income to equal the purchase price, ignoring the payment schedule.</p>
+  </div>
+  <div class="title">Expected<br>Returns</div>
+  {{FOOTER}}
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section class="page" id="p-contact">
   {{HEADER}}
@@ -521,7 +614,7 @@ img.ph{display:block;object-fit:cover}
     </div>
 
   </div>
-  <div class="num">11</div>
+  <div class="num">13</div>
   <img class="ph" src="../assets/img/contact.jpg" alt="Shorouk Mall, street view at dusk" style="position:absolute;left:50pt;top:230pt;width:653pt;height:430pt">
   <div class="title">Contact</div>
   {{FOOTER}}
