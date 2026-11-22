@@ -73,3 +73,11 @@ for name in ("light", "grey", "blue"):
     themed = html.replace("</head>", "<style>\n" + rd(f"src/{name}.css") + "</style>\n</head>", 1)
     open(os.path.join(ROOT, "build", f"brochure-{name}.html"), "w", encoding="utf-8").write(themed)
 print("pages", pages, "footers", count)
+
+# One-page fact sheet (A4), in the same four colour themes.
+fs = rd("src/factsheet.html").replace("{{JALOUR_LOGO}}", JALOUR)
+assert "{{" not in fs
+open(os.path.join(ROOT, "build", "factsheet.html"), "w", encoding="utf-8").write(fs)
+for name in ("light", "grey", "blue"):
+    themed = fs.replace("</head>", "<style>\n" + rd(f"src/{name}.css") + "</style>\n</head>", 1)
+    open(os.path.join(ROOT, "build", f"factsheet-{name}.html"), "w", encoding="utf-8").write(themed)
