@@ -58,6 +58,7 @@ for i, (lab, key) in enumerate(vrows):
         c = ws.cell(r, 2 + j, M.VARIANTS[var][key]); c.font = BLUE; c.number_format = "#,##0.0"
 ws["A18"] = "Year-1 rent, base (midpoint)"
 ws["B18"] = "=AVERAGE(B16:B17)"
+ws["A19"] = "Year-1 rent, bottom-up case (from Rent basis)"; ws["B19"] = "='Rent basis'!E12"; ws["B19"].number_format = "#,##0.0"
 ws["A20"] = "Payment option"; ws["B20"] = "Discount"; ws["C20"] = "Down payment"; ws["D20"] = "Instalment years"
 for c in ("A20", "B20", "C20", "D20"):
     ws[c].font = BOLD
@@ -107,9 +108,9 @@ for col in "BCDE":
     rb.column_dimensions[col].width = 22
 
 # ---------------- Variant sheets ----------------
-def variant_sheet(name, vcol):
+def variant_sheet(name, vcol, rent_row=18, label="expected rent case"):
     s = wb.create_sheet(name)
-    s["A1"] = f"Shorouk Mall {VAR} — cash flows (EGP M), base case"; s["A1"].font = Font(bold=True, size=13)
+    s["A1"] = f"Shorouk Mall {VAR} — cash flows (EGP M), {label}"; s["A1"].font = Font(bold=True, size=13)
     first = 2                                    # column of year 0
     col = lambda t: L(first + t)
     s.cell(3, 1, "Model year").font = BOLD
@@ -126,7 +127,7 @@ def variant_sheet(name, vcol):
             s[f"{c}5"] = 0
         else:
             p = col(t - 1)
-            s[f"{c}5"] = (f"=IF({c}4=0,0,IF({c}4=1,Assumptions!${vcol}$18,"
+            s[f"{c}5"] = (f"=IF({c}4=0,0,IF({c}4=1,Assumptions!${vcol}${rent_row},"
                           f"{p}5*(1+IF({c}4<={ref['g1yrs']},{ref['g1']},{ref['g2']}))))")
         s[f"{c}6"] = f"={c}5*{ref['net']}"
         s[f"{c}7"] = f"=SUM(${col(0)}6:{c}6)"
@@ -176,5 +177,6 @@ def variant_sheet(name, vcol):
     return summary
 
 variant_sheet("Cash flows", "B")
+variant_sheet("Cash flows, bottom-up", "B", 19, "bottom-up rent case")
 wb.save(OUT)
 print("wrote", OUT)

@@ -82,9 +82,9 @@ CONNECT = [("Madinaty", "5 km", "8 min"), ("Cairo–Suez Road", "2 km", "4 min")
 PAGES = []
 
 
-ZOOM = {"Executive summary": 1.17, "Rent basis": 1.13, "Price and payment options": 1.2, "Contact": 1.3, "Market: El Sherouk": 1.14, "Market: competition": 1.10, "Market: catchment and demand": 1.2, "The asset": 1.2,
+ZOOM = {"Executive summary": 1.13, "Rent basis": 1.13, "Price and payment options": 1.2, "Contact": 1.3, "Market: El Sherouk": 1.14, "Market: competition": 1.10, "Market: catchment and demand": 1.2, "The asset": 1.2,
         "Feasibility: results by payment option": 1.04, "Asset value and cash flow": 1.3, "Assumptions and risks": 1.2,
-        "Market: pricing benchmarks": 1.2, "Concept": 1.24, "Returns": 1.2}
+        "Market: pricing benchmarks": 1.2, "Concept": 1.24, "Returns": 1.07}
 
 
 def page(title, body, num=True):
@@ -167,6 +167,16 @@ NLA_TOTAL = _tot
 NLA_NOTE = "; the third floor is assumed to match the second" if G3 else ""
 
 
+BU_NOW = RB["g2_now"] + (RB["third_now"] if G3 else 0)
+BU_HO = RB["g2_handover"] + (RB["third_handover"] if G3 else 0)
+UP = M.run(V, BU_HO)          # bottom-up rent case
+
+
+def up_range(key, f):
+    vals = [o[key] for o in UP["options"]]
+    return rng(min(vals), max(vals), f)
+
+
 def opt_range(var, key, f):
     lo, hi = R[var]["low"]["options"], R[var]["high"]["options"]
     vals = [o[key] for o in lo] + [o[key] for o in hi]
@@ -203,18 +213,18 @@ page("Executive summary", f"""
 </div>
 </div>
 <h3>Headline figures</h3>
-{table(["", V], [
-    ["List price", f"EGP {m(vv['list_price'], 0)}M"],
-    ["Price after discount (four payment options)", f"EGP {rng(midv['options'][0]['price'], midv['options'][-1]['price'])}M"],
-    ["Expected rent, first year after handover", f"EGP {rng(vv['rent_low'], vv['rent_high'], lambda x: m(x, 0))}M"],
-    ["Expected net income, first year (rent less 20%)", f"EGP {rng(rv['low']['net'][0], rv['high']['net'][0], lambda x: m(x, 0))}M"],
-    ["Net yield, year 1, on price paid", opt_range(V, 'yield_paid', pct)],
-    ["Payback from handover, on price paid", opt_range(V, 'payback', m) + " years"],
-    ["IRR, 12 years, with resale", opt_range(V, 'irr', pct)],
-    ["IRR, 12 years, rental income only", opt_range(V, 'irr_income', pct)],
-    ["NPV at 16%, with resale", f"EGP {opt_range(V, 'npv', lambda x: m(x, 0))}M"],
+{table(["", "Expected rent case", "Bottom-up rent case"], [
+    ["List price", f"EGP {m(vv['list_price'], 0)}M", f"EGP {m(vv['list_price'], 0)}M"],
+    ["Price after discount (four payment options)", f"EGP {rng(midv['options'][0]['price'], midv['options'][-1]['price'])}M", f"EGP {rng(midv['options'][0]['price'], midv['options'][-1]['price'])}M"],
+    ["Rent, first year after handover", f"EGP {rng(vv['rent_low'], vv['rent_high'], lambda x: m(x, 0))}M", f"EGP {m(BU_HO)}M"],
+    ["Net income, first year (rent less 20%)", f"EGP {rng(rv['low']['net'][0], rv['high']['net'][0], lambda x: m(x, 0))}M", f"EGP {m(UP['net'][0])}M"],
+    ["Net yield, year 1, on price paid", opt_range(V, 'yield_paid', pct), up_range('yield_paid', pct)],
+    ["Payback from handover, on price paid", opt_range(V, 'payback', m) + " years", up_range('payback', m) + " years"],
+    ["IRR, 12 years, with resale", opt_range(V, 'irr', pct), up_range('irr', pct)],
+    ["IRR, 12 years, rental income only", opt_range(V, 'irr_income', pct), up_range('irr_income', pct)],
+    ["NPV at 16%, with resale", f"EGP {opt_range(V, 'npv', lambda x: m(x, 0))}M", f"EGP {up_range('npv', lambda x: m(x, 0))}M"],
 ], cls="big")}
-<p class="note">Ranges cover the four payment options and the low-to-high rent range. Returns with resale depend mainly on the asset-value assumption (value up about 50% by handover, then about 10% a year); rental income alone returns less than the 16% discount rate. Both are shown throughout so the reader can judge each separately.</p>
+<p class="note"><b>Expected rent case:</b> Jalour\'s expected rent. <b>Bottom-up rent case:</b> the building\'s gross area at Street Side Mall\'s rates (see Rent basis). Ranges cover the four payment options and, in the expected case, the low-to-high rent range. Returns with resale depend mainly on the asset-value assumption (value up about 50% by handover, then about 10% a year). Returns with and without resale are shown throughout so the reader can judge each separately.</p>
 {DISC}""")
 
 # ---- concept
@@ -268,9 +278,9 @@ page("The asset", f"""
 <li>Finished outdoor plaza and parking</li>
 <li>Sold as a whole building, land included; all floors commercial</li></ul></div>
 </div>
-<h3>Indicative net leasable area</h3>
+<h3>Gross area used for the rent basis</h3>
 {table(_heads + ["Total"], [["sqm"] + _cells + [m(NLA_TOTAL, 0)]])}
-<p class="note">Leasable areas are as instructed by Jalour and equal the full 650 sqm floor plate of each floor. They exclude the outdoor seating and the rooftop café, and are subject to final design.</p>""")
+<p class="note">Rent is calculated on the gross area of each floor (650 sqm), as instructed by Jalour. The figures exclude the outdoor seating and the rooftop café, and are subject to final design.</p>""")
 
 # ---- market 1
 page("Market: El Sherouk", f"""
@@ -358,19 +368,17 @@ page("Market: pricing benchmarks", f"""
 <p class="src">Source: DAMAK market research, December 2024; Jalour Developments (Street Side Mall rents, March 2026).</p>""")
 
 # ---- rent basis
-BU_NOW = RB["g2_now"] + (RB["third_now"] if G3 else 0)
-BU_HO = RB["g2_handover"] + (RB["third_handover"] if G3 else 0)
 _mid = (vv["rent_low"] + vv["rent_high"]) / 2
-BU_LEAD = ("At Street Side Mall's rates, the building's leasable area supports more rent than Jalour's expected figure." if BU_HO > vv["rent_high"]
-           else "The expected rent reconciles with the building's leasable area at Street Side Mall's rates.")
+BU_LEAD = ("At Street Side Mall's rates, the building's gross area supports more rent than Jalour's expected figure." if BU_HO > vv["rent_high"]
+           else "The expected rent reconciles with the building's gross area at Street Side Mall's rates.")
 BU_TXT = ("The bottom-up result sits " + ("below" if BU_HO < vv["rent_low"] else "above" if BU_HO > vv["rent_high"] else "within")
           + " Jalour's expected range" + (", close to its low end." if vv["rent_low"] <= BU_HO < _mid else "."))
 rb_rows = [[lab, m(a, 0), m(p, 0), m(a * p * 12 / 1e6), m(a * p * 12 / 1e6 * RB["factor"])] for lab, a, p in RB["rows"]]
 t3 = RB["third"]
 page("Rent basis", f"""
 <p class="lead">{BU_LEAD}</p>
-<p>Jalour expects total rent of EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)} million in the first year after handover. The table tests that figure from the bottom up: indicative leasable areas multiplied by the March 2026 rates, then raised by 10% a year to handover.</p>
-{table(["Component", "Area (sqm)", "EGP/sqm/month", "Rent, March 2026 (EGP M)", "Rent at handover (EGP M)"],
+<p>Jalour expects total rent of EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)} million in the first year after handover. The table tests that figure from the bottom up: gross areas multiplied by the March 2026 rates, then raised by 10% a year to handover.</p>
+{table(["Component", "Gross area (sqm)", "EGP/sqm/month", "Rent, March 2026 (EGP M)", "Rent at handover (EGP M)"],
        rb_rows + ([[t3[0].replace(" (G+3)", ""), m(t3[1], 0), m(t3[2], 0), m(RB['third_now']), m(RB['third_handover'])]] if G3 else [])
        + [["<b>Total</b>", "", "", f"<b>{m(BU_NOW)}</b>", f"<b>{m(BU_HO)}</b>"]])}
 {kpis([(f"EGP {m(BU_HO)}M", "Bottom-up rent at handover"),
@@ -380,11 +388,11 @@ page("Rent basis", f"""
 <ul class="list">
 <li>Rates are March 2026 asking rents at Street Side Mall, the nearest competitor, supplied by Jalour</li>
 <li>Escalation of 10% a year for {M.ESCALATION_TO_HANDOVER_YEARS} years to an assumed handover in early 2029 (factor {RB['factor']:.2f})</li>
-<li>Leasable areas as instructed by Jalour: the full 650 sqm floor plate on each floor, {m(M.NLA['ground_outdoor'], 0)} sqm of outdoor seating and a {m(M.NLA['rooftop_cafe'], 0)} sqm rooftop open-air café</li>
+<li>Areas are gross, as instructed by Jalour: 650 sqm on each floor, {m(M.NLA['ground_outdoor'], 0)} sqm of outdoor seating and a {m(M.NLA['rooftop_cafe'], 0)} sqm rooftop open-air café</li>
 <li>Full occupancy from the first year, as instructed. A slower lease-up would reduce first-year income</li>
 <li>Sponsorship income is included in the kiosk line at the same rate</li>
 </ul>
-<p class="note">{BU_TXT} The return calculations that follow use Jalour's expected ranges, not the bottom-up figure.</p>
+<p class="note">{BU_TXT} The pages that follow show returns for both cases: Jalour's expected rent and this bottom-up rent.</p>
 {DISC}""")
 
 # ---- price and payment
@@ -430,9 +438,14 @@ def returns_page(var):
        (opt_range(var, 'yield_paid', pct), "Net yield, year 1, on price paid"),
        (opt_range(var, 'payback', m) + " yrs", "Payback from handover, on price paid"),
        (f"EGP {rng(sum(lo['net']), sum(hi['net']), lambda x: m(x, 0))}M", "Net income over 10 years")], 4)}
-<h3>Ten operating years from handover (EGP millions)</h3>
+<h3>Bottom-up rent case</h3>
+{kpis([(f"EGP {m(UP['net'][0])}M", f"Net income, year 1 (rent EGP {m(BU_HO)}M)"),
+       (up_range('yield_paid', pct), "Net yield, year 1, on price paid"),
+       (up_range('payback', m) + " yrs", "Payback from handover, on price paid"),
+       (f"EGP {m(sum(UP['net']), 0)}M", "Net income over 10 years")], 4)}
+<h3>Ten operating years from handover, expected rent case (EGP millions)</h3>
 {table(["Operating year", "Rent growth", "Total rent", "Net income", "Cumulative net income", "Asset value (basis)"], rows)}
-<h3>Net income by year, base case (EGP millions)</h3>
+<h3>Net income by year, expected rent case (EGP millions)</h3>
 {chart}
 <p class="note">Ranges show the low and high rent cases; the chart and the asset value use the midpoint. Net income is total rent less 20%, which covers management, maintenance, vacancy and all other costs. Rent growth is 10% a year for operating years 2–5 and an assumed {pct(A['growth_later'], 0)} a year afterwards; growth after the first period will follow the market. Operating year 1 begins at handover, 2 years after contract signing.</p>
 {DISC}""")
@@ -451,7 +464,10 @@ def feas_rows(var):
 fh = ["Option", "Price paid", "Net yield, yr 1", "Payback (yrs)", "IRR, with resale", "IRR, income only", "NPV, with resale"]
 page("Feasibility: results by payment option", f"""
 <p class="lead">With the resale value, every option clears the 16% discount rate.</p>
+<h3>Expected rent case: EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)}M in year 1</h3>
 {table(fh, feas_rows(V), cls="sm nw")}
+<h3>Bottom-up rent case: EGP {m(BU_HO)}M in year 1</h3>
+{table(fh, [[o["name"], m(o["price"]), pct(o["yield_paid"]), m(o["payback"]), pct(o["irr"]), pct(o["irr_income"]), m(o["npv"], 0)] for o in UP["options"]], cls="sm nw")}
 <div class="two" style="margin-top:12pt">
 <div><h3>How to read this</h3><ul class="list">
 <li><b>Net yield:</b> first-year net income divided by the price paid</li>
@@ -463,7 +479,7 @@ page("Feasibility: results by payment option", f"""
 <li>Options 2 and 3 are still being paid when rent begins, so early income helps fund the later instalments</li>
 <li>The case for buying rests on both income and capital growth. A buyer who expects lower value growth should weight the income-only column</li></ul></div>
 </div>
-<p class="note">Price and NPV in EGP millions. Ranges show the low and high rent cases.</p>
+<p class="note">Price and NPV in EGP millions. In the expected rent case, ranges show the low and high rent. The bottom-up rent case uses the rent calculated on the Rent basis page. Both cases use the same price, growth, cost and resale assumptions.</p>
 {DISC}""")
 
 # ---- value and cash flow
@@ -537,7 +553,7 @@ page("Assumptions and risks", f"""
 <li><b>Taxes.</b> Rental and capital gains taxes are not modelled</li>
 </ul>
 <h3>Recommended before commitment</h3>
-<ul class="list"><li>Verify current achieved rents and occupancy at Street Side Mall</li><li>Obtain a measured leasable-area schedule</li><li>Take independent legal, tax and valuation advice</li></ul>
+<ul class="list"><li>Verify current achieved rents and occupancy at Street Side Mall</li><li>Obtain a measured area schedule</li><li>Take independent legal, tax and valuation advice</li></ul>
 </div>
 </div>""")
 
