@@ -9,7 +9,10 @@ from openpyxl.utils import get_column_letter as L
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import model as M
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else "Shorouk_Mall_Financial_Model.xlsx"
+VAR = sys.argv[1]
+assert VAR in M.VARIANTS
+G3 = VAR == "G+3"
+OUT = sys.argv[2]
 A = M.ASSUMPTIONS
 T = A["handover_year"] + A["operating_years"]
 
@@ -25,7 +28,7 @@ wb = Workbook()
 # ---------------- Assumptions ----------------
 ws = wb.active
 ws.title = "Assumptions"
-ws["A1"] = "Shorouk Mall — Financial Model (buyer side)"; ws["A1"].font = Font(bold=True, size=14)
+ws["A1"] = f"Shorouk Mall {VAR} — Financial Model (buyer side)"; ws["A1"].font = Font(bold=True, size=14)
 ws["A2"] = "EGP millions unless stated. Blue cells are inputs; all other cells are formulas. Annual periods: year 0 = contract, handover at end of year 2."
 rows = [
     ("Years from contract to handover", A["handover_year"], "0"),
@@ -44,17 +47,17 @@ for i, ((lab, val, fmt), nm) in enumerate(zip(rows, names)):
     r = 5 + i
     ws.cell(r, 1, lab); c = ws.cell(r, 2, val); c.font = BLUE; c.number_format = fmt
     ref[nm] = f"Assumptions!$B${r}"
-ws["A14"] = "Variant"; ws["B14"] = "G+2"; ws["C14"] = "G+3"
-for c in ("A14", "B14", "C14"):
+ws["A14"] = "Configuration"; ws["B14"] = VAR
+for c in ("A14", "B14"):
     ws[c].font = BOLD
 vrows = [("List price", "list_price"), ("Year-1 rent, low", "rent_low"), ("Year-1 rent, high", "rent_high")]
 for i, (lab, key) in enumerate(vrows):
     r = 15 + i
     ws.cell(r, 1, lab)
-    for j, var in enumerate(("G+2", "G+3")):
+    for j, var in enumerate((VAR,)):
         c = ws.cell(r, 2 + j, M.VARIANTS[var][key]); c.font = BLUE; c.number_format = "#,##0.0"
 ws["A18"] = "Year-1 rent, base (midpoint)"
-ws["B18"] = "=AVERAGE(B16:B17)"; ws["C18"] = "=AVERAGE(C16:C17)"
+ws["B18"] = "=AVERAGE(B16:B17)"
 ws["A20"] = "Payment option"; ws["B20"] = "Discount"; ws["C20"] = "Down payment"; ws["D20"] = "Instalment years"
 for c in ("A20", "B20", "C20", "D20"):
     ws[c].font = BOLD
@@ -83,7 +86,8 @@ hdr = ["Component", "Net leasable area (sqm)", "Rent (EGP/sqm/month)", "Annual r
 for j, h in enumerate(hdr):
     c = rb.cell(3, 1 + j, h); c.font = HEAD; c.fill = HFILL; c.alignment = Alignment(wrap_text=True)
 build = M.rent_build()
-allrows = build["rows"] + [build["third"]]
+third = (build["third"][0].replace(" (G+3)", ""),) + build["third"][1:]
+allrows = build["rows"] + ([third] if G3 else [])
 rb["A12"] = "Years of 10% escalation to handover"; rb["B12"] = M.ESCALATION_TO_HANDOVER_YEARS; rb["B12"].font = BLUE
 for i, (lab, area, rate) in enumerate(allrows):
     r = 4 + i
@@ -92,11 +96,10 @@ for i, (lab, area, rate) in enumerate(allrows):
     p = rb.cell(r, 3, rate); p.font = BLUE; p.number_format = "#,##0"
     rb.cell(r, 4, f"=B{r}*C{r}*12/1000000").number_format = "#,##0.0"
     rb.cell(r, 5, f"=D{r}*(1+{ref['g1']})^$B$12").number_format = "#,##0.0"
-rb["A10"] = "Total, G+2 (first five rows)"; rb["A10"].font = BOLD
-rb["D10"] = "=SUM(D4:D8)"; rb["E10"] = "=SUM(E4:E8)"
-rb["A11"] = "Total, G+3"; rb["A11"].font = BOLD
-rb["D11"] = "=SUM(D4:D9)"; rb["E11"] = "=SUM(E4:E9)"
-for c in ("D10", "E10", "D11", "E11"):
+rb["A10"] = "Total"; rb["A10"].font = BOLD
+_last = 3 + len(allrows)
+rb["D10"] = f"=SUM(D4:D{_last})"; rb["E10"] = f"=SUM(E4:E{_last})"
+for c in ("D10", "E10"):
     rb[c].number_format = "#,##0.0"; rb[c].font = BOLD
 rb["A14"] = "Areas are indicative, from the unit areas on the architectural drawings; the outdoor seating area is an assumption."
 rb.column_dimensions["A"].width = 40
@@ -106,7 +109,7 @@ for col in "BCDE":
 # ---------------- Variant sheets ----------------
 def variant_sheet(name, vcol):
     s = wb.create_sheet(name)
-    s["A1"] = f"Shorouk Mall {name} — cash flows (EGP M), base case"; s["A1"].font = Font(bold=True, size=13)
+    s["A1"] = f"Shorouk Mall {VAR} — cash flows (EGP M), base case"; s["A1"].font = Font(bold=True, size=13)
     first = 2                                    # column of year 0
     col = lambda t: L(first + t)
     s.cell(3, 1, "Model year").font = BOLD
@@ -172,7 +175,6 @@ def variant_sheet(name, vcol):
     s.freeze_panes = "B4"
     return summary
 
-variant_sheet("G+2", "B")
-variant_sheet("G+3", "C")
+variant_sheet("Cash flows", "B")
 wb.save(OUT)
 print("wrote", OUT)

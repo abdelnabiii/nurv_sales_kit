@@ -84,7 +84,7 @@ PAGES = []
 
 ZOOM = {"Executive summary": 1.17, "Rent basis": 1.13, "Price and payment options": 1.2, "Important notice and contact": 1.3, "Market: El Sherouk": 1.14, "Market: competition": 1.10, "Market: catchment and demand": 1.2, "The asset": 1.2,
         "Feasibility: results by payment option": 1.04, "Asset value and cash flow": 1.3, "Assumptions and risks": 1.2,
-        "Market: pricing benchmarks": 1.2, "Concept": 1.24, "Returns: G+2": 1.2, "Returns: G+3": 1.2}
+        "Market: pricing benchmarks": 1.2, "Concept": 1.24, "Returns": 1.2}
 
 
 def page(title, body, num=True):
@@ -147,8 +147,24 @@ DISC = ('<p class="disc">Projections only. Figures are estimates based on the as
         'and are not guaranteed. This study is not an offer or a contract.</p>')
 
 # ================================================================== PAGES
-g2, g3 = R["G+2"], R["G+3"]
-v2, v3 = M.VARIANTS["G+2"], M.VARIANTS["G+3"]
+V = sys.argv[1] if len(sys.argv) > 1 else "G+2"
+assert V in M.VARIANTS
+G3 = V == "G+3"
+rv, vv = R[V], M.VARIANTS[V]
+midv = rv["mid"]
+GFA_ABOVE = 2600 if G3 else 1950
+GFA_TOTAL = "3,900" if G3 else "3,250"
+COVERNAME = "cover-g3" if G3 else "cover"
+XLSX = f"Shorouk_Mall_{V}_Financial_Model.xlsx"
+MIXTXT = "dining, lifestyle retail, wellness and co-working" if G3 else "dining, lifestyle retail and wellness"
+_n = M.NLA
+_cells = [m(_n["ground_indoor"], 0), m(_n["kiosk"], 0), m(_n["first"], 0), m(_n["second"], 0)]
+_tot = _n["ground_indoor"] + _n["kiosk"] + _n["first"] + _n["second"]
+_heads = ["", "Ground, indoor", "Kiosks", "First", "Second"]
+if G3:
+    _cells.append(m(_n["third"], 0)); _heads.append("Third"); _tot += _n["third"]
+NLA_TOTAL = _tot
+NLA_NOTE = "; the third floor is assumed to match the second" if G3 else ""
 
 
 def opt_range(var, key, f):
@@ -162,17 +178,17 @@ page("cover", f"""
 <div class="cover">
   <div class="conf">Confidential</div>
   <h1>Shorouk<br>Mall</h1>
-  <div class="ct">Investment Study</div>
+  <div class="ct">Investment Study · {V}</div>
   <div class="cs">Concept · Market study · Returns · Feasibility</div>
-  <img src="{BRO}/assets/img/cover.jpg" alt="Shorouk Mall">
-  <div class="cb"><b>El Sherouk, Cairo</b><br>A mixed-use commercial development, offered as a whole building in G+2 and G+3 configurations<br>
+  <img src="{BRO}/assets/img/{COVERNAME}.jpg" alt="Shorouk Mall">
+  <div class="cb"><b>El Sherouk, Cairo</b><br>A mixed-use commercial development, offered as a whole building · {V} configuration<br>
   Developed by Jalour Developments, Al Jalal Holding · November 2026</div>
 </div>""", num=False)
 
 # ---- contents + executive summary
 toc = ["Executive summary", "Concept", "The asset", "Market: El Sherouk", "Market: catchment and demand",
        "Market: competition", "Market: pricing benchmarks", "Rent basis", "Price and payment options",
-       "Returns: G+2", "Returns: G+3", "Feasibility: results by payment option", "Asset value and cash flow",
+       "Returns", "Feasibility: results by payment option", "Asset value and cash flow",
        "Assumptions and risks", "Important notice and contact"]
 page("Executive summary", f"""
 <div class="two">
@@ -182,21 +198,21 @@ page("Executive summary", f"""
 </div>
 <div>
 <h3>The opportunity</h3>
-<p>Shorouk Mall is a mixed-use commercial building in the Fourth District of El Sherouk, offered for sale as a whole building with its land (1,113 sqm). It is planned floor by floor (dining, lifestyle retail, wellness and, in the G+3 configuration, co-working), with basement parking and a rooftop running track.</p>
-<p>This study sets out the concept, the market evidence, the expected returns and a buyer-side feasibility for both configurations.</p>
+<p>Shorouk Mall is a mixed-use commercial building in the Fourth District of El Sherouk, offered for sale as a whole building with its land (1,113 sqm). It is planned floor by floor ({MIXTXT}), with basement parking and a rooftop running track.</p>
+<p>This study sets out the concept, the market evidence, the expected returns and a buyer-side feasibility for the {V} configuration.</p>
 </div>
 </div>
 <h3>Headline figures</h3>
-{table(["", "G+2", "G+3"], [
-    ["List price", f"EGP {m(v2['list_price'], 0)}M", f"EGP {m(v3['list_price'], 0)}M"],
-    ["Price after discount (four payment options)", f"EGP {rng(g2['mid']['options'][0]['price'], g2['mid']['options'][-1]['price'], lambda x: m(x, 0))}M", f"EGP {rng(g3['mid']['options'][0]['price'], g3['mid']['options'][-1]['price'])}M"],
-    ["Expected rent, first year after handover", f"EGP {rng(v2['rent_low'], v2['rent_high'], lambda x: m(x, 0))}M", f"EGP {rng(v3['rent_low'], v3['rent_high'], lambda x: m(x, 0))}M"],
-    ["Expected net income, first year (rent less 20%)", f"EGP {rng(g2['low']['net'][0], g2['high']['net'][0], lambda x: m(x, 0))}M", f"EGP {rng(g3['low']['net'][0], g3['high']['net'][0], lambda x: m(x, 0))}M"],
-    ["Net yield, year 1, on price paid", opt_range('G+2', 'yield_paid', pct), opt_range('G+3', 'yield_paid', pct)],
-    ["Payback from handover, on price paid", opt_range('G+2', 'payback', m) + " years", opt_range('G+3', 'payback', m) + " years"],
-    ["IRR, 12 years, with resale", opt_range('G+2', 'irr', pct), opt_range('G+3', 'irr', pct)],
-    ["IRR, 12 years, rental income only", opt_range('G+2', 'irr_income', pct), opt_range('G+3', 'irr_income', pct)],
-    ["NPV at 16%, with resale", f"EGP {opt_range('G+2', 'npv', lambda x: m(x, 0))}M", f"EGP {opt_range('G+3', 'npv', lambda x: m(x, 0))}M"],
+{table(["", V], [
+    ["List price", f"EGP {m(vv['list_price'], 0)}M"],
+    ["Price after discount (four payment options)", f"EGP {rng(midv['options'][0]['price'], midv['options'][-1]['price'])}M"],
+    ["Expected rent, first year after handover", f"EGP {rng(vv['rent_low'], vv['rent_high'], lambda x: m(x, 0))}M"],
+    ["Expected net income, first year (rent less 20%)", f"EGP {rng(rv['low']['net'][0], rv['high']['net'][0], lambda x: m(x, 0))}M"],
+    ["Net yield, year 1, on price paid", opt_range(V, 'yield_paid', pct)],
+    ["Payback from handover, on price paid", opt_range(V, 'payback', m) + " years"],
+    ["IRR, 12 years, with resale", opt_range(V, 'irr', pct)],
+    ["IRR, 12 years, rental income only", opt_range(V, 'irr_income', pct)],
+    ["NPV at 16%, with resale", f"EGP {opt_range(V, 'npv', lambda x: m(x, 0))}M"],
 ], cls="big")}
 <p class="note">Ranges cover the four payment options and the low-to-high rent range. Returns with resale depend mainly on the asset-value assumption (value up about 50% by handover, then about 10% a year); rental income alone returns less than the 16% discount rate. Both are shown throughout so the reader can judge each separately.</p>
 {DISC}""")
@@ -210,7 +226,7 @@ page("Concept", f"""
     ["Ground floor", "The Dining Experience", "Restaurants and cafés with outdoor seating on the plaza; daily-needs units such as a pharmacy and a bank; kiosks"],
     ["First floor", "Lifestyle and Shopping", "Home comfort and lifestyle retail"],
     ["Second floor", "The Wellness Arena", "Fitness, treatment and wellbeing"],
-    ["Third floor (G+3)", "Co-working", "Flexible workspace and meeting rooms, bringing a weekday community"],
+    *([["Third floor", "Co-working", "Flexible workspace and meeting rooms, bringing a weekday community"]] if G3 else []),
     ["Rooftop", "On-Air Track", "A lit, rubberised perimeter running track; the building's landmark"],
 ], align=["l", "l", "l"])}
 <div class="two" style="margin-top:14pt">
@@ -232,12 +248,12 @@ page("The asset", f"""
 <div>
 {table(["Level", "Gross area (sqm)", "Height"], [
     ["Basement", "1,100", "4 m"], ["Ground floor", "650", "5 m"], ["First floor", "650", "4 m"], ["Second floor", "650", "4 m"],
-    ["Third floor (G+3 only)", "650", "4 m"], ["Rooftop track", "200", "—"]])}
-{kpis([("1,113 sqm", "Land area, included in the sale"), ("3,250 sqm", "Total gross area, G+2"), ("3,900 sqm", "Total gross area, G+3")])}
+    *([["Third floor", "650", "4 m"]] if G3 else []), ["Rooftop track", "200", "—"]])}
+{kpis([("1,113 sqm", "Land area, included in the sale"), (GFA_TOTAL + " sqm", "Total gross area"), (f"{GFA_ABOVE:,} sqm", "Above-ground commercial gross area")])}
 </div>
 <div>
-<img class="ph" src="{BRO}/assets/img/cover-g3.jpg" alt="Shorouk Mall, G+3 configuration">
-<p class="cap">The G+3 configuration. Artist's impression.</p>
+<img class="ph" src="{BRO}/assets/img/{COVERNAME}.jpg" alt="Shorouk Mall">
+<p class="cap">The {V} configuration. Artist's impression.</p>
 </div>
 </div>
 <div class="two" style="margin-top:10pt">
@@ -253,11 +269,8 @@ page("The asset", f"""
 <li>Sold as a whole building, land included; all floors commercial</li></ul></div>
 </div>
 <h3>Indicative net leasable area</h3>
-{table(["", "Ground, indoor", "Kiosks", "First", "Second", "Third (G+3)", "Total G+2", "Total G+3"], [[
-    "sqm", m(M.NLA['ground_indoor'], 0), m(M.NLA['kiosk'], 0), m(M.NLA['first'], 0), m(M.NLA['second'], 0), m(M.NLA['third'], 0),
-    m(M.NLA['ground_indoor'] + M.NLA['kiosk'] + M.NLA['first'] + M.NLA['second'], 0),
-    m(M.NLA['ground_indoor'] + M.NLA['kiosk'] + M.NLA['first'] + M.NLA['second'] + M.NLA['third'], 0)]])}
-<p class="note">Net leasable areas are indicative, taken from the unit areas on the architectural drawings; the third floor is assumed to match the second. They exclude circulation, cores and outdoor seating, and are subject to final design.</p>""")
+{table(_heads + ["Total"], [["sqm"] + _cells + [m(NLA_TOTAL, 0)]])}
+<p class="note">Net leasable areas are indicative, taken from the unit areas on the architectural drawings{NLA_NOTE}. They exclude circulation, cores and outdoor seating, and are subject to final design.</p>""")
 
 # ---- market 1
 page("Market: El Sherouk", f"""
@@ -321,8 +334,8 @@ page("Market: competition", f"""
 <p class="src">Source: DAMAK market research, December 2024. Street Side Mall information: Jalour Developments, March 2026.</p>""")
 
 # ---- pricing benchmarks
-ours_cash = M.VARIANTS["G+2"]["list_price"] * 0.6 * 1e6 / 1950
-ours_list = M.VARIANTS["G+2"]["list_price"] * 1e6 / 1950
+ours_cash = vv["list_price"] * 0.6 * 1e6 / GFA_ABOVE
+ours_list = vv["list_price"] * 1e6 / GFA_ABOVE
 chart = bars(RETAIL_PSM + [("Shorouk Mall, cash", ours_cash), ("Shorouk Mall, list", ours_list)],
              hl={"Shorouk Mall, cash", "Shorouk Mall, list"}, labw=92)
 page("Market: pricing benchmarks", f"""
@@ -330,7 +343,7 @@ page("Market: pricing benchmarks", f"""
 <div>
 <h3>Retail asking prices, primary market (EGP per sqm)</h3>
 {chart}
-<p class="note">Competitors: average asking price per sqm of retail units, December 2024. Shorouk Mall (blue): G+2 price divided by its 1,950 sqm of above-ground gross area; the price also includes the land, the basement and the rooftop. Competitor prices are for individual units two years earlier, so the comparison is indicative only.</p>
+<p class="note">Competitors: average asking price per sqm of retail units, December 2024. Shorouk Mall (blue): price divided by its {GFA_ABOVE:,} sqm of above-ground gross area; the price also includes the land, the basement and the rooftop. Competitor prices are for individual units two years earlier, so the comparison is indicative only.</p>
 </div>
 <div>
 <h3>Rents recorded in the 2024 survey</h3>
@@ -339,7 +352,7 @@ page("Market: pricing benchmarks", f"""
 {table(["Space", "EGP / sqm / month"], [
     ["Ground floor, indoor", m(M.RENT_RATES['ground_indoor'], 0)], ["Ground floor, outdoor", m(M.RENT_RATES['ground_outdoor'], 0)],
     ["Kiosks and sponsorship", m(M.RENT_RATES['kiosk'], 0)], ["First and second floors", m(M.RENT_RATES['upper'], 0)],
-    ["Third floor, co-working", m(M.RENT_RATES['coworking'], 0)]])}
+    *([["Third floor, co-working", m(M.RENT_RATES['coworking'], 0)]] if G3 else [])])}
 <p class="note"><b>Read these together with care.</b> The rents used in this study are asking rents at Street Side Mall in March 2026, supplied by Jalour. They are well above the rents the 2024 survey recorded at other malls (EGP 293–798). Part of the gap is time (15 months of market growth) and part is positioning. A buyer should verify current achieved rents before relying on the returns in this study.</p>
 <h3>Market payment norms</h3><ul class="list"><li>Most common plan: 20% down and 6 years</li><li>Other frequent plans: 15% or 25% down and 6 years; 40% down and 2 years</li><li>Shorouk Mall: 20–30% down over 3–5 years, with discounts of 20–40%</li></ul>
 </div>
@@ -347,18 +360,22 @@ page("Market: pricing benchmarks", f"""
 <p class="src">Source: DAMAK market research, December 2024; Jalour Developments (Street Side Mall rents, March 2026).</p>""")
 
 # ---- rent basis
+BU_NOW = RB["g2_now"] + (RB["third_now"] if G3 else 0)
+BU_HO = RB["g2_handover"] + (RB["third_handover"] if G3 else 0)
+_mid = (vv["rent_low"] + vv["rent_high"]) / 2
+BU_TXT = ("The bottom-up result sits " + ("below" if BU_HO < vv["rent_low"] else "above" if BU_HO > vv["rent_high"] else "within")
+          + " Jalour's expected range" + (", close to its low end." if vv["rent_low"] <= BU_HO < _mid else "."))
 rb_rows = [[lab, m(a, 0), m(p, 0), m(a * p * 12 / 1e6), m(a * p * 12 / 1e6 * RB["factor"])] for lab, a, p in RB["rows"]]
 t3 = RB["third"]
 page("Rent basis", f"""
 <p class="lead">The expected rent reconciles with the building's leasable area at Street Side Mall's rates.</p>
-<p>Jalour expects total rent of EGP {m(v2['rent_low'], 0)}–{m(v2['rent_high'], 0)} million in the first year after handover for G+2, and about EGP 15 million more for G+3. The table tests that figure from the bottom up: indicative leasable areas multiplied by the March 2026 rates, then raised by 10% a year to handover.</p>
+<p>Jalour expects total rent of EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)} million in the first year after handover. The table tests that figure from the bottom up: indicative leasable areas multiplied by the March 2026 rates, then raised by 10% a year to handover.</p>
 {table(["Component", "Area (sqm)", "EGP/sqm/month", "Rent, March 2026 (EGP M)", "Rent at handover (EGP M)"],
-       rb_rows + [["<b>Total, G+2</b>", "", "", f"<b>{m(RB['g2_now'])}</b>", f"<b>{m(RB['g2_handover'])}</b>"],
-                  [t3[0], m(t3[1], 0), m(t3[2], 0), m(RB['third_now']), m(RB['third_handover'])],
-                  ["<b>Total, G+3</b>", "", "", f"<b>{m(RB['g2_now'] + RB['third_now'])}</b>", f"<b>{m(RB['g2_handover'] + RB['third_handover'])}</b>"]])}
-{kpis([(f"EGP {m(RB['g2_handover'])}M", f"Bottom-up rent at handover, G+2 (expected: EGP {m(v2['rent_low'], 0)}–{m(v2['rent_high'], 0)}M)"),
-       (f"EGP {m(RB['g2_handover'] + RB['third_handover'])}M", f"Bottom-up rent at handover, G+3 (expected: EGP {m(v3['rent_low'], 0)}–{m(v3['rent_high'], 0)}M)"),
-       (f"EGP {m(RB['third_handover'])}M", "Bottom-up rent from the third floor (expected: about EGP 15M)")])}
+       rb_rows + ([[t3[0].replace(" (G+3)", ""), m(t3[1], 0), m(t3[2], 0), m(RB['third_now']), m(RB['third_handover'])]] if G3 else [])
+       + [["<b>Total</b>", "", "", f"<b>{m(BU_NOW)}</b>", f"<b>{m(BU_HO)}</b>"]])}
+{kpis([(f"EGP {m(BU_HO)}M", "Bottom-up rent at handover"),
+       (f"EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)}M", "Jalour's expected rent, first year after handover"),
+       (f"{BU_HO / ((vv['rent_low'] + vv['rent_high']) / 2) * 100:.0f}%", "Bottom-up result as a share of the expected midpoint")])}
 <h3>What this rests on</h3>
 <ul class="list">
 <li>Rates are March 2026 asking rents at Street Side Mall, the nearest competitor, supplied by Jalour</li>
@@ -367,7 +384,7 @@ page("Rent basis", f"""
 <li>Full occupancy from the first year, as instructed. A slower lease-up would reduce first-year income</li>
 <li>Sponsorship income is included in the kiosk line at the same rate</li>
 </ul>
-<p class="note">The bottom-up result sits at the low end of the expected G+2 range and within the G+3 range. The return calculations that follow use Jalour's expected ranges, not the bottom-up figure.</p>
+<p class="note">{BU_TXT} The return calculations that follow use Jalour's expected ranges, not the bottom-up figure.</p>
 {DISC}""")
 
 # ---- price and payment
@@ -381,11 +398,9 @@ def pay_rows(var):
     return rows
 ph = ["Option", "Discount", "Price paid", "Down payment", "Quarterly instalments", "Term"]
 page("Price and payment options", f"""
-{kpis([(f"EGP {m(v2['list_price'], 0)}M", "List price, G+2, whole building with land"), (f"EGP {m(v3['list_price'], 0)}M", "List price, G+3, whole building with land")], 2)}
-<h3>G+2</h3>
-{table(ph, pay_rows("G+2"), cls="nw")}
-<h3>G+3</h3>
-{table(ph, pay_rows("G+3"), cls="nw")}
+{kpis([(f"EGP {m(vv['list_price'], 0)}M", f"List price, {V}, whole building with land"), (f"EGP {rng(midv['options'][0]['price'], midv['options'][-1]['price'])}M", "Price after discount, across the four options")], 2)}
+<h3>Payment options</h3>
+{table(ph, pay_rows(V), cls="nw")}
 <div class="two" style="margin-top:12pt">
 <div><h3>Terms</h3><ul class="list">
 <li>Instalments are quarterly and equal, starting after the down payment</li>
@@ -409,7 +424,7 @@ def returns_page(var):
         g = "—" if k == 0 else pct(A["growth_initial"] if k < A["growth_initial_years"] else A["growth_later"], 0)
         rows.append([f"Year {k + 1}", g, rng(lo["gross"][k], hi["gross"][k]), rng(lo["net"][k], hi["net"][k]), rng(cl, ch), m(mid["value"][k], 0)])
     chart = columns([(f"Y{k + 1}", mid["net"][k]) for k in range(A["operating_years"])], h=120, fmt=lambda x: f"{x:,.0f}")
-    page(f"Returns: {var}", f"""
+    page("Returns", f"""
 <p class="lead">Expected rent of EGP {m(v['rent_low'], 0)}–{m(v['rent_high'], 0)} million in the first year after handover, rising 10% a year for the first five years.</p>
 {kpis([(f"EGP {rng(lo['net'][0], hi['net'][0], lambda x: m(x, 0))}M", "Net income, year 1"),
        (opt_range(var, 'yield_paid', pct), "Net yield, year 1, on price paid"),
@@ -422,8 +437,7 @@ def returns_page(var):
 <p class="note">Ranges show the low and high rent cases; the chart and the asset value use the midpoint. Net income is total rent less 20%, which covers management, maintenance, vacancy and all other costs. Rent growth is 10% a year for operating years 2–5 and an assumed {pct(A['growth_later'], 0)} a year afterwards; growth after the first period will follow the market. Operating year 1 begins at handover, 2 years after contract signing.</p>
 {DISC}""")
 
-returns_page("G+2")
-returns_page("G+3")
+returns_page(V)
 
 # ---- feasibility
 def feas_rows(var):
@@ -437,10 +451,7 @@ def feas_rows(var):
 fh = ["Option", "Price paid", "Net yield, yr 1", "Payback (yrs)", "IRR, with resale", "IRR, income only", "NPV, with resale", "NPV, income only"]
 page("Feasibility: results by payment option", f"""
 <p class="lead">With the resale value, every option clears the 16% discount rate. On rental income alone, none does.</p>
-<h3>G+2</h3>
-{table(fh, feas_rows("G+2"), cls="sm nw")}
-<h3>G+3</h3>
-{table(fh, feas_rows("G+3"), cls="sm nw")}
+{table(fh, feas_rows(V), cls="sm nw")}
 <div class="two" style="margin-top:12pt">
 <div><h3>How to read this</h3><ul class="list">
 <li><b>Net yield:</b> first-year net income divided by the price paid</li>
@@ -450,7 +461,7 @@ page("Feasibility: results by payment option", f"""
 <li><b>Income only:</b> ignores any resale value, as a floor</li></ul></div>
 <div><h3>Findings</h3><ul class="list">
 <li>Cash gives the highest yield and shortest payback; Option 2 gives the highest IRR and NPV with resale, because less capital is tied up before rent starts</li>
-<li>G+3 improves every measure: EGP 50M more in price buys about EGP 15M more rent a year</li>
+<li>Options 2 and 3 are still being paid when rent begins, so early income helps fund the later instalments</li>
 <li>The case for buying rests on both income and capital growth. A buyer who expects lower value growth should weight the income-only columns</li></ul></div>
 </div>
 <p class="note">Price and NPV in EGP millions. Ranges show the low and high rent cases. A negative income-only NPV means rental income alone, over 10 years, returns less than 16% a year; it does not mean a loss.</p>
@@ -461,47 +472,49 @@ def flow_chart(var, idx):
     o = R[var]["mid"]["options"][idx]
     T = A["handover_year"] + A["operating_years"]
     return columns([(f"Y{t}", o["flows_income"][t]) for t in range(T + 1)], h=118, fmt=lambda x: f"{x:,.0f}")
-mid2, mid3 = g2["mid"], g3["mid"]
+
 page("Asset value and cash flow", f"""
 <div class="two">
 <div>
 <h3>Asset-value basis</h3>
 <p>As instructed by Jalour, the study assumes the building's value rises by about 50% between contract and handover, and by about 10% a year afterwards, starting from the list price.</p>
-{table(["", "G+2 (EGP M)", "G+3 (EGP M)"], [
-    ["List price at contract", m(v2['list_price'], 0), m(v3['list_price'], 0)],
-    ["Value at handover (+50%)", m(mid2['value_handover'], 0), m(mid3['value_handover'], 0)],
-    ["Value after 5 operating years", m(mid2['value'][4], 0), m(mid3['value'][4], 0)],
-    ["Value after 10 operating years (resale)", m(mid2['exit_value'], 0), m(mid3['exit_value'], 0)],
-    ["Net income in year 10 as a share of resale value", rng(g2['low']['exit_yield'], g2['high']['exit_yield'], pct), rng(g3['low']['exit_yield'], g3['high']['exit_yield'], pct)]])}
+{table(["", "EGP M"], [
+    ["List price at contract", m(vv['list_price'], 0)],
+    ["Value at handover (+50%)", m(midv['value_handover'], 0)],
+    ["Value after 5 operating years", m(midv['value'][4], 0)],
+    ["Value after 10 operating years (resale)", m(midv['exit_value'], 0)],
+    ["Net income in year 10 as a share of resale value", rng(rv['low']['exit_yield'], rv['high']['exit_yield'], pct)]])}
 </div>
 <div>
 <h3>A check on the resale value</h3>
-<p>At the assumed resale value, the building would sell on a net income yield of about {pct(mid2['exit_yield'])} (G+2) or {pct(mid3['exit_yield'])} (G+3). That is well below the {opt_range('G+2', 'yield_paid', pct)} entry yield in this study, because value is assumed to grow faster than rent.</p>
+<p>At the assumed resale value, the building would sell on a net income yield of about {pct(midv['exit_yield'])}. That is well below the {opt_range(V, 'yield_paid', pct)} entry yield in this study, because value is assumed to grow faster than rent.</p>
 <p>If the building instead resold at the same yield as it was bought, the resale value would be lower and so would the IRR. The resale assumption is the single largest driver of the with-resale returns and deserves the buyer's own view.</p>
 </div>
 </div>
 <h3>Annual net cash flow before resale, base case (EGP millions)</h3>
 <div class="two">
-<div><p class="cap2">G+2 · Option 1, cash</p>{flow_chart("G+2", 0)}</div>
-<div><p class="cap2">G+2 · Option 2, 30% down and 5 years</p>{flow_chart("G+2", 1)}</div>
+<div><p class="cap2">Option 1, cash</p>{flow_chart(V, 0)}</div>
+<div><p class="cap2">Option 2, 30% down and 5 years</p>{flow_chart(V, 1)}</div>
 </div>
 <div class="two">
-<div><p class="cap2">G+3 · Option 1, cash</p>{flow_chart("G+3", 0)}</div>
-<div><p class="cap2">G+3 · Option 2, 30% down and 5 years</p>{flow_chart("G+3", 1)}</div>
+<div><p class="cap2">Option 3, 25% down and 4 years</p>{flow_chart(V, 2)}</div>
+<div><p class="cap2">Option 4, 20% down and 3 years</p>{flow_chart(V, 3)}</div>
 </div>
 <p class="note">Y0 is contract signing; rent begins in Y3, the first year after handover. Quarterly instalments are shown as annual totals. Resale proceeds at the end of Y12 are excluded from the charts.</p>
 {DISC}""")
 
+APPROVAL_TXT = ("The G+3 configuration and the 2-year handover depend on approvals and construction progress" if G3
+                else "The 2-year handover depends on approvals and construction progress")
 # ---- assumptions and risks
 page("Assumptions and risks", f"""
 <div class="two">
 <div>
 <h3>Assumptions</h3>
 {table(["Item", "Basis"], [
-    ["List price", f"EGP {m(v2['list_price'], 0)}M (G+2); EGP {m(v3['list_price'], 0)}M (G+3)"],
+    ["List price", f"EGP {m(vv['list_price'], 0)}M ({V})"],
     ["Payment options", "Four options; discounts of 20–40%"],
     ["Handover", "2 years from contract (contractual)"],
-    ["First-year rent", f"EGP {m(v2['rent_low'], 0)}–{m(v2['rent_high'], 0)}M (G+2); EGP {m(v3['rent_low'], 0)}–{m(v3['rent_high'], 0)}M (G+3)"],
+    ["First-year rent", f"EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)}M"],
     ["Occupancy", "100% from the first year"],
     ["Costs", "20% of rent, covering everything"],
     ["Rent growth", f"10% a year, operating years 2–5; then {pct(A['growth_later'], 0)} (study assumption)"],
@@ -522,7 +535,7 @@ page("Assumptions and risks", f"""
 <li><b>Market data.</b> The market survey dates from December 2024; prices, supply and rents have moved since</li>
 <li><b>New supply.</b> Eleven nearby plots could become competing projects</li>
 <li><b>Costs.</b> The 20% deduction is a single allowance, not a costed budget</li>
-<li><b>Approvals and delivery.</b> The G+3 configuration and the 2-year handover depend on approvals and construction progress</li>
+<li><b>Approvals and delivery.</b> {APPROVAL_TXT}</li>
 <li><b>Economy.</b> Inflation, interest rates and currency affect rents, values and the appropriate discount rate</li>
 <li><b>Taxes.</b> Rental and capital gains taxes are not modelled</li>
 </ul>
@@ -540,7 +553,7 @@ page("Important notice and contact", f"""
 <p>Recipients should make their own enquiries and take independent legal, tax, financial and valuation advice before making any decision.</p>
 <p class="note">This wording is interim and has not been reviewed by legal counsel.</p>
 <h3>Accompanying file</h3>
-<p>The Excel workbook <b>Shorouk_Mall_Financial_Model.xlsx</b> contains the full model with live formulas: assumptions, the rent basis, and year-by-year cash flows, IRR and NPV for each payment option in both configurations.</p>
+<p>The Excel workbook <b>{XLSX}</b> contains the full model with live formulas: assumptions, the rent basis, and year-by-year cash flows, IRR and NPV for each payment option.</p>
 <div class="contact">
 <div><b>Abdelnabi</b><br>Head of Business Development<br>Jalour Developments, Al Jalal Holding</div>
 <div class="r">abdelnabi@aljalalholding.com<br>+20 100 077 5002</div>
@@ -621,15 +634,15 @@ for i, (title, body, num) in enumerate(PAGES, 1):
     if title == "cover":
         inner = body
     else:
-        inner = (f'<div class="hdr"><span>Jalour</span><span>Shorouk Mall · Investment Study</span><span>Confidential · 2026</span></div>'
+        inner = (f'<div class="hdr"><span>Jalour</span><span>Shorouk Mall {V} · Investment Study</span><span>Confidential · 2026</span></div>'
                  f'<h2>{title}</h2><div class="content" style="zoom:{ZOOM.get(title, 1.26)}">{body}</div>')
     ftr = (f'<div class="ftr"><span class="logo">{JALOUR}</span><span class="t">Confidential. Projections only; not guaranteed. '
            f'Not an offer or a contract.</span><span class="pg">{i:02d} / {total:02d}</span></div>')
     html_pages.append(f'<section class="page">{inner}{ftr}</section>')
 
-doc = ('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Shorouk Mall — Investment Study</title>'
+doc = ('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Shorouk Mall {V} — Investment Study</title>'
        f"<style>{CSS}</style>__THEME__</head><body>{''.join(html_pages)}</body></html>")
 os.makedirs(os.path.join(HERE, "build"), exist_ok=True)
-open(os.path.join(HERE, "build", "study.html"), "w", encoding="utf-8").write(doc.replace("__THEME__", ""))
-open(os.path.join(HERE, "build", "study-light.html"), "w", encoding="utf-8").write(doc.replace("__THEME__", f"<style>{LIGHT}</style>"))
-print("pages", total)
+open(os.path.join(HERE, "build", f"study-{V}.html"), "w", encoding="utf-8").write(doc.replace("__THEME__", ""))
+open(os.path.join(HERE, "build", f"study-{V}-light.html"), "w", encoding="utf-8").write(doc.replace("__THEME__", f"<style>{LIGHT}</style>"))
+print(V, "pages", total)
