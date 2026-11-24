@@ -88,20 +88,20 @@ for j, h in enumerate(hdr):
 build = M.rent_build()
 third = (build["third"][0].replace(" (G+3)", ""),) + build["third"][1:]
 allrows = build["rows"] + ([third] if G3 else [])
-rb["A12"] = "Years of 10% escalation to handover"; rb["B12"] = M.ESCALATION_TO_HANDOVER_YEARS; rb["B12"].font = BLUE
+rb["A14"] = "Years of 10% escalation to handover"; rb["B14"] = M.ESCALATION_TO_HANDOVER_YEARS; rb["B14"].font = BLUE
 for i, (lab, area, rate) in enumerate(allrows):
     r = 4 + i
     rb.cell(r, 1, lab)
     a = rb.cell(r, 2, area); a.font = BLUE; a.number_format = "#,##0.0"
     p = rb.cell(r, 3, rate); p.font = BLUE; p.number_format = "#,##0"
     rb.cell(r, 4, f"=B{r}*C{r}*12/1000000").number_format = "#,##0.0"
-    rb.cell(r, 5, f"=D{r}*(1+{ref['g1']})^$B$12").number_format = "#,##0.0"
-rb["A10"] = "Total"; rb["A10"].font = BOLD
+    rb.cell(r, 5, f"=D{r}*(1+{ref['g1']})^$B$14").number_format = "#,##0.0"
+rb["A12"] = "Total"; rb["A12"].font = BOLD
 _last = 3 + len(allrows)
-rb["D10"] = f"=SUM(D4:D{_last})"; rb["E10"] = f"=SUM(E4:E{_last})"
-for c in ("D10", "E10"):
+rb["D12"] = f"=SUM(D4:D{_last})"; rb["E12"] = f"=SUM(E4:E{_last})"
+for c in ("D12", "E12"):
     rb[c].number_format = "#,##0.0"; rb[c].font = BOLD
-rb["A14"] = "Areas are indicative, from the unit areas on the architectural drawings; the outdoor seating area is an assumption."
+rb["A16"] = "Leasable areas as instructed by Jalour: the full 650 sqm floor plate per floor, 400 sqm of outdoor seating and a 300 sqm rooftop open-air cafe."
 rb.column_dimensions["A"].width = 40
 for col in "BCDE":
     rb.column_dimensions[col].width = 22

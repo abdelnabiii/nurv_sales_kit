@@ -74,15 +74,15 @@ RENT_COMPS = [  # EGP per sqm per month, Dec 2024
     ("Value Mall 1", "Retail", "318–500"), ("Orium Mall", "Retail, fully finished", "759–798"),
     ("Eagle Mall 85", "Office", "333"), ("Town Center", "Clinic", "293"),
 ]
-CONNECT = [("Madinaty", "8 km", "12 min"), ("Cairo–Suez Road", "7 km", "11 min"), ("Ring Road", "3 km", "6 min"),
-           ("Cairo–Ismailia Road", "24 km", "25 min"), ("New Cairo", "24 km", "27 min"),
-           ("Cairo International Airport", "37 km", "36 min"), ("New Administrative Capital", "19 km", "20 min")]
+CONNECT = [("Madinaty", "5 km", "8 min"), ("Cairo–Suez Road", "2 km", "4 min"), ("Ring Road", "6 km", "9 min"),
+           ("Cairo–Ismailia Road", "9 km", "12 min"), ("New Cairo", "24 km", "27 min"),
+           ("Cairo International Airport", "31 km", "30 min"), ("New Administrative Capital", "19 km", "20 min")]
 
 # ------------------------------------------------------------------ building blocks
 PAGES = []
 
 
-ZOOM = {"Executive summary": 1.17, "Rent basis": 1.13, "Price and payment options": 1.2, "Important notice and contact": 1.3, "Market: El Sherouk": 1.14, "Market: competition": 1.10, "Market: catchment and demand": 1.2, "The asset": 1.2,
+ZOOM = {"Executive summary": 1.17, "Rent basis": 1.13, "Price and payment options": 1.2, "Contact": 1.3, "Market: El Sherouk": 1.14, "Market: competition": 1.10, "Market: catchment and demand": 1.2, "The asset": 1.2,
         "Feasibility: results by payment option": 1.04, "Asset value and cash flow": 1.3, "Assumptions and risks": 1.2,
         "Market: pricing benchmarks": 1.2, "Concept": 1.24, "Returns": 1.2}
 
@@ -153,7 +153,7 @@ G3 = V == "G+3"
 rv, vv = R[V], M.VARIANTS[V]
 midv = rv["mid"]
 GFA_ABOVE = 2600 if G3 else 1950
-GFA_TOTAL = "3,900" if G3 else "3,250"
+GFA_TOTAL = "4,000" if G3 else "3,350"
 COVERNAME = "cover-g3" if G3 else "cover"
 XLSX = f"Shorouk_Mall_{V}_Financial_Model.xlsx"
 MIXTXT = "dining, lifestyle retail, wellness and co-working" if G3 else "dining, lifestyle retail and wellness"
@@ -189,7 +189,7 @@ page("cover", f"""
 toc = ["Executive summary", "Concept", "The asset", "Market: El Sherouk", "Market: catchment and demand",
        "Market: competition", "Market: pricing benchmarks", "Rent basis", "Price and payment options",
        "Returns", "Feasibility: results by payment option", "Asset value and cash flow",
-       "Assumptions and risks", "Important notice and contact"]
+       "Assumptions and risks", "Contact"]
 page("Executive summary", f"""
 <div class="two">
 <div>
@@ -198,7 +198,7 @@ page("Executive summary", f"""
 </div>
 <div>
 <h3>The opportunity</h3>
-<p>Shorouk Mall is a mixed-use commercial building in the Fourth District of El Sherouk, offered for sale as a whole building with its land (1,113 sqm). It is planned floor by floor ({MIXTXT}), with basement parking and a rooftop running track.</p>
+<p>Shorouk Mall is a mixed-use commercial building in the Fourth District of El Sherouk, offered for sale as a whole building with its land (1,113 sqm). It is planned floor by floor ({MIXTXT}), with basement parking and a rooftop open-air café.</p>
 <p>This study sets out the concept, the market evidence, the expected returns and a buyer-side feasibility for the {V} configuration.</p>
 </div>
 </div>
@@ -227,7 +227,7 @@ page("Concept", f"""
     ["First floor", "Lifestyle and Shopping", "Home comfort and lifestyle retail"],
     ["Second floor", "The Wellness Arena", "Fitness, treatment and wellbeing"],
     *([["Third floor", "Co-working", "Flexible workspace and meeting rooms, bringing a weekday community"]] if G3 else []),
-    ["Rooftop", "On-Air Track", "A lit, rubberised perimeter running track; the building's landmark"],
+    ["Rooftop", "Open-air café", "An open-air café on the roof; the building's landmark"],
 ], align=["l", "l", "l"])}
 <div class="two" style="margin-top:14pt">
 <div><h3>Design</h3><ul class="list">
@@ -248,7 +248,7 @@ page("The asset", f"""
 <div>
 {table(["Level", "Gross area (sqm)", "Height"], [
     ["Basement", "1,100", "4 m"], ["Ground floor", "650", "5 m"], ["First floor", "650", "4 m"], ["Second floor", "650", "4 m"],
-    *([["Third floor", "650", "4 m"]] if G3 else []), ["Rooftop track", "200", "—"]])}
+    *([["Third floor", "650", "4 m"]] if G3 else []), ["Rooftop, open-air café", "300", "—"]])}
 {kpis([("1,113 sqm", "Land area, included in the sale"), (GFA_TOTAL + " sqm", "Total gross area"), (f"{GFA_ABOVE:,} sqm", "Above-ground commercial gross area")])}
 </div>
 <div>
@@ -270,7 +270,7 @@ page("The asset", f"""
 </div>
 <h3>Indicative net leasable area</h3>
 {table(_heads + ["Total"], [["sqm"] + _cells + [m(NLA_TOTAL, 0)]])}
-<p class="note">Net leasable areas are indicative, taken from the unit areas on the architectural drawings{NLA_NOTE}. They exclude circulation, cores and outdoor seating, and are subject to final design.</p>""")
+<p class="note">Leasable areas are as instructed by Jalour and equal the full 650 sqm floor plate of each floor. They exclude the outdoor seating and the rooftop café, and are subject to final design.</p>""")
 
 # ---- market 1
 page("Market: El Sherouk", f"""
@@ -295,7 +295,7 @@ page("Market: El Sherouk", f"""
 # ---- market 2
 page("Market: catchment and demand", f"""
 <p class="lead">About 22,000 residents in the surrounding districts are served by a single mixed-use building.</p>
-{kpis([("22,000", "Residents in the immediate catchment, approximately"), ("5,340", "Residential units in the main catchment district"), ("1", "Mixed-use building currently serving it"), ("3,900 sqm", "Service space still needed to meet the minimum code requirement, approximately")], 4)}
+{kpis([("22,000", "Residents in the immediate catchment, approximately"), ("5,340", "Residential units in the main catchment district"), ("1", "Mixed-use building currently serving it"), ("13,500 sqm", "Service space still needed, measured against the average code requirement, approximately")], 4)}
 <div class="two" style="margin-top:12pt">
 <div>
 <h3>The site's district</h3>
@@ -307,7 +307,7 @@ page("Market: catchment and demand", f"""
 </div>
 <div>
 <h3>Supply gap</h3>
-<p>Under Egyptian codes, the service area (retail, offices and clinics) required for this population is between 5,340 and 32,040 sqm. The one existing mixed-use building, Rio Business Hub (1,440 sqm of land), leaves about 3,900 sqm unmet at the minimum requirement.</p>
+<p>Under Egyptian codes, the service area (retail, offices and clinics) required for this population is between 5,340 and 32,040 sqm. The one existing mixed-use building, Rio Business Hub (1,440 sqm of land), leaves about 13,500 sqm unmet when measured against the average of that range.</p>
 <p>The study also identifies 11 nearby land plots that could become either expansion or direct competition, so the gap will not stay open indefinitely.</p>
 <h3>Who uses mixed-use space</h3>
 <p>The study's survey concludes that the users of mixed-use space in El Sherouk are primarily families and teenagers. Among services wanted beside a residential project, malls rank alongside schools, hospitals and clubs. This supports a dining, lifestyle, wellness and daily-needs mix.</p>
@@ -346,14 +346,12 @@ page("Market: pricing benchmarks", f"""
 <p class="note">Competitors: average asking price per sqm of retail units, December 2024. Shorouk Mall (blue): price divided by its {GFA_ABOVE:,} sqm of above-ground gross area; the price also includes the land, the basement and the rooftop. Competitor prices are for individual units two years earlier, so the comparison is indicative only.</p>
 </div>
 <div>
-<h3>Rents recorded in the 2024 survey</h3>
-{table(["Project", "Type", "EGP / sqm / month"], RENT_COMPS, align=["l", "l", "r"])}
 <h3>Rents used in this study (March 2026)</h3>
 {table(["Space", "EGP / sqm / month"], [
     ["Ground floor, indoor", m(M.RENT_RATES['ground_indoor'], 0)], ["Ground floor, outdoor", m(M.RENT_RATES['ground_outdoor'], 0)],
     ["Kiosks and sponsorship", m(M.RENT_RATES['kiosk'], 0)], ["First and second floors", m(M.RENT_RATES['upper'], 0)],
+    ["Rooftop, open-air café", m(M.RENT_RATES['rooftop_cafe'], 0)],
     *([["Third floor, co-working", m(M.RENT_RATES['coworking'], 0)]] if G3 else [])])}
-<p class="note"><b>Read these together with care.</b> The rents used in this study are asking rents at Street Side Mall in March 2026, supplied by Jalour. They are well above the rents the 2024 survey recorded at other malls (EGP 293–798). Part of the gap is time (15 months of market growth) and part is positioning. A buyer should verify current achieved rents before relying on the returns in this study.</p>
 <h3>Market payment norms</h3><ul class="list"><li>Most common plan: 20% down and 6 years</li><li>Other frequent plans: 15% or 25% down and 6 years; 40% down and 2 years</li><li>Shorouk Mall: 20–30% down over 3–5 years, with discounts of 20–40%</li></ul>
 </div>
 </div>
@@ -363,12 +361,14 @@ page("Market: pricing benchmarks", f"""
 BU_NOW = RB["g2_now"] + (RB["third_now"] if G3 else 0)
 BU_HO = RB["g2_handover"] + (RB["third_handover"] if G3 else 0)
 _mid = (vv["rent_low"] + vv["rent_high"]) / 2
+BU_LEAD = ("At Street Side Mall's rates, the building's leasable area supports more rent than Jalour's expected figure." if BU_HO > vv["rent_high"]
+           else "The expected rent reconciles with the building's leasable area at Street Side Mall's rates.")
 BU_TXT = ("The bottom-up result sits " + ("below" if BU_HO < vv["rent_low"] else "above" if BU_HO > vv["rent_high"] else "within")
           + " Jalour's expected range" + (", close to its low end." if vv["rent_low"] <= BU_HO < _mid else "."))
 rb_rows = [[lab, m(a, 0), m(p, 0), m(a * p * 12 / 1e6), m(a * p * 12 / 1e6 * RB["factor"])] for lab, a, p in RB["rows"]]
 t3 = RB["third"]
 page("Rent basis", f"""
-<p class="lead">The expected rent reconciles with the building's leasable area at Street Side Mall's rates.</p>
+<p class="lead">{BU_LEAD}</p>
 <p>Jalour expects total rent of EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)} million in the first year after handover. The table tests that figure from the bottom up: indicative leasable areas multiplied by the March 2026 rates, then raised by 10% a year to handover.</p>
 {table(["Component", "Area (sqm)", "EGP/sqm/month", "Rent, March 2026 (EGP M)", "Rent at handover (EGP M)"],
        rb_rows + ([[t3[0].replace(" (G+3)", ""), m(t3[1], 0), m(t3[2], 0), m(RB['third_now']), m(RB['third_handover'])]] if G3 else [])
@@ -380,7 +380,7 @@ page("Rent basis", f"""
 <ul class="list">
 <li>Rates are March 2026 asking rents at Street Side Mall, the nearest competitor, supplied by Jalour</li>
 <li>Escalation of 10% a year for {M.ESCALATION_TO_HANDOVER_YEARS} years to an assumed handover in early 2029 (factor {RB['factor']:.2f})</li>
-<li>Leasable areas are indicative, from the drawings; the outdoor seating area ({m(M.NLA['ground_outdoor'], 0)} sqm) is an assumption</li>
+<li>Leasable areas as instructed by Jalour: the full 650 sqm floor plate on each floor, {m(M.NLA['ground_outdoor'], 0)} sqm of outdoor seating and a {m(M.NLA['rooftop_cafe'], 0)} sqm rooftop open-air café</li>
 <li>Full occupancy from the first year, as instructed. A slower lease-up would reduce first-year income</li>
 <li>Sponsorship income is included in the kiosk line at the same rate</li>
 </ul>
@@ -446,25 +446,24 @@ def feas_rows(var):
     for a, b, c in zip(lo, mid, hi):
         rows.append([b["name"], m(b["price"]), rng(a["yield_paid"], c["yield_paid"], pct), rng(c["payback"], a["payback"], m),
                      rng(a["irr"], c["irr"], pct), rng(a["irr_income"], c["irr_income"], pct),
-                     rng(a["npv"], c["npv"], lambda x: m(x, 0)), rng(a["npv_income"], c["npv_income"], lambda x: m(x, 0))])
+                     rng(a["npv"], c["npv"], lambda x: m(x, 0))])
     return rows
-fh = ["Option", "Price paid", "Net yield, yr 1", "Payback (yrs)", "IRR, with resale", "IRR, income only", "NPV, with resale", "NPV, income only"]
+fh = ["Option", "Price paid", "Net yield, yr 1", "Payback (yrs)", "IRR, with resale", "IRR, income only", "NPV, with resale"]
 page("Feasibility: results by payment option", f"""
-<p class="lead">With the resale value, every option clears the 16% discount rate. On rental income alone, none does.</p>
+<p class="lead">With the resale value, every option clears the 16% discount rate.</p>
 {table(fh, feas_rows(V), cls="sm nw")}
 <div class="two" style="margin-top:12pt">
 <div><h3>How to read this</h3><ul class="list">
 <li><b>Net yield:</b> first-year net income divided by the price paid</li>
 <li><b>Payback:</b> years from handover until cumulative net income equals the price paid</li>
 <li><b>IRR and NPV:</b> over 12 years from contract (2 to handover, 10 of operation), on annual cash flows; NPV at a 16% discount rate</li>
-<li><b>With resale:</b> assumes a sale at the end of year 12 at the asset-value basis on the next page</li>
-<li><b>Income only:</b> ignores any resale value, as a floor</li></ul></div>
+<li><b>With resale:</b> assumes a sale at the end of year 12 at the asset-value basis on the next page</li></ul></div>
 <div><h3>Findings</h3><ul class="list">
 <li>Cash gives the highest yield and shortest payback; Option 2 gives the highest IRR and NPV with resale, because less capital is tied up before rent starts</li>
 <li>Options 2 and 3 are still being paid when rent begins, so early income helps fund the later instalments</li>
-<li>The case for buying rests on both income and capital growth. A buyer who expects lower value growth should weight the income-only columns</li></ul></div>
+<li>The case for buying rests on both income and capital growth. A buyer who expects lower value growth should weight the income-only column</li></ul></div>
 </div>
-<p class="note">Price and NPV in EGP millions. Ranges show the low and high rent cases. A negative income-only NPV means rental income alone, over 10 years, returns less than 16% a year; it does not mean a loss.</p>
+<p class="note">Price and NPV in EGP millions. Ranges show the low and high rent cases.</p>
 {DISC}""")
 
 # ---- value and cash flow
@@ -478,17 +477,15 @@ page("Asset value and cash flow", f"""
 <div>
 <h3>Asset-value basis</h3>
 <p>As instructed by Jalour, the study assumes the building's value rises by about 50% between contract and handover, and by about 10% a year afterwards, starting from the list price.</p>
+
+</div>
+<div>
+<h3>Asset value (EGP millions)</h3>
 {table(["", "EGP M"], [
     ["List price at contract", m(vv['list_price'], 0)],
     ["Value at handover (+50%)", m(midv['value_handover'], 0)],
     ["Value after 5 operating years", m(midv['value'][4], 0)],
-    ["Value after 10 operating years (resale)", m(midv['exit_value'], 0)],
-    ["Net income in year 10 as a share of resale value", rng(rv['low']['exit_yield'], rv['high']['exit_yield'], pct)]])}
-</div>
-<div>
-<h3>A check on the resale value</h3>
-<p>At the assumed resale value, the building would sell on a net income yield of about {pct(midv['exit_yield'])}. That is well below the {opt_range(V, 'yield_paid', pct)} entry yield in this study, because value is assumed to grow faster than rent.</p>
-<p>If the building instead resold at the same yield as it was bought, the resale value would be lower and so would the IRR. The resale assumption is the single largest driver of the with-resale returns and deserves the buyer's own view.</p>
+    ["Value after 10 operating years (resale)", m(midv['exit_value'], 0)]])}
 </div>
 </div>
 <h3>Annual net cash flow before resale, base case (EGP millions)</h3>
@@ -517,41 +514,35 @@ page("Assumptions and risks", f"""
     ["First-year rent", f"EGP {m(vv['rent_low'], 0)}–{m(vv['rent_high'], 0)}M"],
     ["Occupancy", "100% from the first year"],
     ["Costs", "20% of rent, covering everything"],
-    ["Rent growth", f"10% a year, operating years 2–5; then {pct(A['growth_later'], 0)} (study assumption)"],
+    ["Rent growth", f"10% a year, operating years 2–5; then {pct(A['growth_later'], 0)} (conservative study assumption)"],
     ["Asset value", "+50% to handover; +10% a year after"],
     ["Horizon", "12 years: 2 to handover, 10 operating"],
     ["Discount rate", "16%"],
     ["Timing", "Annual cash flows; down payment at contract"],
     ["Taxes and financing", "Not modelled; unleveraged, before tax"],
 ], align=["l", "l"])}
-<p class="note">Jalour supplied all inputs except the rent growth after year 5, the outdoor seating area and the assumed handover date, which are assumptions of this study.</p>
+<p class="note">Jalour supplied all inputs except the rent growth after year 5 and the assumed handover date, which are assumptions of this study.</p>
 </div>
 <div>
 <h3>Risks a buyer should weigh</h3>
 <ul class="list">
-<li><b>Rent level.</b> The rates used are asking rents at one competitor and are well above the 2024 survey's figures. Achieved rents may be lower</li>
-<li><b>Lease-up.</b> Full occupancy in the first year is assumed. No tenant is signed; a slower lease-up delays income</li>
+<li><b>Rent level.</b> The rates used are asking rents at one competitor. Achieved rents may be lower. <b>Mitigation:</b> with the operator's expertise, these rents can be achieved</li>
+<li><b>Lease-up.</b> Full occupancy in the first year is assumed. No tenant is signed; a slower lease-up delays income. <b>Mitigation:</b> with the operator's expertise, full occupancy in the first year can be achieved</li>
 <li><b>Resale value.</b> The with-resale returns depend on value growing faster than rent. Income-only returns are below the discount rate</li>
 <li><b>Market data.</b> The market survey dates from December 2024; prices, supply and rents have moved since</li>
 <li><b>New supply.</b> Eleven nearby plots could become competing projects</li>
 <li><b>Costs.</b> The 20% deduction is a single allowance, not a costed budget</li>
-<li><b>Approvals and delivery.</b> {APPROVAL_TXT}</li>
+<li><b>Approvals and delivery.</b> {APPROVAL_TXT}. <b>Mitigation:</b> contractual penalties compensate the buyer for any delay in delivery</li>
 <li><b>Economy.</b> Inflation, interest rates and currency affect rents, values and the appropriate discount rate</li>
 <li><b>Taxes.</b> Rental and capital gains taxes are not modelled</li>
 </ul>
 <h3>Recommended before commitment</h3>
-<ul class="list"><li>Verify current achieved rents and occupancy at Street Side Mall and Rio Business Hub</li><li>Obtain a measured leasable-area schedule</li><li>Take independent legal, tax and valuation advice</li></ul>
+<ul class="list"><li>Verify current achieved rents and occupancy at Street Side Mall</li><li>Obtain a measured leasable-area schedule</li><li>Take independent legal, tax and valuation advice</li></ul>
 </div>
 </div>""")
 
 # ---- notice + contact
-page("Important notice and contact", f"""
-<h3>Important notice</h3>
-<p>This study has been prepared by Jalour Developments for the confidential use of the party to whom it is addressed. It is provided for information only and does not constitute an offer, a solicitation or a contract.</p>
-<p>The financial figures are projections based on the assumptions stated. They are estimates, are rounded, and are not guaranteed. Actual rents, occupancy, costs, values and returns may differ materially. Past and projected market growth is not a reliable guide to future performance.</p>
-<p>Market data is drawn from market research prepared for Al Jalal Holding in December 2024 and from information supplied by Jalour in 2026. It has not been independently verified. Visuals are artist's impressions. Plans, areas and specifications are indicative and subject to change and to final approvals.</p>
-<p>Recipients should make their own enquiries and take independent legal, tax, financial and valuation advice before making any decision.</p>
-<p class="note">This wording is interim and has not been reviewed by legal counsel.</p>
+page("Contact", f"""
 <h3>Accompanying file</h3>
 <p>The Excel workbook <b>{XLSX}</b> contains the full model with live formulas: assumptions, the rent basis, and year-by-year cash flows, IRR and NPV for each payment option.</p>
 <div class="contact">

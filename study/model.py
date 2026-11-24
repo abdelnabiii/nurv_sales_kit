@@ -33,10 +33,11 @@ OPTIONS = [
 
 # Rent basis: Street Side Mall asking rents, March 2026 (EGP per sqm per month), per client.
 RENT_RATES = {"ground_indoor": 1500, "ground_outdoor": 750, "kiosk": 4000,
-              "upper": 1250, "coworking": 2000}
-# Indicative net leasable areas (sqm) taken from the unit areas on the architectural drawings.
-NLA = {"ground_indoor": 392.4, "kiosk": 27.8, "first": 545.4, "second": 535.1, "third": 535.1,
-       "ground_outdoor": 250.0}   # outdoor seating area is an ASSUMPTION
+              "upper": 1000, "coworking": 2000, "rooftop_cafe": 1500}
+# Leasable areas (sqm), as instructed by the client: the full 650 sqm floor plate per floor,
+# 400 sqm of outdoor seating and a 300 sqm rooftop open-air cafe. Kiosk area from the drawings.
+NLA = {"ground_indoor": 650.0, "kiosk": 27.8, "first": 650.0, "second": 650.0, "third": 650.0,
+       "ground_outdoor": 400.0, "rooftop_cafe": 300.0}
 ESCALATION_TO_HANDOVER_YEARS = 3   # March 2026 -> assumed handover Q1 2029
 
 
@@ -122,6 +123,7 @@ def rent_build():
         ("Kiosks and sponsorship", n["kiosk"], r["kiosk"]),
         ("First floor", n["first"], r["upper"]),
         ("Second floor", n["second"], r["upper"]),
+        ("Rooftop, open-air café", n["rooftop_cafe"], r["rooftop_cafe"]),
     ]
     third = ("Third floor, co-working (G+3)", n["third"], r["coworking"])
     f = 1.10 ** ESCALATION_TO_HANDOVER_YEARS
