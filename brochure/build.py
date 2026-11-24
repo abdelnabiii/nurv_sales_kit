@@ -82,3 +82,27 @@ for src_name, out in (("factsheet.html", "factsheet"), ("factsheet-ar.html", "fa
     for name in ("light", "grey", "blue"):
         themed = fs.replace("</head>", "<style>\n" + rd(f"src/{name}.css") + "</style>\n</head>", 1)
         open(os.path.join(ROOT, "build", f"{out}-{name}.html"), "w", encoding="utf-8").write(themed)
+
+# G+3 variant (brochure + fact sheet), dark and light only.
+g3 = rd("src/brochure-g3.html")
+g3 = g3.replace("{{HEADER}}", HEADER)
+g3_pages = g3.count('<section class="page')
+_n = 0
+def _g3footer(_):
+    global _n
+    _n += 1
+    return (f'<div class="ftr"><span class="logo">{JALOUR}</span><span class="legal">{LEGAL}</span>'
+            f'<span class="pg">{_n:02d} / {g3_pages:02d}</span></div>')
+g3 = re.sub(r"\{\{FOOTER\}\}", _g3footer, g3)
+g3 = g3.replace("{{NURV_LOGO}}", NURV).replace("{{JALOUR_LOGO}}", JALOUR).replace("{{MEADIS_LOGO}}", MEADIS)
+g3 = g3.replace("{{MAP}}", strip(rd("src/map.svg")))
+for i in range(1, 6):
+    g3 = g3.replace("{{PLAN%d}}" % i, strip(rd(f"assets/plans/plan{i}.svg")))
+assert "{{" not in g3
+fs3 = rd("src/factsheet-g3.html").replace("{{JALOUR_LOGO}}", JALOUR)
+assert "{{" not in fs3
+for out, doc in (("brochure-g3", g3), ("factsheet-g3", fs3)):
+    open(os.path.join(ROOT, "build", f"{out}.html"), "w", encoding="utf-8").write(doc)
+    lt = doc.replace("</head>", "<style>\n" + rd("src/light.css") + "</style>\n</head>", 1)
+    open(os.path.join(ROOT, "build", f"{out}-light.html"), "w", encoding="utf-8").write(lt)
+print("g3 pages", g3_pages)
