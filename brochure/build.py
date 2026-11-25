@@ -75,7 +75,8 @@ for name in ("light", "grey", "blue"):
 print("pages", pages, "footers", count)
 
 # One-page fact sheet (A4), in the same four colour themes.
-for src_name, out in (("factsheet.html", "factsheet"), ("factsheet-ar.html", "factsheet-ar")):
+for src_name, out in (("factsheet.html", "factsheet"), ("factsheet-ar.html", "factsheet-ar"),
+                      ("factsheet-ar-sa.html", "factsheet-ar-sa"), ("factsheet-g3-ar-sa.html", "factsheet-g3-ar-sa")):
     fs = rd(f"src/{src_name}").replace("{{JALOUR_LOGO}}", JALOUR)
     assert "{{" not in fs
     open(os.path.join(ROOT, "build", f"{out}.html"), "w", encoding="utf-8").write(fs)
